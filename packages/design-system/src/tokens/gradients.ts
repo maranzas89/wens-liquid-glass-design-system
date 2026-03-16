@@ -3,7 +3,7 @@
  */
 
 export const gradients = {
-  primary:   'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+  primary:   'linear-gradient(135deg, #F97316 0%, #FB923C 100%)',
   secondary: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
   accent:    'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
   success:   'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)',

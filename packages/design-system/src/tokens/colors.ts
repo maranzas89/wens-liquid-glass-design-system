@@ -31,14 +31,14 @@ export const statusColors = {
   success: { base: '#43e97b', light: 'rgba(67, 233, 123, 0.2)', border: 'rgba(74, 222, 128, 0.3)' },
   warning: { base: '#fee140', light: 'rgba(251, 191, 36, 0.2)', border: 'rgba(251, 191, 36, 0.3)' },
   error:   { base: '#f5576c', light: 'rgba(239, 68, 68, 0.2)',  border: 'rgba(248, 113, 113, 0.3)' },
-  info:    { base: '#4facfe', light: 'rgba(59, 130, 246, 0.2)',  border: 'rgba(96, 165, 250, 0.3)' },
+  info:    { base: '#FDBA74', light: 'rgba(253, 186, 116, 0.2)', border: 'rgba(253, 186, 116, 0.3)' },
 } as const;
 
 /** Brand accents */
 export const brandColors = {
-  primary: '#667eea',
+  primary: '#F97316',
   secondary: '#764ba2',
-  accent: '#4facfe',
+  accent: '#FB923C',
 } as const;
 
 /** Text opacity levels on dark backgrounds */
