@@ -14,7 +14,7 @@ export function ChartsSection({ addToast }: ChartsSectionProps) {
   return (
     <div className="space-y-8">
       <div className="text-center mb-12">
-        <h2 className="text-5xl text-white font-bold mb-4 bg-gradient-to-r from-blue-300 to-cyan-300 bg-clip-text text-transparent">
+        <h2 className="text-5xl text-white font-bold mb-4 bg-gradient-to-r from-[var(--brand-secondary)] to-[var(--brand-accent)] bg-clip-text text-transparent">
           Charts & Visualizations
         </h2>
         <p className="text-white/70 text-lg">

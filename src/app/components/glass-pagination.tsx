@@ -52,11 +52,11 @@ export function GlassPagination({
         className="
           p-2 rounded-xl
           backdrop-blur-md backdrop-saturate-150
-          bg-white/10
-          border border-white/20
+          bg-[var(--glass-bg-light)]
+          border border-[var(--glass-border)]
           text-white
           disabled:opacity-50 disabled:cursor-not-allowed
-          hover:bg-white/20
+          hover:bg-[var(--glass-bg-medium)]
           transition-all duration-200
         "
       >
@@ -66,18 +66,18 @@ export function GlassPagination({
       {getPageNumbers().map((page, index) => (
         <div key={index}>
           {page === '...' ? (
-            <span className="text-white/60 px-2">...</span>
+            <span className="text-[var(--text-muted)] px-2">...</span>
           ) : (
             <button
               onClick={() => onPageChange(page as number)}
               className={`
                 px-4 py-2 rounded-xl
                 backdrop-blur-md backdrop-saturate-150
-                border border-white/20
+                border border-[var(--glass-border)]
                 transition-all duration-200
                 ${currentPage === page
-                  ? 'bg-white/20 text-white'
-                  : 'bg-white/10 text-white/80 hover:bg-white/15 hover:text-white'
+                  ? 'bg-[var(--glass-bg-medium)] text-white'
+                  : 'bg-[var(--glass-bg-light)] text-[var(--text-secondary)] hover:bg-[var(--glass-bg-medium)] hover:text-white'
                 }
               `}
             >
@@ -93,11 +93,11 @@ export function GlassPagination({
         className="
           p-2 rounded-xl
           backdrop-blur-md backdrop-saturate-150
-          bg-white/10
-          border border-white/20
+          bg-[var(--glass-bg-light)]
+          border border-[var(--glass-border)]
           text-white
           disabled:opacity-50 disabled:cursor-not-allowed
-          hover:bg-white/20
+          hover:bg-[var(--glass-bg-medium)]
           transition-all duration-200
         "
       >

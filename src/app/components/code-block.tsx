@@ -10,25 +10,25 @@ export function CodeBlock({ code, language = 'tsx' }: CodeBlockProps) {
   return (
     <div className="mt-12">
       <div className="
-        backdrop-blur-xl bg-gradient-to-br from-white/10 to-white/5
-        border border-white/20
+        backdrop-blur-xl bg-gradient-to-br from-[var(--glass-bg-light)] to-[var(--glass-bg-subtle)]
+        border border-[var(--glass-border)]
         rounded-3xl
         overflow-hidden
         shadow-2xl
       ">
-        <div className="p-4 border-b border-white/10 bg-white/5 flex items-center justify-between">
+        <div className="p-4 border-b border-[var(--glass-dark-border)] bg-[var(--glass-bg-subtle)] flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="flex gap-2">
-              <div className="w-3 h-3 rounded-full bg-red-400/60" />
+              <div className="w-3 h-3 rounded-full bg-[var(--status-error)]/60" />
               <div className="w-3 h-3 rounded-full bg-yellow-400/60" />
-              <div className="w-3 h-3 rounded-full bg-green-400/60" />
+              <div className="w-3 h-3 rounded-full bg-[var(--status-success)]/60" />
             </div>
-            <span className="text-white/70 text-sm font-medium">{language}</span>
+            <span className="text-[var(--text-tertiary)] text-sm font-medium">{language}</span>
           </div>
           <div className="
             px-3 py-1.5 rounded-lg
-            bg-white/10
-            border border-white/20
+            bg-[var(--glass-bg-light)]
+            border border-[var(--glass-border)]
             text-white/50 text-sm
             flex items-center gap-2
             cursor-default select-none

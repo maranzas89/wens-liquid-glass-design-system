@@ -1,4 +1,5 @@
 import React from 'react';
+import { TokenProvider } from './providers/TokenProvider';
 import { GlassNavSidebar, useScrollSpy, scrollToSection } from './components/glass-nav-sidebar';
 import { GlassToastAdvancedContainer, useAdvancedToast } from './components/glass-toast-advanced';
 import { 
@@ -93,13 +94,14 @@ export default function App() {
   const activeSection = useScrollSpy(sectionIds, 150);
 
   return (
+    <TokenProvider>
     <div className="min-h-screen relative overflow-hidden">
       {/* Animated Background */}
       <div className="fixed inset-0 -z-10">
         <div className="absolute inset-0 bg-gradient-to-br from-purple-900 via-blue-900 to-teal-900" />
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-500/30 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500/30 rounded-full blur-3xl animate-pulse delay-1000" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse delay-500" />
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-[color-mix(in_srgb,var(--brand-secondary)_30%,transparent)] rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[color-mix(in_srgb,var(--brand-primary)_30%,transparent)] rounded-full blur-3xl animate-pulse delay-1000" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[color-mix(in_srgb,var(--brand-accent)_20%,transparent)] rounded-full blur-3xl animate-pulse delay-500" />
       </div>
 
       {/* Toast Container */}
@@ -129,18 +131,18 @@ export default function App() {
                   <div className="
                     w-24 h-24 
                     rounded-3xl
-                    bg-gradient-to-br from-blue-400/20 to-purple-500/20
+                    bg-gradient-to-br from-[var(--brand-primary)]/20 to-[var(--brand-secondary)]/20
                     backdrop-blur-md
-                    border border-white/20
+                    border border-[var(--glass-border)]
                     flex items-center justify-center
                     relative overflow-hidden
                     animate-pulse
                   ">
-                    <div className="absolute inset-0 bg-gradient-to-br from-white/30 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-br from-[var(--glass-bg-strong)] to-transparent" />
                     <Palette className="text-white relative z-10" size={48} />
                   </div>
                 </div>
-                <h1 className="text-7xl text-white font-bold bg-gradient-to-r from-blue-300 via-purple-300 to-pink-300 bg-clip-text text-transparent">
+                <h1 className="text-7xl text-white font-bold bg-gradient-to-r from-[var(--brand-primary)] via-[var(--brand-secondary)] to-[var(--status-error)] bg-clip-text text-transparent">
                   Wen's Project Liquid Glass
                 </h1>
                 <p className="text-2xl text-white/70 max-w-3xl mx-auto">
@@ -152,44 +154,44 @@ export default function App() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
                 <div className="
                   p-6 rounded-2xl
-                  backdrop-blur-xl bg-gradient-to-br from-white/10 to-white/5
-                  border border-white/20
-                  hover:border-white/30
+                  backdrop-blur-xl bg-gradient-to-br from-[var(--glass-bg-light)] to-[var(--glass-bg-subtle)]
+                  border border-[var(--glass-border)]
+                  hover:border-[var(--glass-border-strong)]
                   transition-all duration-300
                   group
                 ">
                   <div className="text-center space-y-2">
                     <p className="text-white/60 text-sm font-medium">Components</p>
                     <p className="text-white text-5xl font-bold group-hover:scale-110 transition-transform">60+</p>
-                    <div className="h-1 w-16 mx-auto bg-gradient-to-r from-blue-400 to-purple-500 rounded-full" />
+                    <div className="h-1 w-16 mx-auto bg-gradient-to-r from-[var(--brand-primary)] to-[var(--brand-secondary)] rounded-full" />
                   </div>
                 </div>
                 <div className="
                   p-6 rounded-2xl
-                  backdrop-blur-xl bg-gradient-to-br from-white/10 to-white/5
-                  border border-white/20
-                  hover:border-white/30
+                  backdrop-blur-xl bg-gradient-to-br from-[var(--glass-bg-light)] to-[var(--glass-bg-subtle)]
+                  border border-[var(--glass-border)]
+                  hover:border-[var(--glass-border-strong)]
                   transition-all duration-300
                   group
                 ">
                   <div className="text-center space-y-2">
                     <p className="text-white/60 text-sm font-medium">Categories</p>
                     <p className="text-white text-5xl font-bold group-hover:scale-110 transition-transform">24</p>
-                    <div className="h-1 w-16 mx-auto bg-gradient-to-r from-purple-400 to-pink-500 rounded-full" />
+                    <div className="h-1 w-16 mx-auto bg-gradient-to-r from-[var(--brand-secondary)] to-[var(--status-error)] rounded-full" />
                   </div>
                 </div>
                 <div className="
                   p-6 rounded-2xl
-                  backdrop-blur-xl bg-gradient-to-br from-white/10 to-white/5
-                  border border-white/20
-                  hover:border-white/30
+                  backdrop-blur-xl bg-gradient-to-br from-[var(--glass-bg-light)] to-[var(--glass-bg-subtle)]
+                  border border-[var(--glass-border)]
+                  hover:border-[var(--glass-border-strong)]
                   transition-all duration-300
                   group
                 ">
                   <div className="text-center space-y-2">
                     <p className="text-white/60 text-sm font-medium">Variations</p>
                     <p className="text-white text-5xl font-bold group-hover:scale-110 transition-transform">150+</p>
-                    <div className="h-1 w-16 mx-auto bg-gradient-to-r from-pink-400 to-blue-500 rounded-full" />
+                    <div className="h-1 w-16 mx-auto bg-gradient-to-r from-[var(--status-error)] to-[var(--brand-primary)] rounded-full" />
                   </div>
                 </div>
               </div>
@@ -1048,5 +1050,6 @@ export default function App() {
         </div>
       </div>
     </div>
+    </TokenProvider>
   );
 }

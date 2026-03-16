@@ -37,8 +37,8 @@ export function GlassFontPicker({ value, onChange, className = '' }: GlassFontPi
             border-2 transition-all duration-300
             text-left
             ${value === font.value
-              ? 'bg-white/20 border-blue-400/50 scale-[1.02]'
-              : 'bg-white/10 border-white/20 hover:bg-white/15 hover:border-white/30'
+              ? 'bg-[var(--glass-bg-medium)] border-[var(--status-info-border)] scale-[1.02]'
+              : 'bg-[var(--glass-bg-light)] border-[var(--glass-border)] hover:bg-[var(--glass-bg-medium)] hover:border-[var(--glass-border-strong)]'
             }
           `}
         >
@@ -47,11 +47,11 @@ export function GlassFontPicker({ value, onChange, className = '' }: GlassFontPi
               <div className="flex items-center gap-2 mb-2">
                 <h4 className="text-white">{font.name}</h4>
                 {value === font.value && (
-                  <Check size={16} className="text-blue-300" />
+                  <Check size={16} className="text-[var(--brand-primary)]" />
                 )}
               </div>
               <p 
-                className="text-white/70 text-lg"
+                className="text-[var(--text-tertiary)] text-lg"
                 style={{ fontFamily: font.value }}
               >
                 {font.preview}

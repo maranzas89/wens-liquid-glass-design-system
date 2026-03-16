@@ -45,7 +45,7 @@ export function GlassDrawer({
     <>
       {/* Backdrop */}
       <div 
-        className="fixed inset-0 z-40 bg-black/40 backdrop-blur-sm animate-in fade-in duration-200"
+        className="fixed inset-0 z-40 bg-[var(--overlay-backdrop)] backdrop-blur-sm animate-in fade-in duration-200"
         onClick={onClose}
       />
       
@@ -55,23 +55,23 @@ export function GlassDrawer({
         ${positionStyles[position]}
         ${sizeStyles[position][size]}
         backdrop-blur-xl backdrop-saturate-150
-        bg-black/85
-        border border-white/20
-        shadow-[0_16px_48px_0_rgba(0,0,0,0.3)]
+        bg-[var(--overlay-popover)]
+        border border-[var(--glass-border)]
+        shadow-[var(--shadow-overlay)]
         ${slideAnimation[position]} duration-300
         ${(position === 'left' || position === 'right') ? 'overflow-y-auto' : 'overflow-x-auto'}
       `}>
         {/* Header */}
         {title && (
-          <div className="flex items-center justify-between p-6 border-b border-white/20">
+          <div className="flex items-center justify-between p-6 border-b border-[var(--glass-border)]">
             <h3 className="text-xl text-white">{title}</h3>
             <button
               onClick={onClose}
               className="
-                text-white/70 hover:text-white
+                text-[var(--text-tertiary)] hover:text-white
                 transition-colors duration-200
                 p-2 rounded-xl
-                hover:bg-white/10
+                hover:bg-[var(--glass-bg-light)]
               "
             >
               <X size={20} />

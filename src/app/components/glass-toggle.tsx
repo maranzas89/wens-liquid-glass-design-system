@@ -24,10 +24,10 @@ export function GlassToggle({
   };
 
   const variants = {
-    primary: 'from-blue-400/80 to-blue-600/80',
-    success: 'from-green-400/80 to-green-600/80',
-    warning: 'from-yellow-400/80 to-yellow-600/80',
-    danger: 'from-red-400/80 to-red-600/80'
+    primary: 'from-[var(--brand-primary)] to-[var(--brand-primary)]',
+    success: 'from-[var(--status-success)] to-[var(--status-success)]',
+    warning: 'from-[var(--status-warning)] to-[var(--status-warning)]',
+    danger: 'from-[var(--status-error)] to-[var(--status-error)]'
   };
 
   const s = sizes[size];
@@ -48,7 +48,7 @@ export function GlassToggle({
         ${disabled ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'}
         ${checked
           ? `bg-gradient-to-r ${variantClass} shadow-lg shadow-${variant === 'primary' ? 'blue' : variant === 'success' ? 'green' : variant === 'warning' ? 'yellow' : 'red'}-500/50`
-          : 'bg-white/10 border border-white/20'
+          : 'bg-[var(--glass-bg-light)] border border-[var(--glass-border)]'
         }
         ${!disabled && 'hover:scale-105'}
         backdrop-blur-md

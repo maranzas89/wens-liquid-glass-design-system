@@ -36,9 +36,9 @@ export const statusColors = {
 
 /** Brand accents */
 export const brandColors = {
-  primary: '#F97316',
-  secondary: '#764ba2',
-  accent: '#FB923C',
+  primary: '#34D399',
+  secondary: '#3B82F6',
+  accent: '#9CA3AF',
 } as const;
 
 /** Text opacity levels on dark backgrounds */

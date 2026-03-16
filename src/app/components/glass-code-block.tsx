@@ -27,13 +27,13 @@ export function GlassCodeBlock({
   return (
     <div className={`
       backdrop-blur-md backdrop-saturate-150
-      bg-white/10
-      border border-white/20
+      bg-[var(--glass-bg-light)]
+      border border-[var(--glass-border)]
       rounded-2xl
       overflow-hidden
       ${className}
     `}>
-      <div className="flex items-center justify-between px-4 py-3 border-b border-white/20">
+      <div className="flex items-center justify-between px-4 py-3 border-b border-[var(--glass-border)]">
         <span className="text-white/70 text-sm">{language}</span>
         <button
           onClick={copyToClipboard}
@@ -41,10 +41,10 @@ export function GlassCodeBlock({
             flex items-center gap-2
             px-3 py-1.5 rounded-lg
             backdrop-blur-md backdrop-saturate-150
-            bg-white/10
-            border border-white/20
+            bg-[var(--glass-bg-light)]
+            border border-[var(--glass-border)]
             text-white/80
-            hover:text-white hover:bg-white/20
+            hover:text-white hover:bg-[var(--glass-bg-medium)]
             transition-all duration-200
           "
         >

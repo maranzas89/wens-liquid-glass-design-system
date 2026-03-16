@@ -30,7 +30,7 @@ export function GlassDashboard({
         logo={logo}
         footer={
           user && (
-            <div className="flex items-center gap-3 p-3 rounded-2xl bg-white/5">
+            <div className="flex items-center gap-3 p-3 rounded-2xl bg-[var(--glass-bg-subtle)]">
               {user.avatar ? (
                 <img 
                   src={user.avatar} 
@@ -38,13 +38,13 @@ export function GlassDashboard({
                   className="w-10 h-10 rounded-full"
                 />
               ) : (
-                <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center text-white">
+                <div className="w-10 h-10 rounded-full bg-[var(--glass-bg-medium)] flex items-center justify-center text-white">
                   {user.name.charAt(0)}
                 </div>
               )}
               <div className="flex-1 min-w-0">
                 <p className="text-white text-sm truncate">{user.name}</p>
-                <p className="text-white/60 text-xs">View profile</p>
+                <p className="text-[var(--text-muted)] text-xs">View profile</p>
               </div>
             </div>
           )

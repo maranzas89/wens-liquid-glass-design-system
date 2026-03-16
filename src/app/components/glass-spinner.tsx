@@ -15,9 +15,9 @@ export function GlassSpinner({ size = 'md', variant = 'primary', className = '' 
   };
 
   const variantStyles = {
-    primary: 'border-white/20 border-t-white',
-    success: 'border-green-500/20 border-t-green-400',
-    warning: 'border-yellow-500/20 border-t-yellow-400'
+    primary: 'border-[var(--glass-border)] border-t-white',
+    success: 'border-[var(--status-success-light)] border-t-[var(--status-success)]',
+    warning: 'border-[var(--status-warning-light)] border-t-[var(--status-warning)]'
   };
   
   return (
@@ -36,7 +36,7 @@ export function GlassSpinner({ size = 'md', variant = 'primary', className = '' 
 export function GlassLoadingOverlay({ message, onClose }: { message?: string; onClose?: () => void }) {
   return (
     <div 
-      className="fixed inset-0 z-50 backdrop-blur-sm bg-black/40 flex flex-col items-center justify-center gap-4"
+      className="fixed inset-0 z-50 backdrop-blur-sm bg-[var(--overlay-backdrop)] flex flex-col items-center justify-center gap-4"
       onClick={onClose}
     >
       <div onClick={(e) => e.stopPropagation()}>

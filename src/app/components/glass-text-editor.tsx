@@ -36,8 +36,8 @@ export function GlassTextEditor({ value, onChange, className = '' }: GlassTextEd
       {/* Toolbar */}
       <div className="
         backdrop-blur-md backdrop-saturate-150
-        bg-white/10
-        border border-white/20
+        bg-[var(--glass-bg-light)]
+        border border-[var(--glass-border)]
         rounded-2xl
         p-4
         flex flex-wrap gap-4 items-center
@@ -49,8 +49,8 @@ export function GlassTextEditor({ value, onChange, className = '' }: GlassTextEd
           className="
             px-4 py-2 rounded-xl
             backdrop-blur-md backdrop-saturate-150
-            bg-white/10
-            border border-white/20
+            bg-[var(--glass-bg-light)]
+            border border-[var(--glass-border)]
             text-white
             outline-none
             cursor-pointer
@@ -65,7 +65,7 @@ export function GlassTextEditor({ value, onChange, className = '' }: GlassTextEd
 
         {/* Font Size */}
         <div className="flex items-center gap-2">
-          <Type size={16} className="text-white/60" />
+          <Type size={16} className="text-[var(--text-muted)]" />
           <input
             type="number"
             value={fontSize}
@@ -75,22 +75,22 @@ export function GlassTextEditor({ value, onChange, className = '' }: GlassTextEd
             className="
               w-16 px-2 py-2 rounded-xl
               backdrop-blur-md backdrop-saturate-150
-              bg-white/10
-              border border-white/20
+              bg-[var(--glass-bg-light)]
+              border border-[var(--glass-border)]
               text-white text-center
               outline-none
             "
           />
         </div>
 
-        <div className="h-6 w-px bg-white/20" />
+        <div className="h-6 w-px bg-[var(--glass-border)]" />
 
         {/* Text Style */}
         <button
           onClick={() => setIsBold(!isBold)}
           className={`
             p-2 rounded-xl transition-all duration-200
-            ${isBold ? 'bg-white/20 text-white' : 'bg-white/10 text-white/60 hover:bg-white/15'}
+            ${isBold ? 'bg-[var(--glass-bg-medium)] text-white' : 'bg-[var(--glass-bg-light)] text-[var(--text-muted)] hover:bg-[var(--glass-bg-medium)]'}
           `}
         >
           <Bold size={20} />
@@ -99,7 +99,7 @@ export function GlassTextEditor({ value, onChange, className = '' }: GlassTextEd
           onClick={() => setIsItalic(!isItalic)}
           className={`
             p-2 rounded-xl transition-all duration-200
-            ${isItalic ? 'bg-white/20 text-white' : 'bg-white/10 text-white/60 hover:bg-white/15'}
+            ${isItalic ? 'bg-[var(--glass-bg-medium)] text-white' : 'bg-[var(--glass-bg-light)] text-[var(--text-muted)] hover:bg-[var(--glass-bg-medium)]'}
           `}
         >
           <Italic size={20} />
@@ -108,20 +108,20 @@ export function GlassTextEditor({ value, onChange, className = '' }: GlassTextEd
           onClick={() => setIsUnderline(!isUnderline)}
           className={`
             p-2 rounded-xl transition-all duration-200
-            ${isUnderline ? 'bg-white/20 text-white' : 'bg-white/10 text-white/60 hover:bg-white/15'}
+            ${isUnderline ? 'bg-[var(--glass-bg-medium)] text-white' : 'bg-[var(--glass-bg-light)] text-[var(--text-muted)] hover:bg-[var(--glass-bg-medium)]'}
           `}
         >
           <Underline size={20} />
         </button>
 
-        <div className="h-6 w-px bg-white/20" />
+        <div className="h-6 w-px bg-[var(--glass-border)]" />
 
         {/* Alignment */}
         <button
           onClick={() => setAlignment('left')}
           className={`
             p-2 rounded-xl transition-all duration-200
-            ${alignment === 'left' ? 'bg-white/20 text-white' : 'bg-white/10 text-white/60 hover:bg-white/15'}
+            ${alignment === 'left' ? 'bg-[var(--glass-bg-medium)] text-white' : 'bg-[var(--glass-bg-light)] text-[var(--text-muted)] hover:bg-[var(--glass-bg-medium)]'}
           `}
         >
           <AlignLeft size={20} />
@@ -130,7 +130,7 @@ export function GlassTextEditor({ value, onChange, className = '' }: GlassTextEd
           onClick={() => setAlignment('center')}
           className={`
             p-2 rounded-xl transition-all duration-200
-            ${alignment === 'center' ? 'bg-white/20 text-white' : 'bg-white/10 text-white/60 hover:bg-white/15'}
+            ${alignment === 'center' ? 'bg-[var(--glass-bg-medium)] text-white' : 'bg-[var(--glass-bg-light)] text-[var(--text-muted)] hover:bg-[var(--glass-bg-medium)]'}
           `}
         >
           <AlignCenter size={20} />
@@ -139,7 +139,7 @@ export function GlassTextEditor({ value, onChange, className = '' }: GlassTextEd
           onClick={() => setAlignment('right')}
           className={`
             p-2 rounded-xl transition-all duration-200
-            ${alignment === 'right' ? 'bg-white/20 text-white' : 'bg-white/10 text-white/60 hover:bg-white/15'}
+            ${alignment === 'right' ? 'bg-[var(--glass-bg-medium)] text-white' : 'bg-[var(--glass-bg-light)] text-[var(--text-muted)] hover:bg-[var(--glass-bg-medium)]'}
           `}
         >
           <AlignRight size={20} />
@@ -149,8 +149,8 @@ export function GlassTextEditor({ value, onChange, className = '' }: GlassTextEd
       {/* Editor Area */}
       <div className="
         backdrop-blur-md backdrop-saturate-150
-        bg-white/10
-        border border-white/20
+        bg-[var(--glass-bg-light)]
+        border border-[var(--glass-border)]
         rounded-2xl
         p-6
         min-h-[300px]

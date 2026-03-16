@@ -18,5 +18,6 @@ export const shadows = {
     secondary: '0 8px 32px 0 rgba(240, 147, 251, 0.37)',
     accent:    '0 8px 32px 0 rgba(79, 172, 254, 0.37)',
     success:   '0 8px 32px 0 rgba(67, 233, 123, 0.37)',
+    danger:    '0 8px 32px 0 rgba(245, 87, 108, 0.37)',
   },
 } as const;

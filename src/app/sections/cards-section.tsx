@@ -11,7 +11,7 @@ export function CardsSection() {
   return (
     <div className="space-y-8">
       <div className="text-center mb-12">
-        <h2 className="text-5xl text-white font-bold mb-4 bg-gradient-to-r from-rose-300 to-pink-300 bg-clip-text text-transparent">
+        <h2 className="text-5xl text-white font-bold mb-4 bg-gradient-to-r from-[var(--status-error)] to-[var(--brand-secondary)] bg-clip-text text-transparent">
           Card Components
         </h2>
         <p className="text-white/70 text-lg">

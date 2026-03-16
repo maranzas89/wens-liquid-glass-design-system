@@ -26,34 +26,34 @@ interface GlassToastAdvancedProps {
 export function GlassToastAdvanced({ toast, onClose }: GlassToastAdvancedProps) {
   const variantStyles = {
     success: {
-      border: 'border-green-400/50',
-      bg: 'bg-green-500/20',
-      icon: <CheckCircle size={20} className="text-green-300" />,
-      iconBg: 'bg-green-500/30'
+      border: 'border-[var(--status-success-border)]',
+      bg: 'bg-[var(--status-success-light)]',
+      icon: <CheckCircle size={20} className="text-[var(--status-success)]" />,
+      iconBg: 'bg-[var(--status-success-light)]'
     },
     error: {
-      border: 'border-red-400/50',
-      bg: 'bg-red-500/20',
-      icon: <AlertCircle size={20} className="text-red-300" />,
-      iconBg: 'bg-red-500/30'
+      border: 'border-[var(--status-error-border)]',
+      bg: 'bg-[var(--status-error-light)]',
+      icon: <AlertCircle size={20} className="text-[var(--status-error)]" />,
+      iconBg: 'bg-[var(--status-error-light)]'
     },
     warning: {
-      border: 'border-amber-400/50',
-      bg: 'bg-amber-500/20',
-      icon: <AlertTriangle size={20} className="text-amber-300" />,
-      iconBg: 'bg-amber-500/30'
+      border: 'border-[var(--status-warning-border)]',
+      bg: 'bg-[var(--status-warning-light)]',
+      icon: <AlertTriangle size={20} className="text-[var(--status-warning)]" />,
+      iconBg: 'bg-[var(--status-warning-light)]'
     },
     info: {
-      border: 'border-blue-400/50',
-      bg: 'bg-blue-500/20',
-      icon: <Info size={20} className="text-blue-300" />,
-      iconBg: 'bg-blue-500/30'
+      border: 'border-[var(--status-info-border)]',
+      bg: 'bg-[var(--status-info-light)]',
+      icon: <Info size={20} className="text-[var(--status-info)]" />,
+      iconBg: 'bg-[var(--status-info-light)]'
     },
     default: {
-      border: 'border-white/20',
-      bg: 'bg-white/10',
+      border: 'border-[var(--glass-border)]',
+      bg: 'bg-[var(--glass-bg-light)]',
       icon: <Bell size={20} className="text-white/80" />,
-      iconBg: 'bg-white/20'
+      iconBg: 'bg-[var(--glass-bg-medium)]'
     }
   };
 
@@ -68,7 +68,7 @@ export function GlassToastAdvanced({ toast, onClose }: GlassToastAdvancedProps) 
       border-2 ${style.border}
       rounded-2xl
       p-4
-      shadow-[0_8px_32px_0_rgba(0,0,0,0.2)]
+      shadow-[var(--shadow-overlay)]
       animate-in slide-in-from-top-2 duration-300
     `}>
       <div className="flex items-start gap-3">
@@ -97,8 +97,8 @@ export function GlassToastAdvanced({ toast, onClose }: GlassToastAdvancedProps) 
               onClick={toast.action.onClick}
               className="
                 mt-3 px-4 py-1.5 rounded-lg
-                bg-white/20
-                hover:bg-white/30
+                bg-[var(--glass-bg-medium)]
+                hover:bg-[var(--glass-bg-strong)]
                 text-white text-sm font-medium
                 transition-colors duration-200
               "
@@ -116,7 +116,7 @@ export function GlassToastAdvanced({ toast, onClose }: GlassToastAdvancedProps) 
               p-1.5 rounded-lg
               text-white/60
               hover:text-white
-              hover:bg-white/10
+              hover:bg-[var(--glass-bg-light)]
               transition-all duration-200
               flex-shrink-0
             "

@@ -239,7 +239,7 @@ export function ColorSection() {
 
   const glassOpacities = [
     { name: 'Ultra Light', value: 'bg-white/5', usage: 'Subtle overlays' },
-    { name: 'Light', value: 'bg-white/10', usage: 'Standard glass cards' },
+    { name: 'Light', value: 'bg-[var(--glass-bg-light)]', usage: 'Standard glass cards' },
     { name: 'Medium', value: 'bg-white/15', usage: 'Emphasized elements' },
     { name: 'Strong', value: 'bg-white/20', usage: 'Active states' },
     { name: 'Extra Strong', value: 'bg-white/30', usage: 'Popups, modals' }
@@ -300,7 +300,7 @@ export function ColorSection() {
                       className="
                         w-full flex items-center justify-between
                         px-3 py-2 rounded-lg
-                        bg-white/5 hover:bg-white/10
+                        bg-white/5 hover:bg-[var(--glass-bg-light)]
                         border border-white/10
                         transition-all duration-200
                         group/copy
@@ -323,7 +323,7 @@ export function ColorSection() {
                         className="
                           w-full flex items-center justify-between
                           px-3 py-2 rounded-lg
-                          bg-white/5 hover:bg-white/10
+                          bg-white/5 hover:bg-[var(--glass-bg-light)]
                           border border-white/10
                           transition-all duration-200
                           group/copy
@@ -362,7 +362,7 @@ export function ColorSection() {
                     <span className="text-white font-medium">{opacity.name}</span>
                     <span className="text-white/60 text-sm">{opacity.usage}</span>
                   </div>
-                  <div className="relative h-16 rounded-xl border border-white/20 overflow-hidden">
+                  <div className="relative h-16 rounded-xl border border-[var(--glass-border)] overflow-hidden">
                     <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500" />
                     <div 
                       className={`absolute inset-0 backdrop-blur-md ${opacity.value}`}

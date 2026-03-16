@@ -57,8 +57,8 @@ export function GlassMap({
         className="
           relative overflow-hidden
           backdrop-blur-md backdrop-saturate-150
-          bg-white/10
-          border border-white/20
+          bg-[var(--glass-bg-light)]
+          border border-[var(--glass-border)]
           rounded-3xl
         "
         style={{ height }}
@@ -88,7 +88,7 @@ export function GlassMap({
         </svg>
 
         {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 via-purple-500/10 to-cyan-500/20" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[var(--brand-primary)]/20 via-[var(--brand-secondary)]/10 to-[var(--brand-accent)]/20" />
 
         {/* Markers */}
         <div className="absolute inset-0">
@@ -116,20 +116,20 @@ export function GlassMap({
                   <div 
                     className="
                       backdrop-blur-md backdrop-saturate-150
-                      bg-white/20
+                      bg-[var(--glass-bg-medium)]
                       border-2 border-white/40
                       rounded-full
                       flex items-center justify-center
                       transition-all duration-200
                       group-hover:scale-110
-                      group-hover:bg-white/30
+                      group-hover:bg-[var(--glass-bg-strong)]
                       animate-bounce
                     "
                     style={{
                       width: size * 3,
                       height: size * 3,
-                      borderColor: marker.color || 'rgba(103, 126, 234, 0.8)',
-                      boxShadow: `0 4px 12px ${marker.color || 'rgba(103, 126, 234, 0.4)'}`
+                      borderColor: marker.color || 'var(--brand-primary)',
+                      boxShadow: `0 4px 12px ${marker.color || 'var(--brand-primary)'}`
                     }}
                   >
                     <MapPin 
@@ -143,7 +143,7 @@ export function GlassMap({
                   <div 
                     className="absolute inset-0 rounded-full animate-ping opacity-30"
                     style={{ 
-                      backgroundColor: marker.color || 'rgba(103, 126, 234, 0.6)',
+                      backgroundColor: marker.color || 'var(--brand-primary)',
                       animationDuration: '2s'
                     }}
                   />
@@ -155,8 +155,8 @@ export function GlassMap({
                     absolute bottom-full left-1/2 -translate-x-1/2 mb-2
                     px-3 py-1.5 rounded-lg
                     backdrop-blur-md backdrop-saturate-150
-                    bg-white/20
-                    border border-white/30
+                    bg-[var(--glass-bg-medium)]
+                    border border-[var(--glass-border-strong)]
                     text-white text-sm whitespace-nowrap
                     opacity-0 group-hover:opacity-100
                     transition-opacity duration-200
@@ -175,10 +175,10 @@ export function GlassMap({
           <button className="
             p-3 rounded-xl
             backdrop-blur-md backdrop-saturate-150
-            bg-white/20
-            border border-white/30
+            bg-[var(--glass-bg-medium)]
+            border border-[var(--glass-border-strong)]
             text-white
-            hover:bg-white/30
+            hover:bg-[var(--glass-bg-strong)]
             transition-all duration-200
           ">
             <Navigation size={20} />
@@ -186,10 +186,10 @@ export function GlassMap({
           <button className="
             px-3 py-2 rounded-xl
             backdrop-blur-md backdrop-saturate-150
-            bg-white/20
-            border border-white/30
+            bg-[var(--glass-bg-medium)]
+            border border-[var(--glass-border-strong)]
             text-white text-xl
-            hover:bg-white/30
+            hover:bg-[var(--glass-bg-strong)]
             transition-all duration-200
           ">
             +
@@ -197,10 +197,10 @@ export function GlassMap({
           <button className="
             px-3 py-2 rounded-xl
             backdrop-blur-md backdrop-saturate-150
-            bg-white/20
-            border border-white/30
+            bg-[var(--glass-bg-medium)]
+            border border-[var(--glass-border-strong)]
             text-white text-xl
-            hover:bg-white/30
+            hover:bg-[var(--glass-bg-strong)]
             transition-all duration-200
           ">
             −
@@ -212,8 +212,8 @@ export function GlassMap({
           <div className="
             absolute bottom-4 left-4 right-4
             backdrop-blur-xl backdrop-saturate-150
-            bg-white/20
-            border border-white/30
+            bg-[var(--glass-bg-medium)]
+            border border-[var(--glass-border-strong)]
             rounded-2xl
             p-4
           ">
@@ -222,13 +222,13 @@ export function GlassMap({
                 <h4 className="text-white font-semibold mb-1">
                   {selectedMarker.label || 'Location'}
                 </h4>
-                <p className="text-white/70 text-sm">
+                <p className="text-[var(--text-tertiary)] text-sm">
                   Lat: {selectedMarker.lat.toFixed(4)}, Lng: {selectedMarker.lng.toFixed(4)}
                 </p>
               </div>
               <button
                 onClick={() => setSelectedMarker(null)}
-                className="text-white/60 hover:text-white transition-colors"
+                className="text-[var(--text-muted)] hover:text-white transition-colors"
               >
                 ✕
               </button>
@@ -264,8 +264,8 @@ export function GlassHeatmap({
         className="
           relative overflow-hidden
           backdrop-blur-md backdrop-saturate-150
-          bg-white/10
-          border border-white/20
+          bg-[var(--glass-bg-light)]
+          border border-[var(--glass-border)]
           rounded-3xl
         "
         style={{ height }}
@@ -289,9 +289,9 @@ export function GlassHeatmap({
             const opacity = 0.2 + (point.intensity * 0.6);
 
             const getColor = (intensity: number) => {
-              if (intensity > 0.7) return 'rgba(250, 112, 154, ';
-              if (intensity > 0.4) return 'rgba(250, 208, 137, ';
-              return 'rgba(67, 233, 123, ';
+              if (intensity > 0.7) return 'var(--status-error)';
+              if (intensity > 0.4) return 'var(--status-warning)';
+              return 'var(--status-success)';
             };
 
             return (
@@ -303,7 +303,8 @@ export function GlassHeatmap({
                   top: `${y}%`,
                   width: `${size}px`,
                   height: `${size}px`,
-                  backgroundColor: `${getColor(point.intensity)}${opacity})`,
+                  backgroundColor: getColor(point.intensity),
+                  opacity,
                   transform: 'translate(-50%, -50%)'
                 }}
               />
@@ -315,16 +316,16 @@ export function GlassHeatmap({
         <div className="
           absolute bottom-4 right-4
           backdrop-blur-xl backdrop-saturate-150
-          bg-white/20
-          border border-white/30
+          bg-[var(--glass-bg-medium)]
+          border border-[var(--glass-border-strong)]
           rounded-2xl
           p-4
         ">
           <p className="text-white text-sm mb-2">Intensity</p>
           <div className="flex items-center gap-2">
-            <span className="text-white/60 text-xs">Low</span>
-            <div className="w-32 h-3 rounded-full bg-gradient-to-r from-green-400 via-yellow-400 to-red-400" />
-            <span className="text-white/60 text-xs">High</span>
+            <span className="text-[var(--text-muted)] text-xs">Low</span>
+            <div className="w-32 h-3 rounded-full bg-gradient-to-r from-[var(--status-success)] via-yellow-400 to-red-400" />
+            <span className="text-[var(--text-muted)] text-xs">High</span>
           </div>
         </div>
       </div>

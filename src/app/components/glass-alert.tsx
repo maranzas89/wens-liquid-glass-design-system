@@ -13,27 +13,27 @@ export function GlassAlert({ variant, title, message, onClose, className = '' }:
   const variants = {
     info: {
       icon: Info,
-      color: 'from-blue-400/20 to-cyan-400/20',
-      borderColor: 'border-blue-400/30',
-      iconColor: 'text-blue-300'
+      color: 'bg-[var(--status-info-light)]',
+      borderColor: 'border-[var(--status-info-border)]',
+      iconColor: 'text-[var(--status-info)]'
     },
     success: {
       icon: CheckCircle,
-      color: 'from-green-400/20 to-teal-400/20',
-      borderColor: 'border-green-400/30',
-      iconColor: 'text-green-300'
+      color: 'bg-[var(--status-success-light)]',
+      borderColor: 'border-[var(--status-success-border)]',
+      iconColor: 'text-[var(--status-success)]'
     },
     warning: {
       icon: AlertCircle,
-      color: 'from-amber-400/20 to-orange-400/20',
-      borderColor: 'border-amber-400/30',
-      iconColor: 'text-amber-300'
+      color: 'bg-[var(--status-warning-light)]',
+      borderColor: 'border-[var(--status-warning-border)]',
+      iconColor: 'text-[var(--status-warning)]'
     },
     error: {
       icon: XCircle,
-      color: 'from-red-400/20 to-pink-400/20',
-      borderColor: 'border-red-400/30',
-      iconColor: 'text-red-300'
+      color: 'bg-[var(--status-error-light)]',
+      borderColor: 'border-[var(--status-error-border)]',
+      iconColor: 'text-[var(--status-error)]'
     }
   };
   
@@ -44,7 +44,7 @@ export function GlassAlert({ variant, title, message, onClose, className = '' }:
     <div className={`
       relative rounded-2xl
       backdrop-blur-md backdrop-saturate-150
-      bg-gradient-to-r ${config.color}
+      ${config.color}
       border ${config.borderColor}
       p-4
       ${className}

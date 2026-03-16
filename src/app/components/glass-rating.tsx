@@ -50,7 +50,7 @@ export function GlassRating({
               className={`
                 transition-colors duration-200
                 ${filled
-                  ? 'fill-amber-400 text-amber-400'
+                  ? 'fill-[var(--status-warning)] text-[var(--status-warning)]'
                   : 'text-white/30'
                 }
               `}

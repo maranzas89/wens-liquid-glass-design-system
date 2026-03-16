@@ -78,7 +78,7 @@ export function ChatSection() {
         <h3 className="text-2xl font-bold text-white text-center">Desktop View</h3>
         <div className="
           backdrop-blur-xl bg-gradient-to-br from-white/10 to-white/5
-          border border-white/20
+          border border-[var(--glass-border)]
           rounded-3xl
           overflow-hidden
           shadow-2xl
@@ -102,8 +102,8 @@ export function ChatSection() {
                     placeholder="Search contacts..."
                     className="
                       w-full pl-10 pr-4 py-2 
-                      bg-white/10 
-                      border border-white/20 
+                      bg-[var(--glass-bg-light)] 
+                      border border-[var(--glass-border)] 
                       rounded-xl
                       text-white placeholder-white/40
                       focus:outline-none focus:border-blue-400/50
@@ -127,14 +127,14 @@ export function ChatSection() {
                       border-b border-white/5
                       transition-all duration-200
                       ${selectedContact === contact.id 
-                        ? 'bg-white/10 border-l-4 border-l-blue-400' 
+                        ? 'bg-[var(--glass-bg-light)] border-l-4 border-l-blue-400' 
                         : 'hover:bg-white/5'
                       }
                     `}
                   >
                     {/* Avatar */}
                     <div className="relative flex-shrink-0">
-                      <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-400/30 to-purple-500/30 flex items-center justify-center border border-white/20">
+                      <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-400/30 to-purple-500/30 flex items-center justify-center border border-[var(--glass-border)]">
                         <User className="text-white/70" size={20} />
                       </div>
                       {contact.online && (
@@ -180,7 +180,7 @@ export function ChatSection() {
 
                   {/* Contact Avatar */}
                   <div className="relative">
-                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-400/30 to-purple-500/30 flex items-center justify-center border border-white/20">
+                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-400/30 to-purple-500/30 flex items-center justify-center border border-[var(--glass-border)]">
                       <User className="text-white/70" size={18} />
                     </div>
                     <div className="absolute bottom-0 right-0 w-3 h-3 bg-green-400 rounded-full border-2 border-gray-900" />
@@ -197,13 +197,13 @@ export function ChatSection() {
 
                 {/* Action Buttons */}
                 <div className="flex items-center gap-2">
-                  <button className="w-9 h-9 rounded-lg bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors">
+                  <button className="w-9 h-9 rounded-lg bg-[var(--glass-bg-light)] hover:bg-white/20 flex items-center justify-center transition-colors">
                     <Phone className="text-white/70" size={18} />
                   </button>
-                  <button className="w-9 h-9 rounded-lg bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors">
+                  <button className="w-9 h-9 rounded-lg bg-[var(--glass-bg-light)] hover:bg-white/20 flex items-center justify-center transition-colors">
                     <Video className="text-white/70" size={18} />
                   </button>
-                  <button className="w-9 h-9 rounded-lg bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors">
+                  <button className="w-9 h-9 rounded-lg bg-[var(--glass-bg-light)] hover:bg-white/20 flex items-center justify-center transition-colors">
                     <MoreVertical className="text-white/70" size={18} />
                   </button>
                 </div>
@@ -218,7 +218,7 @@ export function ChatSection() {
                   >
                     <div className={`flex items-end gap-2 max-w-[80%] md:max-w-[70%]`}>
                       {msg.sender === 'other' && (
-                        <div className="w-8 h-8 rounded-full bg-gradient-to-br from-blue-400/30 to-purple-500/30 flex items-center justify-center border border-white/20 flex-shrink-0">
+                        <div className="w-8 h-8 rounded-full bg-gradient-to-br from-blue-400/30 to-purple-500/30 flex items-center justify-center border border-[var(--glass-border)] flex-shrink-0">
                           <User className="text-white/70" size={14} />
                         </div>
                       )}
@@ -229,7 +229,7 @@ export function ChatSection() {
                           backdrop-blur-md
                           ${msg.sender === 'user' 
                             ? 'bg-gradient-to-br from-blue-500/40 to-purple-500/40 border border-blue-400/30 rounded-br-sm' 
-                            : 'bg-white/10 border border-white/20 rounded-bl-sm'
+                            : 'bg-[var(--glass-bg-light)] border border-[var(--glass-border)] rounded-bl-sm'
                           }
                         `}>
                           <p className="text-white text-sm leading-relaxed">{msg.text}</p>
@@ -240,7 +240,7 @@ export function ChatSection() {
                       </div>
 
                       {msg.sender === 'user' && (
-                        <div className="w-8 h-8 rounded-full bg-gradient-to-br from-purple-400/30 to-pink-500/30 flex items-center justify-center border border-white/20 flex-shrink-0">
+                        <div className="w-8 h-8 rounded-full bg-gradient-to-br from-purple-400/30 to-pink-500/30 flex items-center justify-center border border-[var(--glass-border)] flex-shrink-0">
                           <User className="text-white/70" size={14} />
                         </div>
                       )}
@@ -253,7 +253,7 @@ export function ChatSection() {
               <div className="p-4 border-t border-white/10 bg-white/5">
                 <div className="flex items-end gap-2">
                   {/* Attachment Button */}
-                  <button className="w-10 h-10 rounded-xl bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors flex-shrink-0">
+                  <button className="w-10 h-10 rounded-xl bg-[var(--glass-bg-light)] hover:bg-white/20 flex items-center justify-center transition-colors flex-shrink-0">
                     <Paperclip className="text-white/70" size={20} />
                   </button>
 
@@ -267,8 +267,8 @@ export function ChatSection() {
                       rows={1}
                       className="
                         w-full px-4 py-3 pr-12
-                        bg-white/10
-                        border border-white/20
+                        bg-[var(--glass-bg-light)]
+                        border border-[var(--glass-border)]
                         rounded-xl
                         text-white placeholder-white/40
                         focus:outline-none focus:border-blue-400/50
@@ -310,7 +310,7 @@ export function ChatSection() {
         <div className="
           p-6 rounded-2xl
           backdrop-blur-xl bg-gradient-to-br from-white/10 to-white/5
-          border border-white/20
+          border border-[var(--glass-border)]
         ">
           <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-400/20 to-purple-500/20 flex items-center justify-center mb-4">
             <MessageCircle className="text-blue-300" size={24} />
@@ -325,7 +325,7 @@ export function ChatSection() {
         <div className="
           p-6 rounded-2xl
           backdrop-blur-xl bg-gradient-to-br from-white/10 to-white/5
-          border border-white/20
+          border border-[var(--glass-border)]
         ">
           <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-400/20 to-pink-500/20 flex items-center justify-center mb-4">
             <User className="text-purple-300" size={24} />
@@ -340,7 +340,7 @@ export function ChatSection() {
         <div className="
           p-6 rounded-2xl
           backdrop-blur-xl bg-gradient-to-br from-white/10 to-white/5
-          border border-white/20
+          border border-[var(--glass-border)]
         ">
           <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-pink-400/20 to-purple-500/20 flex items-center justify-center mb-4">
             <Phone className="text-pink-300" size={24} />
@@ -375,7 +375,7 @@ export function ChatSection() {
           {/* Mobile - Contact List View */}
           <div className="
             backdrop-blur-xl bg-gradient-to-br from-white/10 to-white/5
-            border border-white/20
+            border border-[var(--glass-border)]
             rounded-3xl
             overflow-hidden
             shadow-2xl
@@ -393,8 +393,8 @@ export function ChatSection() {
                     placeholder="Search contacts..."
                     className="
                       w-full pl-10 pr-4 py-2 
-                      bg-white/10 
-                      border border-white/20 
+                      bg-[var(--glass-bg-light)] 
+                      border border-[var(--glass-border)] 
                       rounded-xl
                       text-white placeholder-white/40
                       focus:outline-none focus:border-blue-400/50
@@ -418,7 +418,7 @@ export function ChatSection() {
                   >
                     {/* Avatar */}
                     <div className="relative flex-shrink-0">
-                      <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-400/30 to-purple-500/30 flex items-center justify-center border border-white/20">
+                      <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-400/30 to-purple-500/30 flex items-center justify-center border border-[var(--glass-border)]">
                         <User className="text-white/70" size={20} />
                       </div>
                       {contact.online && (
@@ -455,7 +455,7 @@ export function ChatSection() {
           {/* Mobile - Chat Window View */}
           <div className="
             backdrop-blur-xl bg-gradient-to-br from-white/10 to-white/5
-            border border-white/20
+            border border-[var(--glass-border)]
             rounded-3xl
             overflow-hidden
             shadow-2xl
@@ -472,7 +472,7 @@ export function ChatSection() {
 
                   {/* Contact Avatar */}
                   <div className="relative">
-                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-400/30 to-purple-500/30 flex items-center justify-center border border-white/20">
+                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-400/30 to-purple-500/30 flex items-center justify-center border border-[var(--glass-border)]">
                       <User className="text-white/70" size={18} />
                     </div>
                     <div className="absolute bottom-0 right-0 w-3 h-3 bg-green-400 rounded-full border-2 border-gray-900" />
@@ -487,10 +487,10 @@ export function ChatSection() {
 
                 {/* Action Buttons */}
                 <div className="flex items-center gap-1">
-                  <button className="w-8 h-8 rounded-lg bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors">
+                  <button className="w-8 h-8 rounded-lg bg-[var(--glass-bg-light)] hover:bg-white/20 flex items-center justify-center transition-colors">
                     <Phone className="text-white/70" size={16} />
                   </button>
-                  <button className="w-8 h-8 rounded-lg bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors">
+                  <button className="w-8 h-8 rounded-lg bg-[var(--glass-bg-light)] hover:bg-white/20 flex items-center justify-center transition-colors">
                     <Video className="text-white/70" size={16} />
                   </button>
                 </div>
@@ -501,11 +501,11 @@ export function ChatSection() {
                 {/* Other's message */}
                 <div className="flex justify-start">
                   <div className="flex items-end gap-2 max-w-[85%]">
-                    <div className="w-7 h-7 rounded-full bg-gradient-to-br from-blue-400/30 to-purple-500/30 flex items-center justify-center border border-white/20 flex-shrink-0">
+                    <div className="w-7 h-7 rounded-full bg-gradient-to-br from-blue-400/30 to-purple-500/30 flex items-center justify-center border border-[var(--glass-border)] flex-shrink-0">
                       <User className="text-white/70" size={12} />
                     </div>
                     <div className="flex flex-col gap-1">
-                      <div className="px-3 py-2 rounded-2xl backdrop-blur-md bg-white/10 border border-white/20 rounded-bl-sm">
+                      <div className="px-3 py-2 rounded-2xl backdrop-blur-md bg-[var(--glass-bg-light)] border border-[var(--glass-border)] rounded-bl-sm">
                         <p className="text-white text-sm">Hey! How are you?</p>
                       </div>
                       <span className="text-white/40 text-xs">10:30 AM</span>
@@ -522,7 +522,7 @@ export function ChatSection() {
                       </div>
                       <span className="text-white/40 text-xs text-right">10:32 AM</span>
                     </div>
-                    <div className="w-7 h-7 rounded-full bg-gradient-to-br from-purple-400/30 to-pink-500/30 flex items-center justify-center border border-white/20 flex-shrink-0">
+                    <div className="w-7 h-7 rounded-full bg-gradient-to-br from-purple-400/30 to-pink-500/30 flex items-center justify-center border border-[var(--glass-border)] flex-shrink-0">
                       <User className="text-white/70" size={12} />
                     </div>
                   </div>
@@ -531,11 +531,11 @@ export function ChatSection() {
                 {/* Other's message */}
                 <div className="flex justify-start">
                   <div className="flex items-end gap-2 max-w-[85%]">
-                    <div className="w-7 h-7 rounded-full bg-gradient-to-br from-blue-400/30 to-purple-500/30 flex items-center justify-center border border-white/20 flex-shrink-0">
+                    <div className="w-7 h-7 rounded-full bg-gradient-to-br from-blue-400/30 to-purple-500/30 flex items-center justify-center border border-[var(--glass-border)] flex-shrink-0">
                       <User className="text-white/70" size={12} />
                     </div>
                     <div className="flex flex-col gap-1">
-                      <div className="px-3 py-2 rounded-2xl backdrop-blur-md bg-white/10 border border-white/20 rounded-bl-sm">
+                      <div className="px-3 py-2 rounded-2xl backdrop-blur-md bg-[var(--glass-bg-light)] border border-[var(--glass-border)] rounded-bl-sm">
                         <p className="text-white text-sm">The Liquid Glass design is amazing!</p>
                       </div>
                       <span className="text-white/40 text-xs">10:33 AM</span>
@@ -548,7 +548,7 @@ export function ChatSection() {
               <div className="p-3 border-t border-white/10 bg-white/5">
                 <div className="flex items-center gap-2">
                   {/* Attachment Button */}
-                  <button className="w-9 h-9 rounded-xl bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors flex-shrink-0">
+                  <button className="w-9 h-9 rounded-xl bg-[var(--glass-bg-light)] hover:bg-white/20 flex items-center justify-center transition-colors flex-shrink-0">
                     <Paperclip className="text-white/70" size={18} />
                   </button>
 
@@ -559,8 +559,8 @@ export function ChatSection() {
                       placeholder="Type a message..."
                       className="
                         w-full px-3 py-2 pr-10
-                        bg-white/10
-                        border border-white/20
+                        bg-[var(--glass-bg-light)]
+                        border border-[var(--glass-border)]
                         rounded-xl
                         text-white text-sm placeholder-white/40
                         focus:outline-none focus:border-blue-400/50

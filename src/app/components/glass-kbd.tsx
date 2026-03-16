@@ -12,8 +12,8 @@ export function GlassKbd({ children, className = '' }: GlassKbdProps) {
       px-2 py-1 min-w-[2rem]
       rounded-lg
       backdrop-blur-md backdrop-saturate-150
-      bg-white/10
-      border border-white/20
+      bg-[var(--glass-bg-light)]
+      border border-[var(--glass-border)]
       text-white text-sm
       font-mono
       shadow-sm

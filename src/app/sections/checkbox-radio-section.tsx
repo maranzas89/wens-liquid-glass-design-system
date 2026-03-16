@@ -24,7 +24,7 @@ export function CheckboxRadioSection({ addToast }: CheckboxRadioSectionProps) {
   return (
     <div className="space-y-8">
       <div className="text-center mb-12">
-        <h2 className="text-5xl text-white font-bold mb-4 bg-gradient-to-r from-teal-300 to-cyan-300 bg-clip-text text-transparent">
+        <h2 className="text-5xl text-white font-bold mb-4 bg-gradient-to-r from-[var(--brand-primary)] to-[var(--brand-accent)] bg-clip-text text-transparent">
           Checkbox & Radio Button
         </h2>
         <p className="text-white/70 text-lg">
@@ -215,7 +215,7 @@ export function CheckboxRadioSection({ addToast }: CheckboxRadioSectionProps) {
             className={`p-6 rounded-2xl border-2 transition-all cursor-pointer ${
               selectedPlan === 'basic'
                 ? 'bg-blue-500/20 border-blue-400/50'
-                : 'bg-white/5 border-white/10 hover:border-white/20'
+                : 'bg-white/5 border-white/10 hover:border-[var(--glass-border)]'
             }`}
           >
             <GlassRadio
@@ -243,7 +243,7 @@ export function CheckboxRadioSection({ addToast }: CheckboxRadioSectionProps) {
             className={`p-6 rounded-2xl border-2 transition-all cursor-pointer ${
               selectedPlan === 'pro'
                 ? 'bg-purple-500/20 border-purple-400/50'
-                : 'bg-white/5 border-white/10 hover:border-white/20'
+                : 'bg-white/5 border-white/10 hover:border-[var(--glass-border)]'
             }`}
           >
             <div className="flex items-center justify-between">
@@ -275,7 +275,7 @@ export function CheckboxRadioSection({ addToast }: CheckboxRadioSectionProps) {
             className={`p-6 rounded-2xl border-2 transition-all cursor-pointer ${
               selectedPlan === 'enterprise'
                 ? 'bg-pink-500/20 border-pink-400/50'
-                : 'bg-white/5 border-white/10 hover:border-white/20'
+                : 'bg-white/5 border-white/10 hover:border-[var(--glass-border)]'
             }`}
           >
             <GlassRadio
@@ -317,7 +317,7 @@ export function CheckboxRadioSection({ addToast }: CheckboxRadioSectionProps) {
               }}
               className={`flex items-center gap-4 p-4 rounded-xl border transition-all cursor-pointer ${
                 selectedColor === color.value
-                  ? 'bg-white/10 border-white/30'
+                  ? 'bg-[var(--glass-bg-light)] border-white/30'
                   : 'bg-white/5 border-white/10 hover:bg-white/8'
               }`}
             >
@@ -347,7 +347,7 @@ export function CheckboxRadioSection({ addToast }: CheckboxRadioSectionProps) {
               className={`flex-1 p-6 rounded-2xl border-2 transition-all cursor-pointer text-center ${
                 selectedSize === size
                   ? 'bg-cyan-500/20 border-cyan-400/50'
-                  : 'bg-white/5 border-white/10 hover:border-white/20'
+                  : 'bg-white/5 border-white/10 hover:border-[var(--glass-border)]'
               }`}
             >
               <GlassRadio

@@ -16,14 +16,14 @@ interface GlassListProps {
 export function GlassList({ items, className = '', variant = 'default' }: GlassListProps) {
   const variantStyles = {
     default: '',
-    bordered: 'border border-white/20 rounded-2xl overflow-hidden',
+    bordered: 'border border-[var(--glass-border)] rounded-2xl overflow-hidden',
     divided: ''
   };
 
   return (
     <div className={`
       backdrop-blur-md backdrop-saturate-150
-      bg-white/10
+      bg-[var(--glass-bg-light)]
       ${variantStyles[variant]}
       ${className}
     `}>
@@ -32,13 +32,13 @@ export function GlassList({ items, className = '', variant = 'default' }: GlassL
           key={item.id}
           className={`
             flex items-center gap-4 px-6 py-4
-            ${variant === 'divided' && index < items.length - 1 ? 'border-b border-white/20' : ''}
-            ${variant === 'default' ? 'hover:bg-white/10 rounded-2xl' : 'hover:bg-white/10'}
+            ${variant === 'divided' && index < items.length - 1 ? 'border-b border-[var(--glass-border)]' : ''}
+            ${variant === 'default' ? 'hover:bg-[var(--glass-bg-light)] rounded-2xl' : 'hover:bg-[var(--glass-bg-light)]'}
             transition-colors duration-200
           `}
         >
           {item.icon && (
-            <div className="text-white/60">
+            <div className="text-[var(--text-muted)]">
               {item.icon}
             </div>
           )}

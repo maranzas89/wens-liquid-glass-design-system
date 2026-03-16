@@ -26,19 +26,19 @@ export function GlassSlider({
       {(label || showValue) && (
         <div className="flex justify-between items-center mb-2">
           {label && <span className="text-white/90 text-sm">{label}</span>}
-          {showValue && <span className="text-white/70 text-sm">{value}</span>}
+          {showValue && <span className="text-[var(--text-tertiary)] text-sm">{value}</span>}
         </div>
       )}
       <div className="relative">
         <div className="
           h-2 rounded-full
           backdrop-blur-md backdrop-saturate-150
-          bg-white/10
-          border border-white/20
+          bg-[var(--glass-bg-light)]
+          border border-[var(--glass-border)]
           overflow-hidden
         ">
           <div
-            className="h-full bg-gradient-to-r from-blue-400 to-cyan-400 transition-all duration-150"
+            className="h-full bg-gradient-to-r from-[var(--brand-primary)] to-cyan-400 transition-all duration-150"
             style={{ width: `${percentage}%` }}
           />
         </div>

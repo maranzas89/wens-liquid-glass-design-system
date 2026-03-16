@@ -1,6 +1,5 @@
 import React from 'react';
 import { cn } from '../../lib/cn';
-import { shadows } from '../../tokens/shadows';
 
 // ---------------------------------------------------------------------------
 // Types
@@ -32,7 +31,7 @@ export interface GlassButtonProps
 const base = [
   'relative overflow-hidden rounded-2xl',
   'backdrop-blur-md backdrop-saturate-150',
-  'border border-white/20',
+  'border border-[var(--glass-border)]',
   'transition-all duration-300',
   'hover:scale-105 hover:shadow-lg',
   'active:scale-95',
@@ -41,41 +40,38 @@ const base = [
 
 const variantMap: Record<GlassButtonVariant, string> = {
   primary: [
-    'bg-white/10 hover:bg-white/20 text-white',
-    `shadow-[${shadows.button.primary.replace(/ /g, '_')}]`.replace(
-      /shadow-\[.*\]/,
-      'shadow-[0_8px_32px_0_rgba(103,126,234,0.37)]',
-    ),
-    'before:absolute before:inset-0 before:bg-gradient-to-br before:from-purple-400/20 before:to-blue-500/20',
+    'bg-[var(--glass-bg-light)] hover:bg-[var(--glass-bg-medium)] text-white',
+    'shadow-[var(--shadow-btn-primary)]',
+    'before:absolute before:inset-0 before:bg-gradient-to-br before:from-[var(--brand-primary)]/20 before:to-[var(--brand-secondary)]/20',
   ].join(' '),
 
   secondary: [
-    'bg-white/10 hover:bg-white/20 text-white',
-    'shadow-[0_8px_32px_0_rgba(240,147,251,0.37)]',
-    'before:absolute before:inset-0 before:bg-gradient-to-br before:from-pink-400/20 before:to-rose-500/20',
+    'bg-[var(--glass-bg-light)] hover:bg-[var(--glass-bg-medium)] text-white',
+    'shadow-[var(--shadow-btn-secondary)]',
+    'before:absolute before:inset-0 before:bg-gradient-to-br before:from-[var(--brand-secondary)]/20 before:to-[var(--status-error)]/20',
   ].join(' '),
 
   accent: [
-    'bg-white/10 hover:bg-white/20 text-white',
-    'shadow-[0_8px_32px_0_rgba(79,172,254,0.37)]',
-    'before:absolute before:inset-0 before:bg-gradient-to-br before:from-cyan-400/20 before:to-blue-400/20',
+    'bg-[var(--glass-bg-light)] hover:bg-[var(--glass-bg-medium)] text-white',
+    'shadow-[var(--shadow-btn-accent)]',
+    'before:absolute before:inset-0 before:bg-gradient-to-br before:from-[var(--brand-accent)]/20 before:to-[var(--brand-primary)]/20',
   ].join(' '),
 
   success: [
-    'bg-white/10 hover:bg-white/20 text-white',
-    'shadow-[0_8px_32px_0_rgba(67,233,123,0.37)]',
-    'before:absolute before:inset-0 before:bg-gradient-to-br before:from-green-400/20 before:to-teal-400/20',
+    'bg-[var(--glass-bg-light)] hover:bg-[var(--glass-bg-medium)] text-white',
+    'shadow-[var(--shadow-btn-success)]',
+    'before:absolute before:inset-0 before:bg-gradient-to-br before:from-[var(--status-success)]/20 before:to-[var(--status-success)]/20',
   ].join(' '),
 
   danger: [
-    'bg-white/10 hover:bg-white/20 text-white',
-    'shadow-[0_8px_32px_0_rgba(245,87,108,0.37)]',
-    'before:absolute before:inset-0 before:bg-gradient-to-br before:from-red-400/20 before:to-pink-500/20',
+    'bg-[var(--glass-bg-light)] hover:bg-[var(--glass-bg-medium)] text-white',
+    'shadow-[var(--shadow-btn-danger)]',
+    'before:absolute before:inset-0 before:bg-gradient-to-br before:from-[var(--status-error)]/20 before:to-[var(--status-error)]/20',
   ].join(' '),
 
   ghost: [
-    'bg-white/5 hover:bg-white/10',
-    'text-white/90 shadow-[0_4px_16px_0_rgba(0,0,0,0.1)]',
+    'bg-[var(--glass-bg-subtle)] hover:bg-[var(--glass-bg-light)]',
+    'text-white/90 shadow-[var(--shadow-glass)]',
   ].join(' '),
 };
 

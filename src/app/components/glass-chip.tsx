@@ -17,11 +17,11 @@ export function GlassChip({
   className = '' 
 }: GlassChipProps) {
   const variantStyles = {
-    default: 'bg-white/10 text-white/90 border-white/20',
-    primary: 'bg-blue-500/20 text-blue-100 border-blue-400/30',
-    success: 'bg-green-500/20 text-green-100 border-green-400/30',
-    warning: 'bg-amber-500/20 text-amber-100 border-amber-400/30',
-    danger: 'bg-red-500/20 text-red-100 border-red-400/30'
+    default: 'bg-[var(--glass-bg-light)] text-white/90 border-[var(--glass-border)]',
+    primary: 'bg-[var(--status-info-light)] text-blue-100 border-[var(--status-info-border)]',
+    success: 'bg-[var(--status-success-light)] text-green-100 border-[var(--status-success-border)]',
+    warning: 'bg-[var(--status-warning-light)] text-amber-100 border-[var(--status-warning-border)]',
+    danger: 'bg-[var(--status-error-light)] text-red-100 border-[var(--status-error-border)]'
   };
   
   return (
@@ -41,7 +41,7 @@ export function GlassChip({
         <button
           onClick={onDelete}
           className="
-            hover:bg-white/10 rounded-full p-0.5
+            hover:bg-[var(--glass-bg-light)] rounded-full p-0.5
             transition-colors duration-200
           "
         >

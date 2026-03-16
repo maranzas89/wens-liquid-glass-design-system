@@ -30,16 +30,16 @@ const base = [
   'inline-flex items-center justify-center',
   'rounded-full',
   'backdrop-blur-md backdrop-saturate-150',
-  'border border-white/20',
+  'border border-[var(--glass-border)]',
   'transition-all duration-200',
 ].join(' ');
 
 const variantMap: Record<GlassBadgeVariant, string> = {
-  default: 'bg-white/10 text-white/90',
-  primary: 'bg-blue-500/20 text-blue-100 border-blue-400/30',
-  success: 'bg-green-500/20 text-green-100 border-green-400/30',
-  warning: 'bg-amber-500/20 text-amber-100 border-amber-400/30',
-  danger:  'bg-red-500/20 text-red-100 border-red-400/30',
+  default: 'bg-[var(--glass-bg-light)] text-white/90',
+  primary: 'bg-[var(--status-info-light)] text-blue-100 border-blue-400/30',
+  success: 'bg-[var(--status-success-light)] text-green-100 border-green-400/30',
+  warning: 'bg-[var(--status-warning-light)] text-amber-100 border-amber-400/30',
+  danger:  'bg-[var(--status-error-light)] text-red-100 border-red-400/30',
 };
 
 const sizeMap: Record<GlassBadgeSize, string> = {

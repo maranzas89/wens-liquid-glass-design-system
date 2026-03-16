@@ -81,7 +81,7 @@ export function GlassNavSidebar({ items, activeSection, onNavigate, onCollapseCh
         className={`
           fixed left-0 top-0 bottom-0
           backdrop-blur-xl backdrop-saturate-150
-          bg-gradient-to-b from-white/10 to-white/5
+          bg-gradient-to-b from-[var(--glass-bg-light)] to-[var(--glass-bg-subtle)]
           z-50
           flex flex-col
           h-screen
@@ -108,10 +108,10 @@ export function GlassNavSidebar({ items, activeSection, onNavigate, onCollapseCh
                   placeholder="Search components..."
                   className="
                     w-full pl-9 pr-8 py-2.5 rounded-xl
-                    bg-white/8 border border-white/15
+                    bg-white/8 border border-[var(--glass-border)]
                     text-white text-sm placeholder-white/35
                     backdrop-blur-md
-                    focus:outline-none focus:border-white/30 focus:bg-white/12
+                    focus:outline-none focus:border-[var(--glass-border-strong)] focus:bg-white/12
                     transition-all duration-200
                   "
                 />
@@ -128,7 +128,7 @@ export function GlassNavSidebar({ items, activeSection, onNavigate, onCollapseCh
                 onClick={handleToggle}
                 className="
                   w-10 h-10 rounded-lg flex-shrink-0
-                  hover:bg-white/20
+                  hover:bg-[var(--glass-bg-medium)]
                   transition-all duration-300
                   flex items-center justify-center
                   text-white/60 hover:text-white
@@ -154,7 +154,7 @@ export function GlassNavSidebar({ items, activeSection, onNavigate, onCollapseCh
               className="
                 w-12 h-12 rounded-xl
                 flex items-center justify-center
-                text-white/60 hover:text-white hover:bg-white/10
+                text-white/60 hover:text-white hover:bg-[var(--glass-bg-light)]
                 transition-all duration-200
               "
               title="Expand Navigation"
@@ -184,14 +184,14 @@ export function GlassNavSidebar({ items, activeSection, onNavigate, onCollapseCh
                     px-4 py-3 rounded-xl
                     transition-all duration-200
                     ${isActive
-                      ? 'bg-white/20 text-white border border-white/30' 
-                      : 'text-white/70 hover:bg-white/10 hover:text-white border border-transparent'
+                      ? 'bg-[var(--glass-bg-medium)] text-white border border-[var(--glass-border-strong)]'
+                      : 'text-white/70 hover:bg-[var(--glass-bg-light)] hover:text-white border border-transparent'
                     }
                   `}
                 >
                   <span className={`
                     flex-shrink-0
-                    ${isActive ? 'text-blue-300' : 'text-white/60 group-hover/nav:text-white/80'}
+                    ${isActive ? 'text-[var(--brand-primary)]' : 'text-white/60 group-hover/nav:text-white/80'}
                   `}>
                     {item.icon}
                   </span>
@@ -201,7 +201,7 @@ export function GlassNavSidebar({ items, activeSection, onNavigate, onCollapseCh
                         {item.label}
                       </span>
                       {isActive && (
-                        <ChevronRight size={16} className="text-blue-300" />
+                        <ChevronRight size={16} className="text-[var(--brand-primary)]" />
                       )}
                     </>
                   )}
@@ -216,12 +216,12 @@ export function GlassNavSidebar({ items, activeSection, onNavigate, onCollapseCh
           <div className="
             flex-shrink-0
             p-4
-            border-t border-white/20
+            border-t border-[var(--glass-border)]
             backdrop-blur-md
           ">
             <div className="
               p-3 rounded-xl
-              bg-white/5
+              bg-[var(--glass-bg-subtle)]
               text-center
             ">
               <p className="text-white/60 text-xs">
@@ -248,9 +248,9 @@ export function GlassNavSidebar({ items, activeSection, onNavigate, onCollapseCh
               fixed
               px-3 py-2 rounded-xl
               backdrop-blur-xl backdrop-saturate-150
-              bg-white/10
-              border border-white/20
-              shadow-[0_8px_32px_0_rgba(0,0,0,0.2)]
+              bg-[var(--glass-bg-light)]
+              border border-[var(--glass-border)]
+              shadow-[var(--shadow-overlay)]
               text-white text-sm whitespace-nowrap
               pointer-events-none
               z-[9999]

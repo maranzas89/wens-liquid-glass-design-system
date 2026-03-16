@@ -22,17 +22,17 @@ export function GlassTimeline({ items, className = '' }: GlassTimelineProps) {
             <div className="
               w-10 h-10 rounded-full
               backdrop-blur-md backdrop-saturate-150
-              bg-white/10
-              border border-white/20
+              bg-[var(--glass-bg-light)]
+              border border-[var(--glass-border)]
               flex items-center justify-center
-              text-white/80
+              text-[var(--text-secondary)]
             ">
               {item.icon || (
                 <div className="w-2 h-2 rounded-full bg-white" />
               )}
             </div>
             {index < items.length - 1 && (
-              <div className="w-px flex-1 bg-white/20 mt-2" />
+              <div className="w-px flex-1 bg-[var(--glass-border)] mt-2" />
             )}
           </div>
           
@@ -40,20 +40,20 @@ export function GlassTimeline({ items, className = '' }: GlassTimelineProps) {
           <div className="flex-1 pb-8">
             <div className="
               backdrop-blur-md backdrop-saturate-150
-              bg-white/10
-              border border-white/20
+              bg-[var(--glass-bg-light)]
+              border border-[var(--glass-border)]
               rounded-2xl
               p-4
             ">
               <div className="flex items-start justify-between gap-4 mb-2">
                 <h4 className="text-white">{item.title}</h4>
                 {item.time && (
-                  <span className="text-white/60 text-sm whitespace-nowrap">
+                  <span className="text-[var(--text-muted)] text-sm whitespace-nowrap">
                     {item.time}
                   </span>
                 )}
               </div>
-              <p className="text-white/80 text-sm">{item.description}</p>
+              <p className="text-[var(--text-secondary)] text-sm">{item.description}</p>
             </div>
           </div>
         </div>

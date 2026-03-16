@@ -31,22 +31,22 @@ export function GlassSelect({
         className="
           w-full rounded-2xl
           backdrop-blur-md backdrop-saturate-150
-          bg-white/10
-          border border-white/20
+          bg-[var(--glass-bg-light)]
+          border border-[var(--glass-border)]
           px-4 py-3
           text-white text-left
           outline-none
-          focus:bg-white/15 focus:border-white/30
+          focus:bg-[var(--glass-bg-medium)] focus:border-[var(--glass-border-strong)]
           transition-all duration-300
           flex items-center justify-between
         "
       >
-        <span className={selectedOption ? 'text-white' : 'text-white/50'}>
+        <span className={selectedOption ? 'text-white' : 'text-[var(--text-placeholder)]'}>
           {selectedOption ? selectedOption.label : placeholder}
         </span>
         <ChevronDown 
           size={20} 
-          className={`text-white/60 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}
+          className={`text-[var(--text-muted)] transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}
         />
       </button>
       
@@ -59,11 +59,11 @@ export function GlassSelect({
           <div className="
             absolute top-full left-0 right-0 mt-2 z-20
             backdrop-blur-xl backdrop-saturate-150
-            bg-black/85
-            border border-white/15
+            bg-[var(--overlay-popover)]
+            border border-[var(--glass-border)]
             rounded-2xl
             overflow-hidden
-            shadow-[0_8px_32px_0_rgba(0,0,0,0.4)]
+            shadow-[var(--shadow-overlay)]
             animate-in fade-in slide-in-from-top-2 duration-200
           ">
             {options.map((option) => (
@@ -77,8 +77,8 @@ export function GlassSelect({
                   w-full px-4 py-3 text-left
                   transition-colors duration-150
                   ${value === option.value
-                    ? 'bg-white/20 text-white'
-                    : 'text-white/80 hover:bg-white/10 hover:text-white'
+                    ? 'bg-[var(--glass-bg-medium)] text-white'
+                    : 'text-[var(--text-secondary)] hover:bg-[var(--glass-bg-light)] hover:text-white'
                   }
                 `}
               >

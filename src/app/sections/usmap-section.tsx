@@ -162,7 +162,7 @@ export function USMapSection({ addToast }: USMapSectionProps) {
       <style dangerouslySetInnerHTML={{ __html: customStyles }} />
       
       <div className="text-center mb-12">
-        <h2 className="text-5xl text-white font-bold mb-4 bg-gradient-to-r from-cyan-300 to-blue-300 bg-clip-text text-transparent">
+        <h2 className="text-5xl text-white font-bold mb-4 bg-gradient-to-r from-[var(--brand-accent)] to-[var(--brand-secondary)] bg-clip-text text-transparent">
           Interactive Maps
         </h2>
         <p className="text-white/70 text-lg">
@@ -193,8 +193,8 @@ export function USMapSection({ addToast }: USMapSectionProps) {
               onClick={handleZoomIn}
               className="
                 w-10 h-10 rounded-lg
-                backdrop-blur-xl bg-white/10
-                border border-white/20
+                backdrop-blur-xl bg-[var(--glass-bg-light)]
+                border border-[var(--glass-border)]
                 hover:bg-white/20
                 transition-all duration-200
                 flex items-center justify-center
@@ -208,8 +208,8 @@ export function USMapSection({ addToast }: USMapSectionProps) {
               onClick={handleZoomOut}
               className="
                 w-10 h-10 rounded-lg
-                backdrop-blur-xl bg-white/10
-                border border-white/20
+                backdrop-blur-xl bg-[var(--glass-bg-light)]
+                border border-[var(--glass-border)]
                 hover:bg-white/20
                 transition-all duration-200
                 flex items-center justify-center
@@ -234,7 +234,7 @@ export function USMapSection({ addToast }: USMapSectionProps) {
             >
               <RotateCcw size={18} />
             </button>
-            <div className="h-px bg-white/10 my-1"></div>
+            <div className="h-px bg-[var(--glass-bg-light)] my-1"></div>
             <button
               onClick={handleFullscreen}
               className="
@@ -314,7 +314,7 @@ export function USMapSection({ addToast }: USMapSectionProps) {
                     absolute bottom-full left-1/2 -translate-x-1/2 mb-2
                     px-3 py-1.5 rounded-lg
                     bg-black/80 backdrop-blur-sm
-                    border border-white/20
+                    border border-[var(--glass-border)]
                     text-white text-sm whitespace-nowrap
                     opacity-0 group-hover:opacity-100
                     transition-opacity duration-200
@@ -360,8 +360,8 @@ export function USMapSection({ addToast }: USMapSectionProps) {
         <div className="relative z-10">
           <div className="
             backdrop-blur-xl backdrop-saturate-150
-            bg-white/10
-            border border-white/20
+            bg-[var(--glass-bg-light)]
+            border border-[var(--glass-border)]
             rounded-2xl
             p-6
             shadow-2xl
@@ -394,7 +394,7 @@ export function USMapSection({ addToast }: USMapSectionProps) {
                   text-white/60 hover:text-white 
                   transition-colors
                   p-2 rounded-lg
-                  hover:bg-white/10
+                  hover:bg-[var(--glass-bg-light)]
                 "
                 aria-label="Close"
               >
@@ -421,8 +421,8 @@ export function USMapSection({ addToast }: USMapSectionProps) {
             className="
               absolute top-6 right-6 z-50
               w-12 h-12 rounded-full
-              backdrop-blur-xl bg-white/10
-              border border-white/20
+              backdrop-blur-xl bg-[var(--glass-bg-light)]
+              border border-[var(--glass-border)]
               hover:bg-white/20
               transition-all duration-200
               flex items-center justify-center
@@ -447,8 +447,8 @@ export function USMapSection({ addToast }: USMapSectionProps) {
                 onClick={handleZoomIn}
                 className="
                   w-12 h-12 rounded-lg
-                  backdrop-blur-xl bg-white/10
-                  border border-white/20
+                  backdrop-blur-xl bg-[var(--glass-bg-light)]
+                  border border-[var(--glass-border)]
                   hover:bg-white/20
                   transition-all duration-200
                   flex items-center justify-center
@@ -462,8 +462,8 @@ export function USMapSection({ addToast }: USMapSectionProps) {
                 onClick={handleZoomOut}
                 className="
                   w-12 h-12 rounded-lg
-                  backdrop-blur-xl bg-white/10
-                  border border-white/20
+                  backdrop-blur-xl bg-[var(--glass-bg-light)]
+                  border border-[var(--glass-border)]
                   hover:bg-white/20
                   transition-all duration-200
                   flex items-center justify-center
@@ -477,8 +477,8 @@ export function USMapSection({ addToast }: USMapSectionProps) {
                 onClick={handleReset}
                 className="
                   w-12 h-12 rounded-lg
-                  backdrop-blur-xl bg-white/10
-                  border border-white/20
+                  backdrop-blur-xl bg-[var(--glass-bg-light)]
+                  border border-[var(--glass-border)]
                   hover:bg-white/20
                   transition-all duration-200
                   flex items-center justify-center
@@ -552,7 +552,7 @@ export function USMapSection({ addToast }: USMapSectionProps) {
                           absolute bottom-full left-1/2 -translate-x-1/2 mb-2
                           px-3 py-1.5 rounded-lg
                           bg-black/80 backdrop-blur-sm
-                          border border-white/20
+                          border border-[var(--glass-border)]
                           text-white text-sm whitespace-nowrap
                           opacity-0 group-hover:opacity-100
                           transition-opacity duration-200

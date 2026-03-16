@@ -38,21 +38,21 @@ export function GlassPercentage({
       <div className={`w-full ${className}`}>
         {label && (
           <div className="flex justify-between mb-2">
-            <span className="text-white/90 text-sm">{label}</span>
+            <span className="text-white text-sm">{label}</span>
             {showValue && (
-              <span className="text-white/70 text-sm">{percentage.toFixed(0)}%</span>
+              <span className="text-[var(--text-tertiary)] text-sm">{percentage.toFixed(0)}%</span>
             )}
           </div>
         )}
         <div className="
           h-4 rounded-full
           backdrop-blur-md backdrop-saturate-150
-          bg-white/10
-          border border-white/20
+          bg-[var(--glass-bg-light)]
+          border border-[var(--glass-border)]
           overflow-hidden
         ">
           <div
-            className="h-full bg-gradient-to-r from-blue-400 to-cyan-400 transition-all duration-500"
+            className="h-full bg-gradient-to-r from-[var(--brand-primary)] to-cyan-400 transition-all duration-500"
             style={{ width: `${percentage}%` }}
           />
         </div>
@@ -66,15 +66,15 @@ export function GlassPercentage({
         <svg width={config.width} height={config.width / 2 + 20}>
           <defs>
             <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="rgba(103, 126, 234, 0.8)" />
-              <stop offset="100%" stopColor="rgba(79, 172, 254, 0.8)" />
+              <stop offset="0%" stopColor="var(--brand-primary)" />
+              <stop offset="100%" stopColor="var(--brand-accent)" />
             </linearGradient>
           </defs>
-          
+
           <path
             d={`M ${config.stroke/2} ${config.width/2} A ${radius} ${radius} 0 0 1 ${config.width - config.stroke/2} ${config.width/2}`}
             fill="none"
-            stroke="rgba(255, 255, 255, 0.1)"
+            stroke="var(--glass-bg-light)"
             strokeWidth={config.stroke}
             strokeLinecap="round"
           />
@@ -98,7 +98,7 @@ export function GlassPercentage({
             </p>
           )}
           {label && (
-            <p className="text-white/70 text-sm mt-1">{label}</p>
+            <p className="text-[var(--text-tertiary)] text-sm mt-1">{label}</p>
           )}
         </div>
       </div>
@@ -110,8 +110,8 @@ export function GlassPercentage({
       <svg width={config.width} height={config.width}>
         <defs>
           <linearGradient id="circularGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="rgba(103, 126, 234, 0.8)" />
-            <stop offset="100%" stopColor="rgba(79, 172, 254, 0.8)" />
+            <stop offset="0%" stopColor="var(--brand-primary)" />
+            <stop offset="100%" stopColor="var(--brand-accent)" />
           </linearGradient>
         </defs>
         
@@ -120,7 +120,7 @@ export function GlassPercentage({
           cy={config.width / 2}
           r={radius}
           fill="none"
-          stroke="rgba(255, 255, 255, 0.1)"
+          stroke="var(--glass-bg-light)"
           strokeWidth={config.stroke}
         />
         
@@ -150,7 +150,7 @@ export function GlassPercentage({
       </svg>
       
       {label && (
-        <p className="text-white/70 text-sm mt-2">{label}</p>
+        <p className="text-[var(--text-tertiary)] text-sm mt-2">{label}</p>
       )}
     </div>
   );

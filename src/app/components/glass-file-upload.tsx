@@ -70,14 +70,14 @@ export function GlassFileUpload({
         onClick={() => inputRef.current?.click()}
         className={`
           backdrop-blur-md backdrop-saturate-150
-          bg-white/10
-          border-2 border-dashed border-white/20
+          bg-[var(--glass-bg-light)]
+          border-2 border-dashed border-[var(--glass-border)]
           rounded-3xl
           p-8
           text-center
           cursor-pointer
           transition-all duration-300
-          ${isDragging ? 'border-blue-400/50 bg-white/20 scale-105' : 'hover:border-white/30 hover:bg-white/15'}
+          ${isDragging ? 'border-[var(--status-info-border)] bg-[var(--glass-bg-medium)] scale-105' : 'hover:border-[var(--glass-border-strong)] hover:bg-[var(--glass-bg-medium)]'}
         `}
       >
         <input
@@ -88,11 +88,11 @@ export function GlassFileUpload({
           onChange={handleFileInput}
           className="hidden"
         />
-        <Upload size={48} className="mx-auto mb-4 text-white/60" />
+        <Upload size={48} className="mx-auto mb-4 text-[var(--text-muted)]" />
         <p className="text-white mb-2">
           Drag & drop files here, or click to select
         </p>
-        <p className="text-white/60 text-sm">
+        <p className="text-[var(--text-muted)] text-sm">
           Maximum file size: {maxSize}MB
         </p>
       </div>
@@ -104,18 +104,18 @@ export function GlassFileUpload({
               key={index}
               className="
                 backdrop-blur-md backdrop-saturate-150
-                bg-white/10
-                border border-white/20
+                bg-[var(--glass-bg-light)]
+                border border-[var(--glass-border)]
                 rounded-2xl
                 p-4
                 flex items-center justify-between
               "
             >
               <div className="flex items-center gap-3">
-                <File className="text-white/60" size={20} />
+                <File className="text-[var(--text-muted)]" size={20} />
                 <div>
                   <p className="text-white text-sm">{file.name}</p>
-                  <p className="text-white/60 text-xs">
+                  <p className="text-[var(--text-muted)] text-xs">
                     {(file.size / 1024).toFixed(2)} KB
                   </p>
                 </div>
@@ -126,7 +126,7 @@ export function GlassFileUpload({
                   removeFile(index);
                 }}
                 className="
-                  text-white/60 hover:text-white
+                  text-[var(--text-muted)] hover:text-white
                   transition-colors duration-200
                   p-1
                 "

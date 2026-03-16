@@ -38,11 +38,11 @@ export function GlassPopover({
             absolute z-20 ${positionStyles[position]}
             min-w-[200px]
             backdrop-blur-xl backdrop-saturate-150
-            bg-black/85
-            border border-white/20
+            bg-[var(--overlay-popover)]
+            border border-[var(--glass-border)]
             rounded-2xl
             p-4
-            shadow-[0_8px_32px_0_rgba(0,0,0,0.2)]
+            shadow-[var(--shadow-overlay)]
             animate-in fade-in slide-in-from-top-2 duration-200
           `}>
             {children}

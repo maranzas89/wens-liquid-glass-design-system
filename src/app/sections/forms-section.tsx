@@ -18,7 +18,7 @@ export function FormsSection({ addToast }: FormsSectionProps) {
   return (
     <div className="space-y-8">
       <div className="text-center mb-12">
-        <h2 className="text-5xl text-white font-bold mb-4 bg-gradient-to-r from-green-300 to-teal-300 bg-clip-text text-transparent">
+        <h2 className="text-5xl text-white font-bold mb-4 bg-gradient-to-r from-[var(--brand-primary)] to-[var(--brand-accent)] bg-clip-text text-transparent">
           Forms & Inputs
         </h2>
         <p className="text-white/70 text-lg">
@@ -47,8 +47,8 @@ export function FormsSection({ addToast }: FormsSectionProps) {
               onChange={(e) => setMessage(e.target.value)}
               className="
                 w-full px-4 py-3
-                bg-white/10
-                border border-white/20
+                bg-[var(--glass-bg-light)]
+                border border-[var(--glass-border)]
                 rounded-xl
                 text-white placeholder-white/40
                 focus:outline-none focus:border-blue-400/50
@@ -103,8 +103,8 @@ export function FormsSection({ addToast }: FormsSectionProps) {
             rows={6}
             className="
               w-full px-4 py-3
-              bg-white/10
-              border border-white/20
+              bg-[var(--glass-bg-light)]
+              border border-[var(--glass-border)]
               rounded-xl
               text-white placeholder-white/40
               focus:outline-none focus:border-blue-400/50

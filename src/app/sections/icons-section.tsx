@@ -14,8 +14,8 @@ export function IconsSection({ addToast }: IconsSectionProps) {
   const iconCategories = [
     {
       name: 'UI & Interface',
-      color: 'from-blue-400 to-cyan-400',
-      bgColor: 'from-blue-500/10 to-cyan-500/10',
+      color: 'from-[var(--brand-secondary)] to-[var(--brand-accent)]',
+      bgColor: 'from-[var(--brand-secondary)]/10 to-[var(--brand-accent)]/10',
       icons: [
         { Icon: Icons.Home, name: 'Home' },
         { Icon: Icons.Settings, name: 'Settings' },
@@ -29,8 +29,8 @@ export function IconsSection({ addToast }: IconsSectionProps) {
     },
     {
       name: 'Actions',
-      color: 'from-purple-400 to-pink-400',
-      bgColor: 'from-purple-500/10 to-pink-500/10',
+      color: 'from-[var(--brand-secondary)] to-[var(--status-error)]',
+      bgColor: 'from-[var(--brand-secondary)]/10 to-[var(--status-error)]/10',
       icons: [
         { Icon: Icons.Plus, name: 'Plus' },
         { Icon: Icons.Minus, name: 'Minus' },
@@ -44,8 +44,8 @@ export function IconsSection({ addToast }: IconsSectionProps) {
     },
     {
       name: 'Media',
-      color: 'from-green-400 to-emerald-400',
-      bgColor: 'from-green-500/10 to-emerald-500/10',
+      color: 'from-[var(--status-success)] to-[var(--brand-primary)]',
+      bgColor: 'from-[var(--status-success)]/10 to-[var(--brand-primary)]/10',
       icons: [
         { Icon: Icons.Play, name: 'Play' },
         { Icon: Icons.Pause, name: 'Pause' },
@@ -59,8 +59,8 @@ export function IconsSection({ addToast }: IconsSectionProps) {
     },
     {
       name: 'Communication',
-      color: 'from-orange-400 to-red-400',
-      bgColor: 'from-orange-500/10 to-red-500/10',
+      color: 'from-[var(--status-warning)] to-[var(--status-error)]',
+      bgColor: 'from-[var(--status-warning)]/10 to-[var(--status-error)]/10',
       icons: [
         { Icon: Icons.MessageSquare, name: 'MessageSquare' },
         { Icon: Icons.Send, name: 'Send' },
@@ -85,7 +85,7 @@ export function IconsSection({ addToast }: IconsSectionProps) {
   return (
     <div className="space-y-8">
       <div className="text-center mb-12">
-        <h2 className="text-5xl text-white font-bold mb-4 bg-gradient-to-r from-blue-300 to-purple-300 bg-clip-text text-transparent">
+        <h2 className="text-5xl text-white font-bold mb-4 bg-gradient-to-r from-[var(--brand-secondary)] to-[var(--brand-accent)] bg-clip-text text-transparent">
           Icon Library
         </h2>
         <p className="text-white/70 text-lg">

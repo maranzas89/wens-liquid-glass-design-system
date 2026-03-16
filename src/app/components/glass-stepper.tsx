@@ -37,10 +37,10 @@ export function GlassStepper({
                   flex items-center justify-center
                   transition-all duration-300
                   ${isCompleted
-                    ? 'bg-green-500/30 border-green-400/50'
+                    ? 'bg-[var(--status-success-light)] border-[var(--status-success-border)]'
                     : isCurrent
-                    ? 'bg-blue-500/30 border-blue-400/50'
-                    : 'bg-white/10 border-white/20'
+                    ? 'bg-[var(--status-info-light)] border-[var(--status-info-border)]'
+                    : 'bg-[var(--glass-bg-light)] border-[var(--glass-border)]'
                   }
                 `}>
                   {isCompleted ? (
@@ -50,7 +50,7 @@ export function GlassStepper({
                   )}
                 </div>
                 {index < steps.length - 1 && (
-                  <div className={`w-px h-12 mt-2 ${isCompleted ? 'bg-green-400/50' : 'bg-white/20'}`} />
+                  <div className={`w-px h-12 mt-2 ${isCompleted ? 'bg-[var(--status-success)]' : 'bg-[var(--glass-border)]'}`} />
                 )}
               </div>
               <div className="flex-1 pb-8">
@@ -85,10 +85,10 @@ export function GlassStepper({
                 flex items-center justify-center
                 transition-all duration-300
                 ${isCompleted
-                  ? 'bg-green-500/30 border-green-400/50'
+                  ? 'bg-[var(--status-success-light)] border-[var(--status-success-border)]'
                   : isCurrent
-                  ? 'bg-blue-500/30 border-blue-400/50'
-                  : 'bg-white/10 border-white/20'
+                  ? 'bg-[var(--status-info-light)] border-[var(--status-info-border)]'
+                  : 'bg-[var(--glass-bg-light)] border-[var(--glass-border)]'
                 }
               `}>
                 {isCompleted ? (
@@ -106,7 +106,7 @@ export function GlassStepper({
             {index < steps.length - 1 && (
               <div className={`
                 flex-1 h-px mx-4 mb-8
-                ${isCompleted ? 'bg-green-400/50' : 'bg-white/20'}
+                ${isCompleted ? 'bg-[var(--status-success)]' : 'bg-[var(--glass-border)]'}
               `} />
             )}
           </div>

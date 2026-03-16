@@ -17,8 +17,8 @@ export function GlassTabs({ tabs, activeTab, onChange }: GlassTabsProps) {
     <div className="
       inline-flex
       backdrop-blur-md backdrop-saturate-150
-      bg-white/10
-      border border-white/20
+      bg-[var(--glass-bg-light)]
+      border border-[var(--glass-border)]
       rounded-2xl
       p-1
       gap-1
@@ -32,8 +32,8 @@ export function GlassTabs({ tabs, activeTab, onChange }: GlassTabsProps) {
             transition-all duration-300
             flex items-center gap-2
             ${activeTab === tab.value
-              ? 'bg-white/20 text-white shadow-lg'
-              : 'text-white/70 hover:text-white hover:bg-white/10'
+              ? 'bg-[var(--glass-bg-medium)] text-white shadow-lg'
+              : 'text-[var(--text-tertiary)] hover:text-white hover:bg-[var(--glass-bg-light)]'
             }
           `}
         >

@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from 'react';
 import { cn } from '../../lib/cn';
 
@@ -123,8 +125,8 @@ export function GlassSidebar({
         collapsed ? 'w-20' : 'w-64',
         'h-screen',
         'backdrop-blur-xl backdrop-saturate-150',
-        'bg-white/10',
-        'border-r border-white/20',
+        'bg-[var(--glass-bg-light)]',
+        'border-r border-[var(--glass-border)]',
         'transition-all duration-300',
         'flex flex-col',
         className,
@@ -133,7 +135,7 @@ export function GlassSidebar({
     >
       {/* Logo */}
       {logo && (
-        <div className="p-6 border-b border-white/20">
+        <div className="p-6 border-b border-[var(--glass-border)]">
           {collapsed ? (
             <div className="flex justify-center">{logo}</div>
           ) : (
@@ -158,7 +160,7 @@ export function GlassSidebar({
                 'w-full flex items-center gap-3',
                 'px-4 py-3 rounded-2xl',
                 'text-white/80',
-                'hover:bg-white/10 hover:text-white',
+                'hover:bg-[var(--glass-bg-light)] hover:text-white',
                 'transition-all duration-200',
                 collapsed && 'justify-center',
               )}
@@ -170,7 +172,7 @@ export function GlassSidebar({
                 <>
                   <span className="flex-1 text-left">{item.label}</span>
                   {item.badge !== undefined && (
-                    <span className="px-2 py-0.5 rounded-full bg-blue-500/30 text-blue-100 text-xs">
+                    <span className="px-2 py-0.5 rounded-full bg-[var(--status-info-light)] text-blue-100 text-xs">
                       {item.badge}
                     </span>
                   )}
@@ -195,7 +197,7 @@ export function GlassSidebar({
                   <button
                     key={childIndex}
                     onClick={child.onClick}
-                    className="w-full flex items-center gap-3 px-4 py-2 rounded-xl text-white/70 hover:bg-white/5 hover:text-white transition-all duration-200"
+                    className="w-full flex items-center gap-3 px-4 py-2 rounded-xl text-white/70 hover:bg-[var(--glass-bg-subtle)] hover:text-white transition-all duration-200"
                   >
                     {child.icon && <span>{child.icon}</span>}
                     <span className="flex-1 text-left text-sm">
@@ -211,14 +213,14 @@ export function GlassSidebar({
 
       {/* Footer */}
       {footer && !collapsed && (
-        <div className="p-4 border-t border-white/20">{footer}</div>
+        <div className="p-4 border-t border-[var(--glass-border)]">{footer}</div>
       )}
 
       {/* Collapse toggle */}
       {collapsible && (
         <button
           onClick={toggle}
-          className="m-4 p-3 rounded-2xl backdrop-blur-md backdrop-saturate-150 bg-white/10 border border-white/20 text-white hover:bg-white/20 transition-all duration-200 flex items-center justify-center"
+          className="m-4 p-3 rounded-2xl backdrop-blur-md backdrop-saturate-150 bg-[var(--glass-bg-light)] border border-[var(--glass-border)] text-white hover:bg-[var(--glass-bg-medium)] transition-all duration-200 flex items-center justify-center"
         >
           {collapsed
             ? expandIcon || <ChevronRight />

@@ -37,15 +37,15 @@ export function GlassFontSizePicker({
       {/* Current Size Display */}
       <div className="
         backdrop-blur-md backdrop-saturate-150
-        bg-white/10
-        border border-white/20
+        bg-[var(--glass-bg-light)]
+        border border-[var(--glass-border)]
         rounded-2xl
         p-6
         text-center
       ">
-        <p className="text-white/60 text-sm mb-2">Current Size</p>
+        <p className="text-[var(--text-muted)] text-sm mb-2">Current Size</p>
         <p className="text-white text-6xl font-bold">{value}</p>
-        <p className="text-white/40 text-sm mt-1">pixels</p>
+        <p className="text-[var(--text-disabled)] text-sm mt-1">pixels</p>
       </div>
 
       {/* Controls */}
@@ -56,11 +56,11 @@ export function GlassFontSizePicker({
           className="
             p-3 rounded-xl
             backdrop-blur-md backdrop-saturate-150
-            bg-white/10
-            border border-white/20
+            bg-[var(--glass-bg-light)]
+            border border-[var(--glass-border)]
             text-white
             disabled:opacity-50 disabled:cursor-not-allowed
-            hover:bg-white/20
+            hover:bg-[var(--glass-bg-medium)]
             transition-all duration-200
           "
         >
@@ -83,11 +83,11 @@ export function GlassFontSizePicker({
           className="
             p-3 rounded-xl
             backdrop-blur-md backdrop-saturate-150
-            bg-white/10
-            border border-white/20
+            bg-[var(--glass-bg-light)]
+            border border-[var(--glass-border)]
             text-white
             disabled:opacity-50 disabled:cursor-not-allowed
-            hover:bg-white/20
+            hover:bg-[var(--glass-bg-medium)]
             transition-all duration-200
           "
         >
@@ -106,8 +106,8 @@ export function GlassFontSizePicker({
               backdrop-blur-md backdrop-saturate-150
               border-2 transition-all duration-200
               ${value === size
-                ? 'bg-white/20 border-blue-400/50 text-white'
-                : 'bg-white/10 border-white/20 text-white/80 hover:bg-white/15'
+                ? 'bg-[var(--glass-bg-medium)] border-[var(--status-info-border)] text-white'
+                : 'bg-[var(--glass-bg-light)] border-[var(--glass-border)] text-[var(--text-secondary)] hover:bg-[var(--glass-bg-medium)]'
               }
             `}
           >

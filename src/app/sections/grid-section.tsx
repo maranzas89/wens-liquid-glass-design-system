@@ -7,7 +7,7 @@ export function GridSection() {
   return (
     <div className="space-y-8">
       <div className="text-center mb-12">
-        <h2 className="text-5xl text-white font-bold mb-4 bg-gradient-to-r from-green-300 to-emerald-300 bg-clip-text text-transparent">
+        <h2 className="text-5xl text-white font-bold mb-4 bg-gradient-to-r from-[var(--status-success)] to-[var(--brand-primary)] bg-clip-text text-transparent">
           Grid Layout
         </h2>
         <p className="text-white/70 text-lg">

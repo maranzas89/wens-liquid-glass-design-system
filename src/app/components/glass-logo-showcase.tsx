@@ -66,7 +66,7 @@ export function GlassLogoShowcase() {
       name: 'Primary Logo',
       description: 'Main brand logo with gradient glass effect',
       component: (
-        <div className="w-32 h-32 rounded-2xl bg-gradient-to-br from-blue-400/20 to-purple-500/20 backdrop-blur-md border border-white/20 flex items-center justify-center relative overflow-hidden">
+        <div className="w-32 h-32 rounded-2xl bg-gradient-to-br from-[var(--brand-primary)]/20 to-[var(--brand-secondary)]/20 backdrop-blur-md border border-[var(--glass-border)] flex items-center justify-center relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-white/30 to-transparent" />
           <AbstractLogoShape className="w-20 h-20 relative z-10" />
         </div>
@@ -76,7 +76,7 @@ export function GlassLogoShowcase() {
       name: 'Compact Logo',
       description: 'Smaller version for navigation',
       component: (
-        <div className="w-20 h-20 rounded-xl bg-gradient-to-br from-blue-400/20 to-purple-500/20 backdrop-blur-md border border-white/20 flex items-center justify-center relative overflow-hidden">
+        <div className="w-20 h-20 rounded-xl bg-gradient-to-br from-[var(--brand-primary)]/20 to-[var(--brand-secondary)]/20 backdrop-blur-md border border-[var(--glass-border)] flex items-center justify-center relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-white/30 to-transparent" />
           <AbstractLogoShape className="w-12 h-12 relative z-10" />
         </div>
@@ -86,7 +86,7 @@ export function GlassLogoShowcase() {
       name: 'Gradient Fill',
       description: 'Logo with colorful gradient fill',
       component: (
-        <div className="w-32 h-32 rounded-2xl bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md border border-white/20 flex items-center justify-center relative overflow-hidden">
+        <div className="w-32 h-32 rounded-2xl bg-gradient-to-br from-[var(--glass-bg-light)] to-[var(--glass-bg-subtle)] backdrop-blur-md border border-[var(--glass-border)] flex items-center justify-center relative overflow-hidden">
           <AbstractLogoShape className="w-20 h-20" gradient={true} />
         </div>
       )
@@ -95,7 +95,7 @@ export function GlassLogoShowcase() {
       name: 'Neon Glow',
       description: 'Logo with neon glow effect',
       component: (
-        <div className="w-32 h-32 rounded-2xl bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md border border-white/20 flex items-center justify-center relative overflow-hidden">
+        <div className="w-32 h-32 rounded-2xl bg-gradient-to-br from-[var(--glass-bg-light)] to-[var(--glass-bg-subtle)] backdrop-blur-md border border-[var(--glass-border)] flex items-center justify-center relative overflow-hidden">
           <svg viewBox="0 0 80 80" className="w-20 h-20" fill="none">
             <defs>
               <filter id="neon-glow-logo">
@@ -121,7 +121,7 @@ export function GlassLogoShowcase() {
       name: 'Outlined',
       description: 'Minimalist outlined version',
       component: (
-        <div className="w-32 h-32 rounded-2xl bg-white/5 backdrop-blur-md border-2 border-white/30 flex items-center justify-center">
+        <div className="w-32 h-32 rounded-2xl bg-[var(--glass-bg-subtle)] backdrop-blur-md border-2 border-[var(--glass-border-strong)] flex items-center justify-center">
           <AbstractLogoOutline className="w-20 h-20" />
         </div>
       )
@@ -130,7 +130,7 @@ export function GlassLogoShowcase() {
       name: 'Solid Fill',
       description: 'Bold solid color version',
       component: (
-        <div className="w-32 h-32 rounded-2xl bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center shadow-2xl shadow-purple-500/50">
+        <div className="w-32 h-32 rounded-2xl bg-gradient-to-br from-[var(--brand-primary)] to-[var(--brand-secondary)] flex items-center justify-center shadow-2xl shadow-purple-500/50">
           <AbstractLogoShape className="w-20 h-20" />
         </div>
       )
@@ -139,7 +139,7 @@ export function GlassLogoShowcase() {
       name: 'Multi-color',
       description: 'Vibrant multi-color gradient',
       component: (
-        <div className="w-32 h-32 rounded-2xl bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md border border-white/20 flex items-center justify-center relative overflow-hidden">
+        <div className="w-32 h-32 rounded-2xl bg-gradient-to-br from-[var(--glass-bg-light)] to-[var(--glass-bg-subtle)] backdrop-blur-md border border-[var(--glass-border)] flex items-center justify-center relative overflow-hidden">
           <svg viewBox="0 0 80 80" className="w-20 h-20" fill="none">
             <defs>
               <linearGradient id="multi-color-1" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -170,9 +170,9 @@ export function GlassLogoShowcase() {
       description: 'Enhanced glass effect with layers',
       component: (
         <div className="w-32 h-32 rounded-2xl relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-400/30 to-purple-500/30 backdrop-blur-xl" />
+          <div className="absolute inset-0 bg-gradient-to-br from-[var(--brand-primary)]/30 to-[var(--brand-secondary)]/30 backdrop-blur-xl" />
           <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent" />
-          <div className="absolute inset-0 border border-white/40 rounded-2xl" />
+          <div className="absolute inset-0 border border-[var(--glass-border-strong)] rounded-2xl" />
           <div className="absolute inset-0 flex items-center justify-center">
             <AbstractLogoShape className="w-20 h-20 relative z-10" />
           </div>
@@ -183,7 +183,7 @@ export function GlassLogoShowcase() {
       name: 'Monochrome',
       description: 'Clean monochrome design',
       component: (
-        <div className="w-32 h-32 rounded-2xl bg-white/10 backdrop-blur-md border border-white/40 flex items-center justify-center">
+        <div className="w-32 h-32 rounded-2xl bg-[var(--glass-bg-light)] backdrop-blur-md border border-[var(--glass-border-strong)] flex items-center justify-center">
           <AbstractLogoShape className="w-20 h-20" />
         </div>
       )
@@ -193,9 +193,9 @@ export function GlassLogoShowcase() {
       description: 'Logo with animated background',
       component: (
         <div className="w-32 h-32 rounded-2xl relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-400/20 via-purple-500/20 to-pink-500/20 backdrop-blur-md animate-pulse" />
+          <div className="absolute inset-0 bg-gradient-to-br from-[var(--brand-primary)]/20 via-[var(--brand-secondary)]/20 to-pink-500/20 backdrop-blur-md animate-pulse" />
           <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent" />
-          <div className="absolute inset-0 border border-white/30 rounded-2xl" />
+          <div className="absolute inset-0 border border-[var(--glass-border-strong)] rounded-2xl" />
           <div className="absolute inset-0 flex items-center justify-center">
             <AbstractLogoShape className="w-20 h-20 relative z-10" />
           </div>
@@ -206,7 +206,7 @@ export function GlassLogoShowcase() {
       name: 'Dark Mode',
       description: 'Optimized for dark backgrounds',
       component: (
-        <div className="w-32 h-32 rounded-2xl bg-black/40 backdrop-blur-md border border-white/10 flex items-center justify-center">
+        <div className="w-32 h-32 rounded-2xl bg-black/40 backdrop-blur-md border border-[var(--glass-dark-border)] flex items-center justify-center">
           <AbstractLogoShape className="w-20 h-20" />
         </div>
       )
@@ -236,12 +236,12 @@ export function GlassLogoShowcase() {
           key={index}
           className="
             backdrop-blur-md backdrop-saturate-150
-            bg-white/5
-            border border-white/10
+            bg-[var(--glass-bg-subtle)]
+            border border-[var(--glass-dark-border)]
             rounded-2xl
             p-6
-            hover:bg-white/10
-            hover:border-white/20
+            hover:bg-[var(--glass-bg-light)]
+            hover:border-[var(--glass-border)]
             transition-all duration-300
             group
           "
@@ -254,7 +254,7 @@ export function GlassLogoShowcase() {
               <h4 className="text-white text-lg font-semibold mb-1">
                 {variant.name}
               </h4>
-              <p className="text-white/60 text-sm">
+              <p className="text-[var(--text-muted)] text-sm">
                 {variant.description}
               </p>
             </div>
@@ -289,9 +289,9 @@ export function GlassLogoWithText({
         <div className={`
           ${s.container}
           rounded-xl
-          bg-gradient-to-br from-blue-400/20 to-purple-500/20
+          bg-gradient-to-br from-[var(--brand-primary)]/20 to-[var(--brand-secondary)]/20
           backdrop-blur-md
-          border border-white/20
+          border border-[var(--glass-border)]
           flex items-center justify-center
           relative overflow-hidden
         `}>
@@ -308,9 +308,9 @@ export function GlassLogoWithText({
       <div className={`
         ${s.container}
         rounded-xl
-        bg-gradient-to-br from-blue-400/20 to-purple-500/20
+        bg-gradient-to-br from-[var(--brand-primary)]/20 to-[var(--brand-secondary)]/20
         backdrop-blur-md
-        border border-white/20
+        border border-[var(--glass-border)]
         flex items-center justify-center
         relative overflow-hidden
       `}>

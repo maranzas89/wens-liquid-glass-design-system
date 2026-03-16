@@ -65,7 +65,7 @@ interface GlassTextGradientProps {
 
 export function GlassTextGradient({ 
   children, 
-  gradient = 'from-blue-400 via-purple-400 to-pink-400',
+  gradient = 'from-[var(--brand-primary)] via-purple-400 to-pink-400',
   className = '' 
 }: GlassTextGradientProps) {
   return (

@@ -20,12 +20,12 @@ export interface GlassInputProps
 const inputBase = [
   'w-full rounded-2xl',
   'backdrop-blur-md backdrop-saturate-150',
-  'bg-white/10',
-  'border border-white/20',
+  'bg-[var(--glass-bg-light)]',
+  'border border-[var(--glass-border)]',
   'text-white placeholder:text-white/50',
   'outline-none',
-  'focus:bg-white/15 focus:border-white/30',
-  'focus:shadow-[0_8px_32px_0_rgba(0,0,0,0.1)]',
+  'focus:bg-[var(--glass-bg-medium)] focus:border-[var(--glass-border-strong)]',
+  'focus:shadow-[var(--shadow-glass)]',
   'transition-all duration-300',
 ].join(' ');
 

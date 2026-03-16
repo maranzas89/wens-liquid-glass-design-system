@@ -18,8 +18,8 @@ export function GlassEmptyState({
   return (
     <div className={`
       backdrop-blur-md backdrop-saturate-150
-      bg-white/10
-      border border-white/20
+      bg-[var(--glass-bg-light)]
+      border border-[var(--glass-border)]
       rounded-3xl
       p-12
       text-center

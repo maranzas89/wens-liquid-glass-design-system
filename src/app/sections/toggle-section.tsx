@@ -21,7 +21,7 @@ export function ToggleSection({ addToast }: ToggleSectionProps) {
   return (
     <div className="space-y-8">
       <div className="text-center mb-12">
-        <h2 className="text-5xl text-white font-bold mb-4 bg-gradient-to-r from-green-300 to-emerald-300 bg-clip-text text-transparent">
+        <h2 className="text-5xl text-white font-bold mb-4 bg-gradient-to-r from-[var(--status-success)] to-[var(--brand-primary)] bg-clip-text text-transparent">
           Toggle Switches
         </h2>
         <p className="text-white/70 text-lg">
@@ -118,7 +118,7 @@ export function ToggleSection({ addToast }: ToggleSectionProps) {
       <GlassCard padding="lg">
         <h3 className="text-white text-2xl mb-6">Interactive Toggles</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="flex items-center justify-between p-4 rounded-xl bg-white/5 hover:bg-white/10 transition-colors">
+          <div className="flex items-center justify-between p-4 rounded-xl bg-white/5 hover:bg-[var(--glass-bg-light)] transition-colors">
             <div className="flex items-center gap-3">
               {wifi ? <Wifi className="text-blue-400" size={24} /> : <WifiOff className="text-white/40" size={24} />}
               <div>
@@ -136,7 +136,7 @@ export function ToggleSection({ addToast }: ToggleSectionProps) {
             />
           </div>
 
-          <div className="flex items-center justify-between p-4 rounded-xl bg-white/5 hover:bg-white/10 transition-colors">
+          <div className="flex items-center justify-between p-4 rounded-xl bg-white/5 hover:bg-[var(--glass-bg-light)] transition-colors">
             <div className="flex items-center gap-3">
               {notifications ? <Bell className="text-yellow-400" size={24} /> : <BellOff className="text-white/40" size={24} />}
               <div>
@@ -154,7 +154,7 @@ export function ToggleSection({ addToast }: ToggleSectionProps) {
             />
           </div>
 
-          <div className="flex items-center justify-between p-4 rounded-xl bg-white/5 hover:bg-white/10 transition-colors">
+          <div className="flex items-center justify-between p-4 rounded-xl bg-white/5 hover:bg-[var(--glass-bg-light)] transition-colors">
             <div className="flex items-center gap-3">
               {darkMode ? <Moon className="text-purple-400" size={24} /> : <Sun className="text-white/40" size={24} />}
               <div>
@@ -172,7 +172,7 @@ export function ToggleSection({ addToast }: ToggleSectionProps) {
             />
           </div>
 
-          <div className="flex items-center justify-between p-4 rounded-xl bg-white/5 hover:bg-white/10 transition-colors">
+          <div className="flex items-center justify-between p-4 rounded-xl bg-white/5 hover:bg-[var(--glass-bg-light)] transition-colors">
             <div className="flex items-center gap-3">
               {sound ? <Volume2 className="text-green-400" size={24} /> : <VolumeX className="text-white/40" size={24} />}
               <div>

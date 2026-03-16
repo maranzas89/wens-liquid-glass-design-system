@@ -8,7 +8,7 @@ export function LayoutSection() {
   return (
     <div className="space-y-8">
       <div className="text-center mb-12">
-        <h2 className="text-5xl text-white font-bold mb-4 bg-gradient-to-r from-cyan-300 to-blue-300 bg-clip-text text-transparent">
+        <h2 className="text-5xl text-white font-bold mb-4 bg-gradient-to-r from-[var(--brand-accent)] to-[var(--brand-secondary)] bg-clip-text text-transparent">
           Layout Components
         </h2>
         <p className="text-white/70 text-lg">
@@ -28,16 +28,16 @@ export function LayoutSection() {
                 <p className="text-white/60 text-sm">1920×1080</p>
               </div>
             </div>
-            <div className="aspect-video rounded-xl bg-white/5 border border-white/20 p-4">
+            <div className="aspect-video rounded-xl bg-white/5 border border-[var(--glass-border)] p-4">
               <div className="h-full flex flex-col gap-2">
                 <div className="h-8 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded" />
                 <div className="flex-1 grid grid-cols-4 gap-2">
-                  <div className="col-span-1 bg-white/10 rounded" />
+                  <div className="col-span-1 bg-[var(--glass-bg-light)] rounded" />
                   <div className="col-span-3 space-y-2">
-                    <div className="h-1/3 bg-white/10 rounded" />
+                    <div className="h-1/3 bg-[var(--glass-bg-light)] rounded" />
                     <div className="h-2/3 grid grid-cols-2 gap-2">
-                      <div className="bg-white/10 rounded" />
-                      <div className="bg-white/10 rounded" />
+                      <div className="bg-[var(--glass-bg-light)] rounded" />
+                      <div className="bg-[var(--glass-bg-light)] rounded" />
                     </div>
                   </div>
                 </div>
@@ -53,14 +53,14 @@ export function LayoutSection() {
                 <p className="text-white/60 text-sm">768×1024</p>
               </div>
             </div>
-            <div className="aspect-[3/4] max-h-80 rounded-xl bg-white/5 border border-white/20 p-3 mx-auto">
+            <div className="aspect-[3/4] max-h-80 rounded-xl bg-white/5 border border-[var(--glass-border)] p-3 mx-auto">
               <div className="h-full flex flex-col gap-2">
                 <div className="h-8 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded" />
                 <div className="flex-1 space-y-2">
-                  <div className="h-1/4 bg-white/10 rounded" />
+                  <div className="h-1/4 bg-[var(--glass-bg-light)] rounded" />
                   <div className="h-3/4 grid grid-cols-2 gap-2">
-                    <div className="bg-white/10 rounded" />
-                    <div className="bg-white/10 rounded" />
+                    <div className="bg-[var(--glass-bg-light)] rounded" />
+                    <div className="bg-[var(--glass-bg-light)] rounded" />
                   </div>
                 </div>
               </div>
@@ -75,14 +75,14 @@ export function LayoutSection() {
                 <p className="text-white/60 text-sm">375×812</p>
               </div>
             </div>
-            <div className="aspect-[9/19.5] max-h-96 rounded-2xl bg-white/5 border border-white/20 p-3 mx-auto">
+            <div className="aspect-[9/19.5] max-h-96 rounded-2xl bg-white/5 border border-[var(--glass-border)] p-3 mx-auto">
               <div className="h-full flex flex-col gap-2">
                 <div className="h-12 bg-gradient-to-r from-pink-500/20 to-orange-500/20 rounded" />
                 <div className="flex-1 space-y-2">
-                  <div className="h-1/5 bg-white/10 rounded" />
-                  <div className="h-1/5 bg-white/10 rounded" />
-                  <div className="h-1/5 bg-white/10 rounded" />
-                  <div className="h-1/5 bg-white/10 rounded" />
+                  <div className="h-1/5 bg-[var(--glass-bg-light)] rounded" />
+                  <div className="h-1/5 bg-[var(--glass-bg-light)] rounded" />
+                  <div className="h-1/5 bg-[var(--glass-bg-light)] rounded" />
+                  <div className="h-1/5 bg-[var(--glass-bg-light)] rounded" />
                 </div>
               </div>
             </div>
@@ -104,11 +104,11 @@ export function LayoutSection() {
               </div>
               <p className="text-white/60 text-sm">Single column layout</p>
             </div>
-            <div className="aspect-[4/3] rounded-xl bg-white/5 border border-white/20 p-3">
+            <div className="aspect-[4/3] rounded-xl bg-white/5 border border-[var(--glass-border)] p-3">
               <div className="h-full flex flex-col gap-2">
                 <div className="h-1/4 bg-gradient-to-r from-blue-400/30 to-cyan-400/30 rounded" />
-                <div className="h-2/4 bg-white/10 rounded" />
-                <div className="h-1/4 bg-white/10 rounded" />
+                <div className="h-2/4 bg-[var(--glass-bg-light)] rounded" />
+                <div className="h-1/4 bg-[var(--glass-bg-light)] rounded" />
               </div>
             </div>
           </GlassCard>
@@ -122,13 +122,13 @@ export function LayoutSection() {
               </div>
               <p className="text-white/60 text-sm">Main content + sidebar</p>
             </div>
-            <div className="aspect-[4/3] rounded-xl bg-white/5 border border-white/20 p-3">
+            <div className="aspect-[4/3] rounded-xl bg-white/5 border border-[var(--glass-border)] p-3">
               <div className="h-full flex gap-2">
                 <div className="flex-1 flex flex-col gap-2">
                   <div className="h-1/4 bg-gradient-to-r from-purple-400/30 to-pink-400/30 rounded" />
-                  <div className="flex-1 bg-white/10 rounded" />
+                  <div className="flex-1 bg-[var(--glass-bg-light)] rounded" />
                 </div>
-                <div className="w-1/3 bg-white/10 rounded" />
+                <div className="w-1/3 bg-[var(--glass-bg-light)] rounded" />
               </div>
             </div>
           </GlassCard>
@@ -142,14 +142,14 @@ export function LayoutSection() {
               </div>
               <p className="text-white/60 text-sm">4-column grid</p>
             </div>
-            <div className="aspect-[4/3] rounded-xl bg-white/5 border border-white/20 p-3">
+            <div className="aspect-[4/3] rounded-xl bg-white/5 border border-[var(--glass-border)] p-3">
               <div className="h-full flex flex-col gap-2">
                 <div className="h-1/5 bg-gradient-to-r from-green-400/30 to-emerald-400/30 rounded" />
                 <div className="flex-1 grid grid-cols-2 gap-2">
-                  <div className="bg-white/10 rounded" />
-                  <div className="bg-white/10 rounded" />
-                  <div className="bg-white/10 rounded" />
-                  <div className="bg-white/10 rounded" />
+                  <div className="bg-[var(--glass-bg-light)] rounded" />
+                  <div className="bg-[var(--glass-bg-light)] rounded" />
+                  <div className="bg-[var(--glass-bg-light)] rounded" />
+                  <div className="bg-[var(--glass-bg-light)] rounded" />
                 </div>
               </div>
             </div>
@@ -164,16 +164,16 @@ export function LayoutSection() {
               </div>
               <p className="text-white/60 text-sm">Left sidebar + grid</p>
             </div>
-            <div className="aspect-[4/3] rounded-xl bg-white/5 border border-white/20 p-3">
+            <div className="aspect-[4/3] rounded-xl bg-white/5 border border-[var(--glass-border)] p-3">
               <div className="h-full flex gap-2">
-                <div className="w-1/4 bg-white/10 rounded" />
+                <div className="w-1/4 bg-[var(--glass-bg-light)] rounded" />
                 <div className="flex-1 flex flex-col gap-2">
                   <div className="h-1/4 bg-gradient-to-r from-orange-400/30 to-red-400/30 rounded" />
                   <div className="flex-1 grid grid-cols-2 gap-2">
-                    <div className="bg-white/10 rounded" />
-                    <div className="bg-white/10 rounded" />
-                    <div className="bg-white/10 rounded" />
-                    <div className="bg-white/10 rounded" />
+                    <div className="bg-[var(--glass-bg-light)] rounded" />
+                    <div className="bg-[var(--glass-bg-light)] rounded" />
+                    <div className="bg-[var(--glass-bg-light)] rounded" />
+                    <div className="bg-[var(--glass-bg-light)] rounded" />
                   </div>
                 </div>
               </div>
@@ -189,14 +189,14 @@ export function LayoutSection() {
               </div>
               <p className="text-white/60 text-sm">Vertical sections</p>
             </div>
-            <div className="aspect-[4/3] rounded-xl bg-white/5 border border-white/20 p-3">
+            <div className="aspect-[4/3] rounded-xl bg-white/5 border border-[var(--glass-border)] p-3">
               <div className="h-full flex gap-2">
-                <div className="w-1/3 bg-white/10 rounded" />
+                <div className="w-1/3 bg-[var(--glass-bg-light)] rounded" />
                 <div className="flex-1 flex flex-col gap-2">
                   <div className="h-1/5 bg-gradient-to-r from-violet-400/30 to-purple-400/30 rounded" />
-                  <div className="flex-1 bg-white/10 rounded" />
-                  <div className="flex-1 bg-white/10 rounded" />
-                  <div className="flex-1 bg-white/10 rounded" />
+                  <div className="flex-1 bg-[var(--glass-bg-light)] rounded" />
+                  <div className="flex-1 bg-[var(--glass-bg-light)] rounded" />
+                  <div className="flex-1 bg-[var(--glass-bg-light)] rounded" />
                 </div>
               </div>
             </div>
@@ -211,21 +211,21 @@ export function LayoutSection() {
               </div>
               <p className="text-white/60 text-sm">Triple split layout</p>
             </div>
-            <div className="aspect-[4/3] rounded-xl bg-white/5 border border-white/20 p-3">
+            <div className="aspect-[4/3] rounded-xl bg-white/5 border border-[var(--glass-border)] p-3">
               <div className="h-full flex flex-col gap-2">
                 <div className="h-1/5 bg-gradient-to-r from-teal-400/30 to-cyan-400/30 rounded" />
                 <div className="flex-1 grid grid-cols-3 gap-2">
                   <div className="space-y-2">
-                    <div className="h-1/2 bg-white/10 rounded" />
-                    <div className="h-1/2 bg-white/10 rounded" />
+                    <div className="h-1/2 bg-[var(--glass-bg-light)] rounded" />
+                    <div className="h-1/2 bg-[var(--glass-bg-light)] rounded" />
                   </div>
                   <div className="space-y-2">
-                    <div className="h-1/2 bg-white/10 rounded" />
-                    <div className="h-1/2 bg-white/10 rounded" />
+                    <div className="h-1/2 bg-[var(--glass-bg-light)] rounded" />
+                    <div className="h-1/2 bg-[var(--glass-bg-light)] rounded" />
                   </div>
                   <div className="space-y-2">
-                    <div className="h-1/2 bg-white/10 rounded" />
-                    <div className="h-1/2 bg-white/10 rounded" />
+                    <div className="h-1/2 bg-[var(--glass-bg-light)] rounded" />
+                    <div className="h-1/2 bg-[var(--glass-bg-light)] rounded" />
                   </div>
                 </div>
               </div>
@@ -241,19 +241,19 @@ export function LayoutSection() {
               </div>
               <p className="text-white/60 text-sm">Pinterest-style grid</p>
             </div>
-            <div className="aspect-[4/3] rounded-xl bg-white/5 border border-white/20 p-3">
+            <div className="aspect-[4/3] rounded-xl bg-white/5 border border-[var(--glass-border)] p-3">
               <div className="h-full grid grid-cols-3 gap-2">
                 <div className="space-y-2">
                   <div className="h-1/3 bg-gradient-to-br from-pink-400/30 to-rose-400/30 rounded" />
-                  <div className="h-2/3 bg-white/10 rounded" />
+                  <div className="h-2/3 bg-[var(--glass-bg-light)] rounded" />
                 </div>
                 <div className="space-y-2">
-                  <div className="h-2/3 bg-white/10 rounded" />
-                  <div className="h-1/3 bg-white/10 rounded" />
+                  <div className="h-2/3 bg-[var(--glass-bg-light)] rounded" />
+                  <div className="h-1/3 bg-[var(--glass-bg-light)] rounded" />
                 </div>
                 <div className="space-y-2">
-                  <div className="h-1/2 bg-white/10 rounded" />
-                  <div className="h-1/2 bg-white/10 rounded" />
+                  <div className="h-1/2 bg-[var(--glass-bg-light)] rounded" />
+                  <div className="h-1/2 bg-[var(--glass-bg-light)] rounded" />
                 </div>
               </div>
             </div>
@@ -268,15 +268,15 @@ export function LayoutSection() {
               </div>
               <p className="text-white/60 text-sm">Large header + content</p>
             </div>
-            <div className="aspect-[4/3] rounded-xl bg-white/5 border border-white/20 p-3">
+            <div className="aspect-[4/3] rounded-xl bg-white/5 border border-[var(--glass-border)] p-3">
               <div className="h-full flex flex-col gap-2">
                 <div className="h-2/5 bg-gradient-to-r from-indigo-400/30 to-blue-400/30 rounded flex items-center justify-center">
                   <div className="w-1/2 h-1/3 bg-white/20 rounded" />
                 </div>
                 <div className="flex-1 grid grid-cols-3 gap-2">
-                  <div className="bg-white/10 rounded" />
-                  <div className="bg-white/10 rounded" />
-                  <div className="bg-white/10 rounded" />
+                  <div className="bg-[var(--glass-bg-light)] rounded" />
+                  <div className="bg-[var(--glass-bg-light)] rounded" />
+                  <div className="bg-[var(--glass-bg-light)] rounded" />
                 </div>
               </div>
             </div>
@@ -291,15 +291,15 @@ export function LayoutSection() {
               </div>
               <p className="text-white/60 text-sm">50/50 divided layout</p>
             </div>
-            <div className="aspect-[4/3] rounded-xl bg-white/5 border border-white/20 p-3">
+            <div className="aspect-[4/3] rounded-xl bg-white/5 border border-[var(--glass-border)] p-3">
               <div className="h-full flex gap-2">
                 <div className="flex-1 flex flex-col gap-2">
                   <div className="h-1/4 bg-gradient-to-r from-amber-400/30 to-yellow-400/30 rounded" />
-                  <div className="flex-1 bg-white/10 rounded" />
+                  <div className="flex-1 bg-[var(--glass-bg-light)] rounded" />
                 </div>
                 <div className="flex-1 flex flex-col gap-2">
-                  <div className="h-1/4 bg-white/10 rounded" />
-                  <div className="flex-1 bg-white/10 rounded" />
+                  <div className="h-1/4 bg-[var(--glass-bg-light)] rounded" />
+                  <div className="flex-1 bg-[var(--glass-bg-light)] rounded" />
                 </div>
               </div>
             </div>
@@ -314,14 +314,14 @@ export function LayoutSection() {
               </div>
               <p className="text-white/60 text-sm">Stats cards grid</p>
             </div>
-            <div className="aspect-[4/3] rounded-xl bg-white/5 border border-white/20 p-3">
+            <div className="aspect-[4/3] rounded-xl bg-white/5 border border-[var(--glass-border)] p-3">
               <div className="h-full flex flex-col gap-2">
                 <div className="h-1/5 bg-gradient-to-r from-lime-400/30 to-green-400/30 rounded" />
                 <div className="flex-1 grid grid-cols-3 gap-2">
-                  <div className="bg-white/10 rounded" />
-                  <div className="bg-white/10 rounded" />
-                  <div className="bg-white/10 rounded" />
-                  <div className="col-span-3 bg-white/10 rounded" />
+                  <div className="bg-[var(--glass-bg-light)] rounded" />
+                  <div className="bg-[var(--glass-bg-light)] rounded" />
+                  <div className="bg-[var(--glass-bg-light)] rounded" />
+                  <div className="col-span-3 bg-[var(--glass-bg-light)] rounded" />
                 </div>
               </div>
             </div>
@@ -336,14 +336,14 @@ export function LayoutSection() {
               </div>
               <p className="text-white/60 text-sm">Vertical list layout</p>
             </div>
-            <div className="aspect-[4/3] rounded-xl bg-white/5 border border-white/20 p-3">
+            <div className="aspect-[4/3] rounded-xl bg-white/5 border border-[var(--glass-border)] p-3">
               <div className="h-full flex flex-col gap-2">
                 <div className="h-1/6 bg-gradient-to-r from-sky-400/30 to-blue-400/30 rounded" />
                 <div className="flex-1 space-y-2">
-                  <div className="h-1/5 bg-white/10 rounded" />
-                  <div className="h-1/5 bg-white/10 rounded" />
-                  <div className="h-1/5 bg-white/10 rounded" />
-                  <div className="h-1/5 bg-white/10 rounded" />
+                  <div className="h-1/5 bg-[var(--glass-bg-light)] rounded" />
+                  <div className="h-1/5 bg-[var(--glass-bg-light)] rounded" />
+                  <div className="h-1/5 bg-[var(--glass-bg-light)] rounded" />
+                  <div className="h-1/5 bg-[var(--glass-bg-light)] rounded" />
                 </div>
               </div>
             </div>
@@ -358,7 +358,7 @@ export function LayoutSection() {
               </div>
               <p className="text-white/60 text-sm">Full-page cover layout</p>
             </div>
-            <div className="aspect-[4/3] rounded-xl bg-white/5 border border-white/20 p-3">
+            <div className="aspect-[4/3] rounded-xl bg-white/5 border border-[var(--glass-border)] p-3">
               <div className="h-full flex items-center justify-center">
                 <div className="w-3/4 h-3/4 bg-gradient-to-br from-fuchsia-400/30 to-purple-400/30 rounded-xl flex items-center justify-center">
                   <div className="w-1/2 h-1/4 bg-white/20 rounded" />

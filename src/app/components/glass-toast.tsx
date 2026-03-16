@@ -17,27 +17,27 @@ export function GlassToast({ toast, onClose }: GlassToastProps) {
   const variants = {
     success: {
       icon: CheckCircle,
-      color: 'from-green-400/20 to-teal-400/20',
-      borderColor: 'border-green-400/30',
-      iconColor: 'text-green-300'
+      color: 'bg-[var(--status-success-light)]',
+      borderColor: 'border-[var(--status-success-border)]',
+      iconColor: 'text-[var(--status-success)]'
     },
     error: {
       icon: XCircle,
-      color: 'from-red-400/20 to-pink-400/20',
-      borderColor: 'border-red-400/30',
-      iconColor: 'text-red-300'
+      color: 'bg-[var(--status-error-light)]',
+      borderColor: 'border-[var(--status-error-border)]',
+      iconColor: 'text-[var(--status-error)]'
     },
     warning: {
       icon: AlertCircle,
-      color: 'from-amber-400/20 to-orange-400/20',
-      borderColor: 'border-amber-400/30',
-      iconColor: 'text-amber-300'
+      color: 'bg-[var(--status-warning-light)]',
+      borderColor: 'border-[var(--status-warning-border)]',
+      iconColor: 'text-[var(--status-warning)]'
     },
     info: {
       icon: Info,
-      color: 'from-blue-400/20 to-cyan-400/20',
-      borderColor: 'border-blue-400/30',
-      iconColor: 'text-blue-300'
+      color: 'bg-[var(--status-info-light)]',
+      borderColor: 'border-[var(--status-info-border)]',
+      iconColor: 'text-[var(--status-info)]'
     }
   };
   
@@ -55,11 +55,11 @@ export function GlassToast({ toast, onClose }: GlassToastProps) {
   return (
     <div className={`
       backdrop-blur-xl backdrop-saturate-150
-      bg-gradient-to-r ${config.color}
+      ${config.color}
       border ${config.borderColor}
       rounded-2xl
       p-4
-      shadow-[0_8px_32px_0_rgba(0,0,0,0.2)]
+      shadow-[var(--shadow-overlay)]
       flex items-center gap-3
       min-w-[300px]
       animate-in slide-in-from-right duration-300

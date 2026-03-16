@@ -71,8 +71,8 @@ export function GlassTable({
   return (
     <div className={`
       backdrop-blur-md backdrop-saturate-150
-      bg-white/10
-      border border-white/20
+      bg-[var(--glass-bg-light)]
+      border border-[var(--glass-border)]
       rounded-3xl
       overflow-hidden
       ${className}
@@ -80,7 +80,7 @@ export function GlassTable({
       <div className="overflow-x-auto">
         <table className="w-full">
           <thead>
-            <tr className="border-b border-white/20">
+            <tr className="border-b border-[var(--glass-border)]">
               {columns.map((column) => (
                 <th
                   key={column.key}
@@ -110,9 +110,9 @@ export function GlassTable({
               <tr
                 key={rowIndex}
                 className={`
-                  border-b border-white/10 last:border-0
-                  ${striped && rowIndex % 2 === 1 ? 'bg-white/5' : ''}
-                  ${hoverable ? 'hover:bg-white/10' : ''}
+                  border-b border-[var(--glass-dark-border)] last:border-0
+                  ${striped && rowIndex % 2 === 1 ? 'bg-[var(--glass-bg-subtle)]' : ''}
+                  ${hoverable ? 'hover:bg-[var(--glass-bg-light)]' : ''}
                   transition-colors duration-200
                 `}
               >

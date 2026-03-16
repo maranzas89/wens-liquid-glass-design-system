@@ -188,7 +188,7 @@ export function TableSection() {
       {/* Advanced Table */}
       <div className="
         backdrop-blur-xl bg-gradient-to-br from-white/10 to-white/5
-        border border-white/20
+        border border-[var(--glass-border)]
         rounded-3xl
         overflow-hidden
         shadow-2xl
@@ -209,8 +209,8 @@ export function TableSection() {
                 }}
                 className="
                   w-full pl-10 pr-4 py-2.5
-                  bg-white/10
-                  border border-white/20
+                  bg-[var(--glass-bg-light)]
+                  border border-[var(--glass-border)]
                   rounded-xl
                   text-white placeholder-white/40
                   focus:outline-none focus:border-blue-400/50
@@ -227,8 +227,8 @@ export function TableSection() {
                   onClick={() => setShowColumnSettings(!showColumnSettings)}
                   className="
                     px-4 py-2.5 rounded-xl
-                    bg-white/10 hover:bg-white/20
-                    border border-white/20
+                    bg-[var(--glass-bg-light)] hover:bg-white/20
+                    border border-[var(--glass-border)]
                     text-white
                     transition-colors
                     flex items-center gap-2
@@ -256,7 +256,7 @@ export function TableSection() {
                       max-h-96
                       overflow-y-auto
                     ">
-                      <div className="p-3 border-b border-white/20">
+                      <div className="p-3 border-b border-[var(--glass-border)]">
                         <p className="text-sm font-bold text-white">Manage Columns</p>
                       </div>
                       <div className="p-2">
@@ -306,8 +306,8 @@ export function TableSection() {
               {/* Export */}
               <button className="
                 px-4 py-2.5 rounded-xl
-                bg-white/10 hover:bg-white/20
-                border border-white/20
+                bg-[var(--glass-bg-light)] hover:bg-white/20
+                border border-[var(--glass-border)]
                 text-white
                 transition-colors
                 flex items-center gap-2
@@ -333,7 +333,7 @@ export function TableSection() {
                   transition-colors
                   ${itemsPerPage === count
                     ? 'bg-blue-500/30 text-blue-300 border border-blue-400/50'
-                    : 'bg-white/10 text-white/70 border border-white/20 hover:bg-white/20'
+                    : 'bg-[var(--glass-bg-light)] text-white/70 border border-[var(--glass-border)] hover:bg-white/20'
                   }
                 `}
               >
@@ -444,7 +444,7 @@ export function TableSection() {
                       <td colSpan={visibleColumns.length + 1} className="px-4 py-4">
                         <div className="
                           backdrop-blur-md bg-gradient-to-br from-white/10 to-white/5
-                          border border-white/20
+                          border border-[var(--glass-border)]
                           rounded-xl
                           p-4
                         ">
@@ -502,8 +502,8 @@ export function TableSection() {
                 disabled={currentPage === 1}
                 className="
                   p-2 rounded-lg
-                  bg-white/10 hover:bg-white/20
-                  border border-white/20
+                  bg-[var(--glass-bg-light)] hover:bg-white/20
+                  border border-[var(--glass-border)]
                   text-white
                   disabled:opacity-30 disabled:cursor-not-allowed
                   transition-colors
@@ -516,8 +516,8 @@ export function TableSection() {
                 disabled={currentPage === 1}
                 className="
                   p-2 rounded-lg
-                  bg-white/10 hover:bg-white/20
-                  border border-white/20
+                  bg-[var(--glass-bg-light)] hover:bg-white/20
+                  border border-[var(--glass-border)]
                   text-white
                   disabled:opacity-30 disabled:cursor-not-allowed
                   transition-colors
@@ -549,7 +549,7 @@ export function TableSection() {
                         transition-colors
                         ${currentPage === pageNum
                           ? 'bg-blue-500/30 text-blue-300 border border-blue-400/50'
-                          : 'bg-white/10 text-white/70 border border-white/20 hover:bg-white/20'
+                          : 'bg-[var(--glass-bg-light)] text-white/70 border border-[var(--glass-border)] hover:bg-white/20'
                         }
                       `}
                     >
@@ -564,8 +564,8 @@ export function TableSection() {
                 disabled={currentPage === totalPages}
                 className="
                   p-2 rounded-lg
-                  bg-white/10 hover:bg-white/20
-                  border border-white/20
+                  bg-[var(--glass-bg-light)] hover:bg-white/20
+                  border border-[var(--glass-border)]
                   text-white
                   disabled:opacity-30 disabled:cursor-not-allowed
                   transition-colors
@@ -578,8 +578,8 @@ export function TableSection() {
                 disabled={currentPage === totalPages}
                 className="
                   p-2 rounded-lg
-                  bg-white/10 hover:bg-white/20
-                  border border-white/20
+                  bg-[var(--glass-bg-light)] hover:bg-white/20
+                  border border-[var(--glass-border)]
                   text-white
                   disabled:opacity-30 disabled:cursor-not-allowed
                   transition-colors
@@ -597,7 +597,7 @@ export function TableSection() {
         <div className="
           p-6 rounded-2xl
           backdrop-blur-xl bg-gradient-to-br from-white/10 to-white/5
-          border border-white/20
+          border border-[var(--glass-border)]
         ">
           <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-400/20 to-purple-500/20 flex items-center justify-center mb-4">
             <Search className="text-blue-300" size={24} />
@@ -611,7 +611,7 @@ export function TableSection() {
         <div className="
           p-6 rounded-2xl
           backdrop-blur-xl bg-gradient-to-br from-white/10 to-white/5
-          border border-white/20
+          border border-[var(--glass-border)]
         ">
           <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-400/20 to-pink-500/20 flex items-center justify-center mb-4">
             <ArrowUpDown className="text-purple-300" size={24} />
@@ -625,7 +625,7 @@ export function TableSection() {
         <div className="
           p-6 rounded-2xl
           backdrop-blur-xl bg-gradient-to-br from-white/10 to-white/5
-          border border-white/20
+          border border-[var(--glass-border)]
         ">
           <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-pink-400/20 to-red-500/20 flex items-center justify-center mb-4">
             <Settings className="text-pink-300" size={24} />
@@ -639,7 +639,7 @@ export function TableSection() {
         <div className="
           p-6 rounded-2xl
           backdrop-blur-xl bg-gradient-to-br from-white/10 to-white/5
-          border border-white/20
+          border border-[var(--glass-border)]
         ">
           <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-green-400/20 to-blue-500/20 flex items-center justify-center mb-4">
             <ChevronDown className="text-green-300" size={24} />
@@ -656,7 +656,7 @@ export function TableSection() {
         <h3 className="text-2xl font-bold text-white text-center">Simple Table</h3>
         <div className="
           backdrop-blur-xl bg-gradient-to-br from-white/10 to-white/5
-          border border-white/20
+          border border-[var(--glass-border)]
           rounded-3xl
           overflow-hidden
           shadow-2xl
@@ -708,7 +708,7 @@ export function TableSection() {
         <h3 className="text-2xl font-bold text-white text-center">Compact Table</h3>
         <div className="
           backdrop-blur-xl bg-gradient-to-br from-white/10 to-white/5
-          border border-white/20
+          border border-[var(--glass-border)]
           rounded-3xl
           overflow-hidden
           shadow-2xl

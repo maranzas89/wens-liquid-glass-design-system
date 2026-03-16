@@ -31,8 +31,8 @@ export function GlassBarChart({
   return (
     <div className={`
       backdrop-blur-md backdrop-saturate-150
-      bg-white/10
-      border border-white/20
+      bg-[var(--glass-bg-light)]
+      border border-[var(--glass-border)]
       rounded-3xl
       p-6
       ${className}
@@ -41,7 +41,7 @@ export function GlassBarChart({
         {showGrid && (
           <div className="absolute inset-x-0 flex flex-col justify-between" style={{ height: `${height}px` }}>
             {[...Array(5)].map((_, i) => (
-              <div key={i} className="h-px bg-white/5" />
+              <div key={i} className="h-px bg-[var(--glass-bg-subtle)]" />
             ))}
           </div>
         )}
@@ -49,7 +49,7 @@ export function GlassBarChart({
         <div className="flex items-end gap-4 px-2" style={{ height: `${height}px` }}>
           {data.map((item, index) => {
             const barHeight = (item.value / maxValue) * 100;
-            const color = item.color || 'rgba(103, 126, 234, 0.8)';
+            const color = item.color || 'var(--brand-primary)';
             
             return (
               <div key={index} className="flex-1 flex flex-col items-center gap-3 h-full justify-end">
@@ -69,7 +69,7 @@ export function GlassBarChart({
                       minHeight: '4px'
                     }}
                   >
-                    <div className="absolute inset-0 bg-gradient-to-t from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[var(--glass-bg-light)] to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                   </div>
                 </div>
               </div>
@@ -81,7 +81,7 @@ export function GlassBarChart({
         <div className="flex gap-4 mt-3 px-2">
           {data.map((item, index) => (
             <div key={index} className="flex-1 text-center">
-              <span className="text-white/70 text-sm font-medium">{item.label}</span>
+              <span className="text-[var(--text-tertiary)] text-sm font-medium">{item.label}</span>
             </div>
           ))}
         </div>
@@ -131,22 +131,22 @@ export function GlassLineChart({
   return (
     <div className={`
       backdrop-blur-md backdrop-saturate-150
-      bg-white/10
-      border border-white/20
+      bg-[var(--glass-bg-light)]
+      border border-[var(--glass-border)]
       rounded-3xl
       p-6
       ${className}
     `}>
-      <svg 
-        viewBox="0 0 100 100" 
+      <svg
+        viewBox="0 0 100 100"
         preserveAspectRatio="none"
         style={{ height: `${height}px`, width: '100%' }}
         className="mb-4"
       >
         <defs>
           <linearGradient id="lineGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" stopColor="rgba(103, 126, 234, 0.4)" />
-            <stop offset="100%" stopColor="rgba(103, 126, 234, 0)" />
+            <stop offset="0%" stopColor="var(--brand-primary)" stopOpacity="0.4" />
+            <stop offset="100%" stopColor="var(--brand-primary)" stopOpacity="0" />
           </linearGradient>
           <filter id="glow">
             <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
@@ -181,7 +181,7 @@ export function GlassLineChart({
         <path
           d={pathD}
           fill="none"
-          stroke="rgba(103, 126, 234, 1)"
+          stroke="var(--brand-primary)"
           strokeWidth="0.8"
           filter="url(#glow)"
         />
@@ -199,7 +199,7 @@ export function GlassLineChart({
               cx={point.x}
               cy={point.y}
               r="0.8"
-              fill="rgba(103, 126, 234, 1)"
+              fill="var(--brand-primary)"
             />
           </g>
         ))}
@@ -208,7 +208,7 @@ export function GlassLineChart({
       <div className="flex justify-between px-2">
         {data.map((item, index) => (
           <div key={index} className="text-center">
-            <p className="text-white/70 text-xs">{item.label}</p>
+            <p className="text-[var(--text-tertiary)] text-xs">{item.label}</p>
           </div>
         ))}
       </div>
@@ -234,9 +234,9 @@ export function GlassAreaChart({
 }: GlassAreaChartProps) {
   const series = Object.keys(data[0]?.values || {});
   const colors = [
-    { stroke: 'rgba(103, 126, 234, 1)', fill: 'rgba(103, 126, 234, 0.3)' },
-    { stroke: 'rgba(250, 112, 154, 1)', fill: 'rgba(250, 112, 154, 0.3)' },
-    { stroke: 'rgba(67, 233, 123, 1)', fill: 'rgba(67, 233, 123, 0.3)' }
+    { stroke: 'var(--brand-primary)', fill: 'var(--brand-primary)' },
+    { stroke: 'var(--status-error)', fill: 'var(--status-error)' },
+    { stroke: 'var(--status-success)', fill: 'var(--status-success)' }
   ];
 
   const getMaxValue = () => {
@@ -253,14 +253,14 @@ export function GlassAreaChart({
   return (
     <div className={`
       backdrop-blur-md backdrop-saturate-150
-      bg-white/10
-      border border-white/20
+      bg-[var(--glass-bg-light)]
+      border border-[var(--glass-border)]
       rounded-3xl
       p-6
       ${className}
     `}>
-      <svg 
-        viewBox="0 0 100 100" 
+      <svg
+        viewBox="0 0 100 100"
         preserveAspectRatio="none"
         style={{ height: `${height}px`, width: '100%' }}
         className="mb-4"
@@ -325,7 +325,7 @@ export function GlassAreaChart({
                 className="w-3 h-3 rounded-full"
                 style={{ backgroundColor: colors[index].stroke }}
               />
-              <span className="text-white/70 text-xs">{key}</span>
+              <span className="text-[var(--text-tertiary)] text-xs">{key}</span>
             </div>
           ))}
         </div>
@@ -381,11 +381,11 @@ export function GlassPieChart({
       : `M 50 50 L ${x1} ${y1} A ${outerRadius} ${outerRadius} 0 ${largeArc} 1 ${x2} ${y2} Z`;
 
     const colors = [
-      'rgba(103, 126, 234, 0.8)',
-      'rgba(118, 75, 162, 0.8)',
-      'rgba(79, 172, 254, 0.8)',
-      'rgba(67, 233, 123, 0.8)',
-      'rgba(250, 112, 154, 0.8)'
+      'var(--brand-primary)',
+      'var(--brand-secondary)',
+      'var(--brand-accent)',
+      'var(--status-success)',
+      'var(--status-error)'
     ];
 
     return {
@@ -419,7 +419,7 @@ export function GlassPieChart({
               key={index}
               d={slice.path}
               fill={slice.color}
-              stroke="rgba(255, 255, 255, 0.3)"
+              stroke="var(--glass-bg-strong)"
               strokeWidth="0.3"
               filter={`url(#shadow${index})`}
               className="hover:opacity-90 transition-all cursor-pointer transform hover:scale-105 origin-center"
@@ -431,7 +431,7 @@ export function GlassPieChart({
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="text-center">
               <p className="text-4xl text-white font-bold">{total}</p>
-              <p className="text-white/60 text-sm">Total</p>
+              <p className="text-[var(--text-muted)] text-sm">Total</p>
             </div>
           </div>
         )}
@@ -447,7 +447,7 @@ export function GlassPieChart({
               />
               <div className="flex-1">
                 <p className="text-white text-sm font-medium">{slice.label}</p>
-                <p className="text-white/60 text-xs">
+                <p className="text-[var(--text-muted)] text-xs">
                   {slice.value} ({slice.percentage.toFixed(1)}%)
                 </p>
               </div>
@@ -484,9 +484,9 @@ export function GlassGaugeChart({
       <svg width={size} height={size * 0.65} viewBox="0 0 100 65">
         <defs>
           <linearGradient id="gaugeGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor="rgba(250, 112, 154, 0.8)" />
-            <stop offset="50%" stopColor="rgba(250, 208, 137, 0.8)" />
-            <stop offset="100%" stopColor="rgba(67, 233, 123, 0.8)" />
+            <stop offset="0%" stopColor="var(--status-error)" />
+            <stop offset="50%" stopColor="var(--status-warning)" />
+            <stop offset="100%" stopColor="var(--status-success)" />
           </linearGradient>
         </defs>
         
@@ -494,7 +494,7 @@ export function GlassGaugeChart({
         <path
           d="M 10 60 A 40 40 0 0 1 90 60"
           fill="none"
-          stroke="rgba(255, 255, 255, 0.1)"
+          stroke="var(--glass-bg-light)"
           strokeWidth="8"
           strokeLinecap="round"
         />
@@ -516,11 +516,11 @@ export function GlassGaugeChart({
         {showValue && (
           <p className="text-4xl text-white font-bold mb-1">
             {value}
-            <span className="text-2xl text-white/60">/{max}</span>
+            <span className="text-2xl text-[var(--text-muted)]">/{max}</span>
           </p>
         )}
         {label && (
-          <p className="text-white/70 text-sm">{label}</p>
+          <p className="text-[var(--text-tertiary)] text-sm">{label}</p>
         )}
       </div>
     </div>

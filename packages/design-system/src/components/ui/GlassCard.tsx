@@ -23,9 +23,9 @@ export interface GlassCardProps extends React.HTMLAttributes<HTMLDivElement> {
 const base = [
   'relative overflow-hidden rounded-3xl',
   'backdrop-blur-lg backdrop-saturate-150',
-  'bg-white/10',
-  'border border-white/20',
-  'shadow-[0_8px_32px_0_rgba(0,0,0,0.1)]',
+  'bg-[var(--glass-bg-light)]',
+  'border border-[var(--glass-border)]',
+  'shadow-[var(--shadow-glass)]',
   'transition-all duration-300',
 ].join(' ');
 
@@ -33,12 +33,12 @@ const variantMap: Record<GlassCardVariant, string> = {
   default: '',
   gradient: [
     'before:absolute before:inset-0 before:bg-gradient-to-br',
-    'before:from-white/20 before:via-transparent before:to-transparent',
+    'before:from-[var(--glass-bg-medium)] before:via-transparent before:to-transparent',
     'before:pointer-events-none',
   ].join(' '),
   hover: [
-    'hover:scale-[1.02] hover:shadow-[0_16px_48px_0_rgba(0,0,0,0.15)]',
-    'hover:bg-white/15 cursor-pointer',
+    'hover:scale-[1.02] hover:shadow-[var(--shadow-elevated)]',
+    'hover:bg-[var(--glass-bg-medium)] cursor-pointer',
   ].join(' '),
 };
 

@@ -35,12 +35,12 @@ export function GlassTagInput({
   return (
     <div className={`
       backdrop-blur-md backdrop-saturate-150
-      bg-white/10
-      border border-white/20
+      bg-[var(--glass-bg-light)]
+      border border-[var(--glass-border)]
       rounded-2xl
       px-3 py-2
       flex flex-wrap gap-2
-      focus-within:bg-white/15 focus-within:border-white/30
+      focus-within:bg-[var(--glass-bg-medium)] focus-within:border-[var(--glass-border-strong)]
       transition-all duration-300
       ${className}
     `}>
@@ -52,9 +52,9 @@ export function GlassTagInput({
             px-3 py-1
             rounded-full
             backdrop-blur-md backdrop-saturate-150
-            bg-blue-500/20
-            border border-blue-400/30
-            text-blue-100 text-sm
+            bg-[var(--status-info-light)]
+            border border-[var(--status-info-border)]
+            text-[var(--text-secondary)] text-sm
           "
         >
           <span>{tag}</span>

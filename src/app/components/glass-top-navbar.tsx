@@ -43,8 +43,8 @@ export function GlassTopNavbar({
 
   return (
     <nav className={`
-      backdrop-blur-xl bg-black/85
-      border-b border-white/20
+      backdrop-blur-xl bg-[var(--overlay-popover)]
+      border-b border-[var(--glass-border)]
       ${className}
     `}>
       <div className="px-6 h-16 flex items-center justify-between gap-6">
@@ -55,9 +55,9 @@ export function GlassTopNavbar({
               onClick={onMenuClick}
               className="
                 p-2 rounded-lg
-                backdrop-blur-md bg-white/5
-                border border-white/10
-                hover:bg-white/10
+                backdrop-blur-md bg-[var(--glass-bg-subtle)]
+                border border-[var(--glass-dark-border)]
+                hover:bg-[var(--glass-bg-light)]
                 transition-all duration-300
                 lg:hidden
               "
@@ -70,11 +70,11 @@ export function GlassTopNavbar({
           <div className="flex items-center gap-3">
             {logo || (
               <div className="
-                w-9 h-9 
+                w-9 h-9
                 rounded-lg
-                bg-gradient-to-br from-blue-400/20 to-purple-500/20
+                bg-gradient-to-br from-[var(--brand-primary)]/20 to-[var(--brand-secondary)]/20
                 backdrop-blur-md
-                border border-white/20
+                border border-[var(--glass-border)]
                 flex items-center justify-center
                 relative overflow-hidden
               ">
@@ -96,11 +96,11 @@ export function GlassTopNavbar({
                 relative px-4 py-2 rounded-lg
                 flex items-center gap-2
                 backdrop-blur-md
-                border border-white/10
+                border border-[var(--glass-dark-border)]
                 transition-all duration-300
                 ${activeItem === item.label
-                  ? 'bg-white/15 border-white/30'
-                  : 'bg-white/5 hover:bg-white/10'
+                  ? 'bg-[var(--glass-bg-medium)] border-[var(--glass-border-strong)]'
+                  : 'bg-[var(--glass-bg-subtle)] hover:bg-[var(--glass-bg-light)]'
                 }
               `}
             >
@@ -109,7 +109,7 @@ export function GlassTopNavbar({
               {item.badge && (
                 <span className="
                   px-1.5 py-0.5 rounded-full
-                  bg-gradient-to-r from-pink-500/80 to-purple-500/80
+                  bg-gradient-to-r from-[var(--brand-secondary)] to-[var(--brand-accent)]
                   text-white text-xs font-bold
                   min-w-[20px] text-center
                 ">
@@ -127,9 +127,9 @@ export function GlassTopNavbar({
             <div className="
               hidden md:flex items-center gap-2
               px-4 py-2 rounded-lg
-              backdrop-blur-md bg-white/5
-              border border-white/10
-              focus-within:border-white/30
+              backdrop-blur-md bg-[var(--glass-bg-subtle)]
+              border border-[var(--glass-dark-border)]
+              focus-within:border-[var(--glass-border-strong)]
               transition-all duration-300
               min-w-[200px]
             ">
@@ -155,9 +155,9 @@ export function GlassTopNavbar({
           {showNotifications && (
             <button className="
               relative p-2 rounded-lg
-              backdrop-blur-md bg-white/5
-              border border-white/10
-              hover:bg-white/10
+              backdrop-blur-md bg-[var(--glass-bg-subtle)]
+              border border-[var(--glass-dark-border)]
+              hover:bg-[var(--glass-bg-light)]
               transition-all duration-300
             ">
               <Bell size={20} className="text-white" />
@@ -165,7 +165,7 @@ export function GlassTopNavbar({
                 <span className="
                   absolute -top-1 -right-1
                   w-5 h-5 rounded-full
-                  bg-gradient-to-r from-pink-500 to-purple-500
+                  bg-gradient-to-r from-[var(--brand-secondary)] to-[var(--brand-accent)]
                   text-white text-xs
                   flex items-center justify-center
                   font-bold
@@ -184,15 +184,15 @@ export function GlassTopNavbar({
                 onClick={() => setShowUserDropdown(!showUserDropdown)}
                 className="
                   flex items-center gap-2 px-3 py-2 rounded-lg
-                  backdrop-blur-md bg-white/5
-                  border border-white/10
-                  hover:bg-white/10
+                  backdrop-blur-md bg-[var(--glass-bg-subtle)]
+                  border border-[var(--glass-dark-border)]
+                  hover:bg-[var(--glass-bg-light)]
                   transition-all duration-300
                 "
               >
                 <div className="
                   w-7 h-7 rounded-full
-                  bg-gradient-to-br from-blue-400 to-purple-500
+                  bg-gradient-to-br from-[var(--brand-primary)] to-[var(--brand-secondary)]
                   flex items-center justify-center
                 ">
                   <User size={16} className="text-white" />
@@ -205,13 +205,13 @@ export function GlassTopNavbar({
                 <div className="
                   absolute right-0 top-full mt-2
                   w-48 rounded-xl
-                  backdrop-blur-xl bg-black/85
-                  border border-white/20
+                  backdrop-blur-xl bg-[var(--overlay-popover)]
+                  border border-[var(--glass-border)]
                   shadow-2xl
                   overflow-hidden
                   z-50
                 ">
-                  <div className="p-3 border-b border-white/10">
+                  <div className="p-3 border-b border-[var(--glass-dark-border)]">
                     <p className="text-white text-sm font-medium">John Doe</p>
                     <p className="text-white/60 text-xs">john@example.com</p>
                   </div>
@@ -219,7 +219,7 @@ export function GlassTopNavbar({
                     <button className="
                       w-full px-3 py-2 rounded-lg
                       text-left text-white/80 text-sm
-                      hover:bg-white/10
+                      hover:bg-[var(--glass-bg-light)]
                       transition-all duration-200
                       flex items-center gap-2
                     ">
@@ -229,7 +229,7 @@ export function GlassTopNavbar({
                     <button className="
                       w-full px-3 py-2 rounded-lg
                       text-left text-white/80 text-sm
-                      hover:bg-white/10
+                      hover:bg-[var(--glass-bg-light)]
                       transition-all duration-200
                       flex items-center gap-2
                     ">
@@ -237,11 +237,11 @@ export function GlassTopNavbar({
                       Settings
                     </button>
                   </div>
-                  <div className="p-2 border-t border-white/10">
+                  <div className="p-2 border-t border-[var(--glass-dark-border)]">
                     <button className="
                       w-full px-3 py-2 rounded-lg
-                      text-left text-pink-300 text-sm
-                      hover:bg-white/10
+                      text-left text-[var(--status-error)] text-sm
+                      hover:bg-[var(--glass-bg-light)]
                       transition-all duration-200
                     ">
                       Logout

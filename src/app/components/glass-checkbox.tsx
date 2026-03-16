@@ -53,8 +53,8 @@ export function GlassCheckbox({
             transition-all duration-300
             flex items-center justify-center
             ${checked
-              ? 'bg-gradient-to-br from-blue-400/80 to-blue-600/80 border-blue-400/50 shadow-lg shadow-blue-500/50'
-              : 'bg-white/10 border-white/30 hover:border-white/50'
+              ? 'bg-gradient-to-br from-[var(--brand-primary)] to-[var(--brand-primary)] border-[var(--status-info-border)] shadow-lg'
+              : 'bg-[var(--glass-bg-light)] border-[var(--glass-border-strong)] hover:border-white/50'
             }
             ${!disabled && 'hover:scale-110'}
           `}

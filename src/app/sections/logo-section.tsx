@@ -8,7 +8,7 @@ export function LogoSection() {
   return (
     <div className="space-y-8">
       <div className="text-center mb-12">
-        <h2 className="text-5xl text-white font-bold mb-4 bg-gradient-to-r from-blue-300 via-purple-300 to-pink-300 bg-clip-text text-transparent">
+        <h2 className="text-5xl text-white font-bold mb-4 bg-gradient-to-r from-[var(--brand-secondary)] via-[var(--brand-accent)] to-[var(--brand-primary)] bg-clip-text text-transparent">
           Logo Design System
         </h2>
         <p className="text-white/70 text-lg">
@@ -111,7 +111,7 @@ export function LogoSection() {
         <h3 className="text-white text-2xl mb-6">Brand Colors</h3>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           <div className="space-y-2">
-            <div className="w-full h-24 rounded-xl bg-gradient-to-br from-blue-400 to-blue-600 border border-white/20" />
+            <div className="w-full h-24 rounded-xl bg-gradient-to-br from-[var(--brand-secondary)] to-[var(--brand-secondary)] border border-[var(--glass-border)]" />
             <div className="text-center">
               <p className="text-white text-sm font-medium">Primary Blue</p>
               <p className="text-white/60 text-xs">#60A5FA</p>
@@ -119,7 +119,7 @@ export function LogoSection() {
           </div>
           
           <div className="space-y-2">
-            <div className="w-full h-24 rounded-xl bg-gradient-to-br from-purple-400 to-purple-600 border border-white/20" />
+            <div className="w-full h-24 rounded-xl bg-gradient-to-br from-[var(--brand-accent)] to-[var(--brand-accent)] border border-[var(--glass-border)]" />
             <div className="text-center">
               <p className="text-white text-sm font-medium">Primary Purple</p>
               <p className="text-white/60 text-xs">#A855F7</p>
@@ -127,7 +127,7 @@ export function LogoSection() {
           </div>
           
           <div className="space-y-2">
-            <div className="w-full h-24 rounded-xl bg-gradient-to-br from-pink-400 to-pink-600 border border-white/20" />
+            <div className="w-full h-24 rounded-xl bg-gradient-to-br from-[var(--status-error)] to-[var(--status-error)] border border-[var(--glass-border)]" />
             <div className="text-center">
               <p className="text-white text-sm font-medium">Accent Pink</p>
               <p className="text-white/60 text-xs">#F472B6</p>

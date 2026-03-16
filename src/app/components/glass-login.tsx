@@ -32,16 +32,16 @@ export function GlassLogin({
     <div className={`
       max-w-md w-full
       backdrop-blur-xl backdrop-saturate-150
-      bg-white/10
-      border border-white/20
+      bg-[var(--glass-bg-light)]
+      border border-[var(--glass-border)]
       rounded-3xl
       p-8
-      shadow-[0_16px_48px_0_rgba(0,0,0,0.2)]
+      shadow-[var(--shadow-overlay)]
       ${className}
     `}>
       <div className="text-center mb-8">
         <h2 className="text-3xl text-white mb-2">Welcome Back</h2>
-        <p className="text-white/70">Sign in to your account</p>
+        <p className="text-[var(--text-tertiary)]">Sign in to your account</p>
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-4">
@@ -66,7 +66,7 @@ export function GlassLogin({
             onClick={() => setShowPassword(!showPassword)}
             className="
               absolute right-4 top-1/2 -translate-y-1/2
-              text-white/60 hover:text-white
+              text-[var(--text-muted)] hover:text-white
               transition-colors duration-200
             "
           >
@@ -83,7 +83,7 @@ export function GlassLogin({
           <button
             type="button"
             onClick={onForgotPassword}
-            className="text-white/70 hover:text-white text-sm transition-colors"
+            className="text-[var(--text-tertiary)] hover:text-white text-sm transition-colors"
           >
             Forgot password?
           </button>
@@ -101,10 +101,10 @@ export function GlassLogin({
         <button className="
           w-full py-3 px-4 rounded-2xl
           backdrop-blur-md backdrop-saturate-150
-          bg-white/10
-          border border-white/20
+          bg-[var(--glass-bg-light)]
+          border border-[var(--glass-border)]
           text-white
-          hover:bg-white/20
+          hover:bg-[var(--glass-bg-medium)]
           transition-all duration-200
           flex items-center justify-center gap-2
         ">
@@ -119,7 +119,7 @@ export function GlassLogin({
       </div>
 
       <div className="text-center mt-6">
-        <p className="text-white/70 text-sm">
+        <p className="text-[var(--text-tertiary)] text-sm">
           Don't have an account?{' '}
           <button
             onClick={onSignUp}
@@ -161,16 +161,16 @@ export function GlassSignUp({
     <div className={`
       max-w-md w-full
       backdrop-blur-xl backdrop-saturate-150
-      bg-white/10
-      border border-white/20
+      bg-[var(--glass-bg-light)]
+      border border-[var(--glass-border)]
       rounded-3xl
       p-8
-      shadow-[0_16px_48px_0_rgba(0,0,0,0.2)]
+      shadow-[var(--shadow-overlay)]
       ${className}
     `}>
       <div className="text-center mb-8">
         <h2 className="text-3xl text-white mb-2">Create Account</h2>
-        <p className="text-white/70">Join us today</p>
+        <p className="text-[var(--text-tertiary)]">Join us today</p>
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-4">
@@ -203,7 +203,7 @@ export function GlassSignUp({
             onClick={() => setShowPassword(!showPassword)}
             className="
               absolute right-4 top-1/2 -translate-y-1/2
-              text-white/60 hover:text-white
+              text-[var(--text-muted)] hover:text-white
               transition-colors duration-200
             "
           >
@@ -234,10 +234,10 @@ export function GlassSignUp({
         <button className="
           w-full py-3 px-4 rounded-2xl
           backdrop-blur-md backdrop-saturate-150
-          bg-white/10
-          border border-white/20
+          bg-[var(--glass-bg-light)]
+          border border-[var(--glass-border)]
           text-white
-          hover:bg-white/20
+          hover:bg-[var(--glass-bg-medium)]
           transition-all duration-200
           flex items-center justify-center gap-2
         ">
@@ -252,7 +252,7 @@ export function GlassSignUp({
       </div>
 
       <div className="text-center mt-6">
-        <p className="text-white/70 text-sm">
+        <p className="text-[var(--text-tertiary)] text-sm">
           Already have an account?{' '}
           <button
             onClick={onLogin}

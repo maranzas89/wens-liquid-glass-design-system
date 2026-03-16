@@ -27,8 +27,8 @@ export function GlassColorPicker({
           className="
             w-12 h-12 rounded-xl cursor-pointer
             backdrop-blur-md backdrop-saturate-150
-            bg-white/10
-            border border-white/20
+            bg-[var(--glass-bg-light)]
+            border border-[var(--glass-border)]
           "
         />
         <input
@@ -38,12 +38,12 @@ export function GlassColorPicker({
           className="
             flex-1 rounded-xl
             backdrop-blur-md backdrop-saturate-150
-            bg-white/10
-            border border-white/20
+            bg-[var(--glass-bg-light)]
+            border border-[var(--glass-border)]
             px-4 py-2
             text-white
             outline-none
-            focus:bg-white/15 focus:border-white/30
+            focus:bg-[var(--glass-bg-medium)] focus:border-[var(--glass-border-strong)]
             transition-all duration-300
           "
         />

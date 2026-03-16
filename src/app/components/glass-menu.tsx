@@ -46,17 +46,17 @@ export function GlassMenu({
             absolute z-[101] ${positionStyles[position]}
             min-w-[200px]
             backdrop-blur-xl backdrop-saturate-150
-            bg-black/85
-            border border-white/20
+            bg-[var(--overlay-popover)]
+            border border-[var(--glass-border)]
             rounded-2xl
             overflow-hidden
-            shadow-[0_8px_32px_0_rgba(0,0,0,0.2)]
+            shadow-[var(--shadow-overlay)]
             animate-in fade-in slide-in-from-top-2 duration-200
           `}>
             {items.map((item, index) => (
               <div key={index}>
                 {item.divider ? (
-                  <div className="h-px bg-white/20 my-2" />
+                  <div className="h-px bg-[var(--glass-border)] my-2" />
                 ) : (
                   <button
                     onClick={() => {
@@ -71,8 +71,8 @@ export function GlassMenu({
                       flex items-center gap-3
                       transition-colors duration-150
                       ${item.disabled
-                        ? 'text-white/40 cursor-not-allowed'
-                        : 'text-white/90 hover:bg-white/10 hover:text-white'
+                        ? 'text-[var(--text-disabled)] cursor-not-allowed'
+                        : 'text-white/90 hover:bg-[var(--glass-bg-light)] hover:text-white'
                       }
                     `}
                   >

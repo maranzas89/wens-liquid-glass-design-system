@@ -64,8 +64,8 @@ export function GlassCalendar({ value, onChange, className = '' }: GlassCalendar
   return (
     <div className={`
       backdrop-blur-md backdrop-saturate-150
-      bg-white/10
-      border border-white/15
+      bg-[var(--glass-bg-light)]
+      border border-[var(--glass-border)]
       rounded-3xl
       p-6
       ${className}
@@ -76,7 +76,7 @@ export function GlassCalendar({ value, onChange, className = '' }: GlassCalendar
           onClick={previousMonth}
           className="
             p-2 rounded-xl
-            hover:bg-white/10
+            hover:bg-[var(--glass-bg-light)]
             transition-colors duration-200
             text-white
           "
@@ -90,7 +90,7 @@ export function GlassCalendar({ value, onChange, className = '' }: GlassCalendar
           onClick={nextMonth}
           className="
             p-2 rounded-xl
-            hover:bg-white/10
+            hover:bg-[var(--glass-bg-light)]
             transition-colors duration-200
             text-white
           "
@@ -102,7 +102,7 @@ export function GlassCalendar({ value, onChange, className = '' }: GlassCalendar
       {/* Day names */}
       <div className="grid grid-cols-7 gap-2 mb-2">
         {dayNames.map((day) => (
-          <div key={day} className="text-center text-white/60 text-sm py-2">
+          <div key={day} className="text-center text-[var(--text-muted)] text-sm py-2">
             {day}
           </div>
         ))}
@@ -124,10 +124,10 @@ export function GlassCalendar({ value, onChange, className = '' }: GlassCalendar
                 flex items-center justify-center
                 text-sm transition-all duration-200
                 ${isSelected(day)
-                  ? 'bg-blue-500/30 text-white border-2 border-blue-400/50'
+                  ? 'bg-blue-500/30 text-white border-2 border-[var(--status-info-border)]'
                   : isToday(day)
-                  ? 'bg-white/20 text-white'
-                  : 'text-white/80 hover:bg-white/10 hover:text-white'
+                  ? 'bg-[var(--glass-bg-medium)] text-white'
+                  : 'text-[var(--text-secondary)] hover:bg-[var(--glass-bg-light)] hover:text-white'
                 }
               `}
             >

@@ -19,10 +19,10 @@ export function GlassUSMap({
     
     if (stateData) {
       const intensity = stateData.value / 100;
-      return `rgba(103, 126, 234, ${0.3 + intensity * 0.4})`;
+      return `var(--brand-primary)`;
     }
     
-    return 'rgba(255, 255, 255, 0.08)';
+    return 'var(--glass-bg-subtle)';
   };
 
   const getStateValue = (stateId: string) => {
@@ -89,8 +89,8 @@ export function GlassUSMap({
       className={`
         rounded-2xl overflow-hidden
         backdrop-blur-xl backdrop-saturate-150
-        bg-gradient-to-br from-white/5 to-white/[0.02]
-        border border-white/10
+        bg-gradient-to-br from-[var(--glass-bg-subtle)] to-white/[0.02]
+        border border-[var(--glass-dark-border)]
         p-8
         ${className}
       `}
@@ -113,8 +113,8 @@ export function GlassUSMap({
           
           {/* Gradient for water/background */}
           <linearGradient id="water-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" style={{ stopColor: 'rgba(59, 130, 246, 0.1)', stopOpacity: 1 }} />
-            <stop offset="100%" style={{ stopColor: 'rgba(147, 51, 234, 0.1)', stopOpacity: 1 }} />
+            <stop offset="0%" style={{ stopColor: 'var(--status-info-light)', stopOpacity: 1 }} />
+            <stop offset="100%" style={{ stopColor: 'var(--brand-secondary)', stopOpacity: 1 }} />
           </linearGradient>
         </defs>
 
@@ -131,7 +131,7 @@ export function GlassUSMap({
               <path
                 d={state.d}
                 fill={fillColor}
-                stroke="rgba(255, 255, 255, 0.15)"
+                stroke="var(--glass-bg-medium)"
                 strokeWidth="0.5"
                 className="
                   transition-all duration-300 cursor-pointer
@@ -153,19 +153,20 @@ export function GlassUSMap({
       {/* Legend */}
       {data.length > 0 && (
         <div className="mt-6 flex items-center justify-center gap-4">
-          <span className="text-white/40 text-sm">Low</span>
+          <span className="text-[var(--text-disabled)] text-sm">Low</span>
           <div className="flex gap-1.5">
             {[0, 1, 2, 3, 4].map(i => (
               <div
                 key={i}
-                className="w-12 h-3 rounded-sm backdrop-blur-sm border border-white/10"
+                className="w-12 h-3 rounded-sm backdrop-blur-sm border border-[var(--glass-dark-border)]"
                 style={{ 
-                  backgroundColor: `rgba(103, 126, 234, ${0.3 + i * 0.15})` 
+                  backgroundColor: `var(--brand-primary)`,
+                  opacity: 0.3 + i * 0.15
                 }}
               />
             ))}
           </div>
-          <span className="text-white/40 text-sm">High</span>
+          <span className="text-[var(--text-disabled)] text-sm">High</span>
         </div>
       )}
     </div>

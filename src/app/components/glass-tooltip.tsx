@@ -28,9 +28,9 @@ export function GlassTooltip({ children, content, position = 'top' }: GlassToolt
           absolute z-50 ${positionStyles[position]}
           px-3 py-2 rounded-xl
           backdrop-blur-xl backdrop-saturate-150
-          bg-black/85
-          border border-white/20
-          shadow-[0_8px_32px_0_rgba(0,0,0,0.2)]
+          bg-[var(--overlay-popover)]
+          border border-[var(--glass-border)]
+          shadow-[var(--shadow-overlay)]
           text-white text-sm whitespace-nowrap
           animate-in fade-in zoom-in-95 duration-200
           pointer-events-none

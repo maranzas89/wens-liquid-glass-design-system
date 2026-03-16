@@ -163,7 +163,7 @@ export function FeedbackSection({ addToast }: FeedbackSectionProps) {
                           : score >= 7
                           ? 'bg-yellow-500/30 border-yellow-400 text-white shadow-lg shadow-yellow-500/50'
                           : 'bg-red-500/30 border-red-400 text-white shadow-lg shadow-red-500/50'
-                        : 'bg-white/5 border-white/20 text-white/70 hover:border-white/40'
+                        : 'bg-white/5 border-[var(--glass-border)] text-white/70 hover:border-white/40'
                     }
                   `}
                 >
@@ -209,7 +209,7 @@ export function FeedbackSection({ addToast }: FeedbackSectionProps) {
                 ${
                   satisfactionLevel === 'happy'
                     ? 'bg-green-500/20 border-green-400 shadow-lg shadow-green-500/30'
-                    : 'bg-white/5 border-white/20 hover:border-green-400/50'
+                    : 'bg-white/5 border-[var(--glass-border)] hover:border-green-400/50'
                 }
               `}
             >
@@ -229,7 +229,7 @@ export function FeedbackSection({ addToast }: FeedbackSectionProps) {
                 ${
                   satisfactionLevel === 'neutral'
                     ? 'bg-yellow-500/20 border-yellow-400 shadow-lg shadow-yellow-500/30'
-                    : 'bg-white/5 border-white/20 hover:border-yellow-400/50'
+                    : 'bg-white/5 border-[var(--glass-border)] hover:border-yellow-400/50'
                 }
               `}
             >
@@ -249,7 +249,7 @@ export function FeedbackSection({ addToast }: FeedbackSectionProps) {
                 ${
                   satisfactionLevel === 'sad'
                     ? 'bg-red-500/20 border-red-400 shadow-lg shadow-red-500/30'
-                    : 'bg-white/5 border-white/20 hover:border-red-400/50'
+                    : 'bg-white/5 border-[var(--glass-border)] hover:border-red-400/50'
                 }
               `}
             >
@@ -280,7 +280,7 @@ export function FeedbackSection({ addToast }: FeedbackSectionProps) {
                 ${
                   thumbsRating === 'up'
                     ? 'bg-green-500/20 border-green-400 shadow-lg shadow-green-500/30'
-                    : 'bg-white/5 border-white/20 hover:border-green-400/50'
+                    : 'bg-white/5 border-[var(--glass-border)] hover:border-green-400/50'
                 }
               `}
             >
@@ -301,7 +301,7 @@ export function FeedbackSection({ addToast }: FeedbackSectionProps) {
                 ${
                   thumbsRating === 'down'
                     ? 'bg-red-500/20 border-red-400 shadow-lg shadow-red-500/30'
-                    : 'bg-white/5 border-white/20 hover:border-red-400/50'
+                    : 'bg-white/5 border-[var(--glass-border)] hover:border-red-400/50'
                 }
               `}
             >
@@ -334,8 +334,8 @@ export function FeedbackSection({ addToast }: FeedbackSectionProps) {
                 Absolutely love the design system! The glassmorphism effects are stunning and the components are very easy to use.
               </p>
               <div className="flex gap-2">
-                <span className="px-3 py-1 rounded-full bg-white/10 text-white/70 text-xs">Quality</span>
-                <span className="px-3 py-1 rounded-full bg-white/10 text-white/70 text-xs">Design</span>
+                <span className="px-3 py-1 rounded-full bg-[var(--glass-bg-light)] text-white/70 text-xs">Quality</span>
+                <span className="px-3 py-1 rounded-full bg-[var(--glass-bg-light)] text-white/70 text-xs">Design</span>
               </div>
             </div>
           </GlassCard>
@@ -358,8 +358,8 @@ export function FeedbackSection({ addToast }: FeedbackSectionProps) {
                 Great components overall. Would love to see more chart variations and better mobile responsiveness.
               </p>
               <div className="flex gap-2">
-                <span className="px-3 py-1 rounded-full bg-white/10 text-white/70 text-xs">Components</span>
-                <span className="px-3 py-1 rounded-full bg-white/10 text-white/70 text-xs">Features</span>
+                <span className="px-3 py-1 rounded-full bg-[var(--glass-bg-light)] text-white/70 text-xs">Components</span>
+                <span className="px-3 py-1 rounded-full bg-[var(--glass-bg-light)] text-white/70 text-xs">Features</span>
               </div>
             </div>
           </GlassCard>
@@ -381,8 +381,8 @@ export function FeedbackSection({ addToast }: FeedbackSectionProps) {
                 Perfect for our dashboard redesign. The liquid glass aesthetic is exactly what we were looking for!
               </p>
               <div className="flex gap-2">
-                <span className="px-3 py-1 rounded-full bg-white/10 text-white/70 text-xs">Beautiful</span>
-                <span className="px-3 py-1 rounded-full bg-white/10 text-white/70 text-xs">Modern</span>
+                <span className="px-3 py-1 rounded-full bg-[var(--glass-bg-light)] text-white/70 text-xs">Beautiful</span>
+                <span className="px-3 py-1 rounded-full bg-[var(--glass-bg-light)] text-white/70 text-xs">Modern</span>
               </div>
             </div>
           </GlassCard>
@@ -405,7 +405,7 @@ export function FeedbackSection({ addToast }: FeedbackSectionProps) {
                 Good library with nice visual effects. Documentation could be more comprehensive for beginners.
               </p>
               <div className="flex gap-2">
-                <span className="px-3 py-1 rounded-full bg-white/10 text-white/70 text-xs">Documentation</span>
+                <span className="px-3 py-1 rounded-full bg-[var(--glass-bg-light)] text-white/70 text-xs">Documentation</span>
               </div>
             </div>
           </GlassCard>
@@ -427,7 +427,7 @@ export function FeedbackSection({ addToast }: FeedbackSectionProps) {
                 className="
                   w-full px-4 py-3 rounded-xl
                   bg-white/5 backdrop-blur-md
-                  border border-white/20
+                  border border-[var(--glass-border)]
                   text-white placeholder-white/40
                   focus:outline-none focus:border-blue-400/50
                   transition-all duration-200
@@ -457,7 +457,7 @@ export function FeedbackSection({ addToast }: FeedbackSectionProps) {
                 className="
                   w-full px-4 py-3 rounded-xl
                   bg-white/5 backdrop-blur-md
-                  border border-white/20
+                  border border-[var(--glass-border)]
                   text-white placeholder-white/40
                   focus:outline-none focus:border-blue-400/50
                   transition-all duration-200

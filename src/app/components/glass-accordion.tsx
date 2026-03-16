@@ -39,8 +39,8 @@ export function GlassAccordion({ items, allowMultiple = false, className = '' }:
             key={index}
             className="
               backdrop-blur-md backdrop-saturate-150
-              bg-white/10
-              border border-white/20
+              bg-[var(--glass-bg-light)]
+              border border-[var(--glass-border)]
               rounded-2xl
               overflow-hidden
               transition-all duration-300
@@ -52,7 +52,7 @@ export function GlassAccordion({ items, allowMultiple = false, className = '' }:
                 w-full px-6 py-4
                 flex items-center justify-between
                 text-white
-                hover:bg-white/5
+                hover:bg-[var(--glass-bg-subtle)]
                 transition-colors duration-200
               "
             >
@@ -68,7 +68,7 @@ export function GlassAccordion({ items, allowMultiple = false, className = '' }:
                 ${isOpen ? 'max-h-96' : 'max-h-0'}
               `}
             >
-              <div className="px-6 py-4 border-t border-white/10 text-white/80">
+              <div className="px-6 py-4 border-t border-[var(--glass-dark-border)] text-white/80">
                 {item.content}
               </div>
             </div>

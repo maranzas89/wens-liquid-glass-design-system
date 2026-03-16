@@ -23,8 +23,8 @@ export function GlassAvatar({ src, alt, size = 'md', fallback, className = '' }:
     <div className={`
       ${sizeStyles[size]} rounded-full
       backdrop-blur-md backdrop-saturate-150
-      bg-white/10
-      border border-white/20
+      bg-[var(--glass-bg-light)]
+      border border-[var(--glass-border)]
       overflow-hidden
       flex items-center justify-center
       ${className}
@@ -64,7 +64,7 @@ export function GlassAvatarGroup({ avatars, max = 5, size = 'md' }: GlassAvatarG
           key={index}
           {...avatar}
           size={size}
-          className="ring-2 ring-white/10"
+          className="ring-2 ring-[var(--glass-dark-border)]"
         />
       ))}
       {remaining > 0 && (
@@ -72,9 +72,9 @@ export function GlassAvatarGroup({ avatars, max = 5, size = 'md' }: GlassAvatarG
           ${size === 'sm' ? 'w-8 h-8 text-xs' : size === 'md' ? 'w-12 h-12 text-sm' : size === 'lg' ? 'w-16 h-16 text-base' : 'w-24 h-24 text-xl'}
           rounded-full
           backdrop-blur-md backdrop-saturate-150
-          bg-white/20
-          border border-white/20
-          ring-2 ring-white/10
+          bg-[var(--glass-bg-medium)]
+          border border-[var(--glass-border)]
+          ring-2 ring-[var(--glass-dark-border)]
           flex items-center justify-center
           text-white
         `}>

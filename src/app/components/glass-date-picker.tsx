@@ -111,20 +111,20 @@ export function GlassDatePicker({ value, onChange, placeholder = 'MM/DD/YYYY', c
         className="
           relative w-full rounded-2xl
           backdrop-blur-md backdrop-saturate-150
-          bg-white/10
-          border border-white/20
+          bg-[var(--glass-bg-light)]
+          border border-[var(--glass-border)]
           px-4 py-3 pl-12
           text-white
           outline-none
-          hover:bg-white/15 hover:border-white/30
+          hover:bg-[var(--glass-bg-medium)] hover:border-[var(--glass-border-strong)]
           transition-all duration-300
           select-none
         "
       >
-        <div className="absolute left-4 top-1/2 -translate-y-1/2 text-white/60 pointer-events-none">
+        <div className="absolute left-4 top-1/2 -translate-y-1/2 text-[var(--text-muted)] pointer-events-none">
           <Calendar size={20} />
         </div>
-        <span className={selectedDate ? 'text-white' : 'text-white/50'}>
+        <span className={selectedDate ? 'text-white' : 'text-[var(--text-placeholder)]'}>
           {selectedDate ? formatDate(selectedDate) : placeholder}
         </span>
       </div>
@@ -144,11 +144,11 @@ export function GlassDatePicker({ value, onChange, placeholder = 'MM/DD/YYYY', c
               z-[9999]
               w-[320px]
               backdrop-blur-xl backdrop-saturate-150
-              bg-black/80
-              border border-white/15
+              bg-[var(--overlay-popover)]
+              border border-[var(--glass-border)]
               rounded-2xl
               p-5
-              shadow-[0_16px_48px_0_rgba(0,0,0,0.5)]
+              shadow-[var(--shadow-overlay)]
             "
           >
             {/* Header */}
@@ -157,7 +157,7 @@ export function GlassDatePicker({ value, onChange, placeholder = 'MM/DD/YYYY', c
                 onClick={previousMonth}
                 className="
                   p-2 rounded-xl
-                  hover:bg-white/10
+                  hover:bg-[var(--glass-bg-light)]
                   transition-colors duration-200
                   text-white
                 "
@@ -171,7 +171,7 @@ export function GlassDatePicker({ value, onChange, placeholder = 'MM/DD/YYYY', c
                 onClick={nextMonth}
                 className="
                   p-2 rounded-xl
-                  hover:bg-white/10
+                  hover:bg-[var(--glass-bg-light)]
                   transition-colors duration-200
                   text-white
                 "
@@ -183,7 +183,7 @@ export function GlassDatePicker({ value, onChange, placeholder = 'MM/DD/YYYY', c
             {/* Day names */}
             <div className="grid grid-cols-7 gap-1 mb-1">
               {dayNames.map((day) => (
-                <div key={day} className="text-center text-white/50 text-xs py-1.5">
+                <div key={day} className="text-center text-[var(--text-placeholder)] text-xs py-1.5">
                   {day}
                 </div>
               ))}
@@ -205,10 +205,10 @@ export function GlassDatePicker({ value, onChange, placeholder = 'MM/DD/YYYY', c
                       flex items-center justify-center
                       text-sm transition-all duration-200
                       ${isSelected(day)
-                        ? 'bg-gradient-to-br from-blue-500/50 to-purple-500/50 text-white border border-blue-400/40 shadow-[0_0_12px_rgba(99,102,241,0.3)]'
+                        ? 'bg-gradient-to-br from-[var(--status-info-light)] to-[var(--brand-secondary)] text-white border border-[var(--status-info-border)] shadow-[0_0_12px_rgba(99,102,241,0.3)]'
                         : isToday(day)
-                        ? 'bg-white/15 text-white ring-1 ring-white/30'
-                        : 'text-white/80 hover:bg-white/10 hover:text-white'
+                        ? 'bg-[var(--glass-bg-medium)] text-white ring-1 ring-[var(--glass-border-strong)]'
+                        : 'text-[var(--text-secondary)] hover:bg-[var(--glass-bg-light)] hover:text-white'
                       }
                     `}
                   >
@@ -219,7 +219,7 @@ export function GlassDatePicker({ value, onChange, placeholder = 'MM/DD/YYYY', c
             </div>
 
             {/* Footer */}
-            <div className="mt-4 pt-3 border-t border-white/10 flex items-center justify-between">
+            <div className="mt-4 pt-3 border-t border-[var(--glass-dark-border)] flex items-center justify-between">
               <button
                 onClick={() => {
                   const today = new Date();
@@ -228,7 +228,7 @@ export function GlassDatePicker({ value, onChange, placeholder = 'MM/DD/YYYY', c
                   onChange?.(today);
                   setIsOpen(false);
                 }}
-                className="text-xs text-blue-400 hover:text-blue-300 transition-colors"
+                className="text-xs text-[var(--brand-primary)] hover:text-[var(--brand-primary)] transition-colors"
               >
                 Today
               </button>
@@ -238,7 +238,7 @@ export function GlassDatePicker({ value, onChange, placeholder = 'MM/DD/YYYY', c
                     setSelectedDate(undefined);
                     onChange?.(undefined as any);
                   }}
-                  className="text-xs text-white/40 hover:text-white/60 transition-colors"
+                  className="text-xs text-[var(--text-disabled)] hover:text-[var(--text-muted)] transition-colors"
                 >
                   Clear
                 </button>

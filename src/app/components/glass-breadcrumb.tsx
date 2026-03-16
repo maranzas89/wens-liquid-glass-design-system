@@ -21,15 +21,15 @@ export function GlassBreadcrumb({ items, showHome = true, className = '' }: Glas
           <a
             href="/"
             className="
-              text-white/70 hover:text-white
+              text-[var(--text-tertiary)] hover:text-white
               transition-colors duration-200
               p-2 rounded-lg
-              hover:bg-white/10
+              hover:bg-[var(--glass-bg-light)]
             "
           >
             <Home size={16} />
           </a>
-          <ChevronRight size={16} className="text-white/40" />
+          <ChevronRight size={16} className="text-[var(--text-disabled)]" />
         </>
       )}
       {items.map((item, index) => (
@@ -44,15 +44,15 @@ export function GlassBreadcrumb({ items, showHome = true, className = '' }: Glas
                 href={item.href}
                 onClick={item.onClick}
                 className="
-                  text-white/70 hover:text-white
+                  text-[var(--text-tertiary)] hover:text-white
                   transition-colors duration-200
                   px-2 py-1 rounded-lg
-                  hover:bg-white/10
+                  hover:bg-[var(--glass-bg-light)]
                 "
               >
                 {item.label}
               </a>
-              <ChevronRight size={16} className="text-white/40" />
+              <ChevronRight size={16} className="text-[var(--text-disabled)]" />
             </>
           )}
         </div>

@@ -55,8 +55,8 @@ export function GlassRadio({
             transition-all duration-300
             flex items-center justify-center
             ${checked
-              ? 'bg-gradient-to-br from-purple-400/20 to-purple-600/20 border-purple-400/50 shadow-lg shadow-purple-500/50'
-              : 'bg-white/10 border-white/30 hover:border-white/50'
+              ? 'bg-gradient-to-br from-[var(--brand-secondary)]/20 to-[var(--brand-secondary)]/20 border-[var(--status-info-border)] shadow-lg'
+              : 'bg-[var(--glass-bg-light)] border-[var(--glass-border-strong)] hover:border-white/50'
             }
             ${!disabled && 'hover:scale-110'}
           `}
@@ -66,7 +66,7 @@ export function GlassRadio({
               className={`
                 ${s.inner}
                 rounded-full
-                bg-gradient-to-br from-purple-400 to-purple-600
+                bg-gradient-to-br from-[var(--brand-secondary)] to-purple-600
                 shadow-lg
               `}
             />
@@ -82,7 +82,7 @@ export function GlassRadio({
             </div>
           )}
           {description && (
-            <div className={`text-white/60 ${s.description} mt-1`}>
+            <div className={`text-[var(--text-muted)] ${s.description} mt-1`}>
               {description}
             </div>
           )}

@@ -1,25 +1,17 @@
 {
-  "name": "@wens-project/liquid-glass",
+  "name": "wens-liquid-glass-design-system",
   "version": "1.0.0",
   "description": "Liquid Glass Design System — Glassmorphism UI primitives for React + Tailwind CSS v4",
   "main": "src/index.ts",
   "types": "src/index.ts",
+  "type": "module",
   "exports": {
-    ".": {
-      "import": "./src/index.ts",
-      "types": "./src/index.ts"
-    },
+    ".": "./src/index.ts",
     "./styles/tokens.css": "./src/styles/tokens.css",
     "./styles/theme.css": "./src/styles/theme.css",
     "./styles/fonts.css": "./src/styles/fonts.css",
-    "./tokens": {
-      "import": "./src/tokens/index.ts",
-      "types": "./src/tokens/index.ts"
-    },
-    "./components/ui": {
-      "import": "./src/components/ui/index.ts",
-      "types": "./src/components/ui/index.ts"
-    }
+    "./tokens": "./src/tokens/index.ts",
+    "./components/ui": "./src/components/ui/index.ts"
   },
   "files": [
     "src"

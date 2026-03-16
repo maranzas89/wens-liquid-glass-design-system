@@ -42,15 +42,15 @@ export function GlassSearch({
         <div className={`
           relative
           backdrop-blur-md backdrop-saturate-150
-          bg-white/10
-          border border-white/20
+          bg-[var(--glass-bg-light)]
+          border border-[var(--glass-border)]
           rounded-2xl
           transition-all duration-300
-          ${isFocused ? 'bg-white/15 border-white/30 shadow-[0_8px_32px_0_rgba(0,0,0,0.1)]' : ''}
+          ${isFocused ? 'bg-[var(--glass-bg-medium)] border-[var(--glass-border-strong)] shadow-[0_8px_32px_0_rgba(0,0,0,0.1)]' : ''}
         `}>
           <Search 
             size={20} 
-            className="absolute left-4 top-1/2 -translate-y-1/2 text-white/60 pointer-events-none"
+            className="absolute left-4 top-1/2 -translate-y-1/2 text-[var(--text-muted)] pointer-events-none"
           />
           <input
             type="text"
@@ -71,7 +71,7 @@ export function GlassSearch({
             className="
               w-full px-12 py-3
               bg-transparent
-              text-white placeholder:text-white/50
+              text-white placeholder:text-[var(--text-placeholder)]
               outline-none
             "
           />
@@ -81,7 +81,7 @@ export function GlassSearch({
               onClick={handleClear}
               className="
                 absolute right-4 top-1/2 -translate-y-1/2
-                text-white/60 hover:text-white
+                text-[var(--text-muted)] hover:text-white
                 transition-colors duration-200
               "
             >
@@ -95,11 +95,11 @@ export function GlassSearch({
         <div className="
           absolute top-full left-0 right-0 mt-2 z-20
           backdrop-blur-xl backdrop-saturate-150
-          bg-black/85
-          border border-white/20
+          bg-[var(--overlay-popover)]
+          border border-[var(--glass-border)]
           rounded-2xl
           overflow-hidden
-          shadow-[0_8px_32px_0_rgba(0,0,0,0.2)]
+          shadow-[var(--shadow-overlay)]
           max-h-60 overflow-y-auto
         ">
           {filteredSuggestions.map((suggestion, index) => (
@@ -112,8 +112,8 @@ export function GlassSearch({
               }}
               className="
                 w-full px-4 py-3 text-left
-                text-white/90
-                hover:bg-white/10
+                text-white
+                hover:bg-[var(--glass-bg-light)]
                 transition-colors duration-150
               "
             >

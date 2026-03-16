@@ -15,8 +15,8 @@ export function GlassSkeleton({
 }: GlassSkeletonProps) {
   const baseStyles = `
     backdrop-blur-md backdrop-saturate-150
-    bg-white/10
-    border border-white/10
+    bg-[var(--glass-bg-light)]
+    border border-[var(--glass-dark-border)]
     animate-pulse
   `;
   
@@ -42,8 +42,8 @@ export function GlassSkeletonCard() {
   return (
     <div className="
       backdrop-blur-md backdrop-saturate-150
-      bg-white/10
-      border border-white/20
+      bg-[var(--glass-bg-light)]
+      border border-[var(--glass-border)]
       rounded-3xl
       p-6
       space-y-4

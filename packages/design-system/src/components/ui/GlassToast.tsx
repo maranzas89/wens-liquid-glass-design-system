@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState, useCallback, useEffect } from 'react';
 import { cn } from '../../lib/cn';
 
@@ -105,38 +107,38 @@ interface VariantConfig {
 
 const variants: Record<ToastVariant, VariantConfig> = {
   success: {
-    bg: 'bg-green-500/20',
-    border: 'border-green-400/50',
-    iconColor: 'text-green-300',
-    iconBg: 'bg-green-500/30',
-    defaultIcon: <IconCheck className="text-green-300" />,
+    bg: 'bg-[var(--status-success-light)]',
+    border: 'border-[var(--status-success-border)]',
+    iconColor: 'text-[var(--status-success)]',
+    iconBg: 'bg-[var(--status-success-light)]',
+    defaultIcon: <IconCheck className="text-[var(--status-success)]" />,
   },
   error: {
-    bg: 'bg-red-500/20',
-    border: 'border-red-400/50',
-    iconColor: 'text-red-300',
-    iconBg: 'bg-red-500/30',
-    defaultIcon: <IconAlert className="text-red-300" />,
+    bg: 'bg-[var(--status-error-light)]',
+    border: 'border-[var(--status-error-border)]',
+    iconColor: 'text-[var(--status-error)]',
+    iconBg: 'bg-[var(--status-error-light)]',
+    defaultIcon: <IconAlert className="text-[var(--status-error)]" />,
   },
   warning: {
-    bg: 'bg-amber-500/20',
-    border: 'border-amber-400/50',
-    iconColor: 'text-amber-300',
-    iconBg: 'bg-amber-500/30',
-    defaultIcon: <IconAlert className="text-amber-300" />,
+    bg: 'bg-[var(--status-warning-light)]',
+    border: 'border-[var(--status-warning-border)]',
+    iconColor: 'text-[var(--status-warning)]',
+    iconBg: 'bg-[var(--status-warning-light)]',
+    defaultIcon: <IconAlert className="text-[var(--status-warning)]" />,
   },
   info: {
-    bg: 'bg-blue-500/20',
-    border: 'border-blue-400/50',
-    iconColor: 'text-blue-300',
-    iconBg: 'bg-blue-500/30',
-    defaultIcon: <IconInfo className="text-blue-300" />,
+    bg: 'bg-[var(--status-info-light)]',
+    border: 'border-[var(--status-info-border)]',
+    iconColor: 'text-[var(--status-info)]',
+    iconBg: 'bg-[var(--status-info-light)]',
+    defaultIcon: <IconInfo className="text-[var(--status-info)]" />,
   },
   default: {
-    bg: 'bg-white/10',
-    border: 'border-white/20',
+    bg: 'bg-[var(--glass-bg-light)]',
+    border: 'border-[var(--glass-border)]',
     iconColor: 'text-white/80',
-    iconBg: 'bg-white/20',
+    iconBg: 'bg-[var(--glass-bg-medium)]',
     defaultIcon: <IconBell className="text-white/80" />,
   },
 };
@@ -165,7 +167,7 @@ export function GlassToast({ toast, onClose }: GlassToastProps) {
         'border-2',
         config.border,
         'rounded-2xl p-4',
-        'shadow-[0_8px_32px_0_rgba(0,0,0,0.2)]',
+        'shadow-[var(--shadow-overlay)]',
         'animate-in slide-in-from-top-2 duration-300',
       )}
     >
@@ -183,7 +185,7 @@ export function GlassToast({ toast, onClose }: GlassToastProps) {
           {toast.action && (
             <button
               onClick={toast.action.onClick}
-              className="mt-3 px-4 py-1.5 rounded-lg bg-white/20 hover:bg-white/30 text-white text-sm font-medium transition-colors duration-200"
+              className="mt-3 px-4 py-1.5 rounded-lg bg-[var(--glass-bg-medium)] hover:bg-[var(--glass-border-strong)] text-white text-sm font-medium transition-colors duration-200"
             >
               {toast.action.label}
             </button>
@@ -193,7 +195,7 @@ export function GlassToast({ toast, onClose }: GlassToastProps) {
         {toast.closable !== false && (
           <button
             onClick={() => onClose(toast.id)}
-            className="p-1.5 rounded-lg text-white/60 hover:text-white hover:bg-white/10 transition-all duration-200 flex-shrink-0"
+            className="p-1.5 rounded-lg text-white/60 hover:text-white hover:bg-[var(--glass-bg-light)] transition-all duration-200 flex-shrink-0"
           >
             <IconX />
           </button>
