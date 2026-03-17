@@ -1,9 +1,9 @@
 import React from 'react';
-import { 
-  BarChart3, 
-  Type, 
-  FormInput, 
-  Layout, 
+import {
+  BarChart3,
+  Type,
+  FormInput,
+  Layout,
   Bell,
   Navigation2,
   MapPin,
@@ -13,7 +13,8 @@ import {
   ChevronsLeft,
   ChevronsRight,
   Search,
-  X
+  X,
+  Menu
 } from 'lucide-react';
 
 interface NavItem {
@@ -34,6 +35,7 @@ export function GlassNavSidebar({ items, activeSection, onNavigate, onCollapseCh
   const [hoveredItem, setHoveredItem] = React.useState<string | null>(null);
   const [tooltipPos, setTooltipPos] = React.useState<{ top: number; left: number }>({ top: 0, left: 0 });
   const [searchQuery, setSearchQuery] = React.useState('');
+  const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
   const searchInputRef = React.useRef<HTMLInputElement>(null);
 
   const filteredItems = React.useMemo(() => {
@@ -74,16 +76,126 @@ export function GlassNavSidebar({ items, activeSection, onNavigate, onCollapseCh
     setHoveredItem(null);
   };
 
+  // Lock body scroll when mobile menu is open
+  React.useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => { document.body.style.overflow = ''; };
+  }, [mobileMenuOpen]);
+
+  const handleMobileNavigate = (id: string) => {
+    onNavigate(id);
+    setMobileMenuOpen(false);
+  };
+
   return (
     <>
-      {/* Main Sidebar */}
-      <div 
+      {/* Mobile Hamburger Button - visible only below md */}
+      <button
+        onClick={() => setMobileMenuOpen(true)}
+        className="
+          fixed top-4 left-4 z-50
+          md:hidden
+          w-12 h-12 rounded-xl
+          backdrop-blur-xl backdrop-saturate-150
+          bg-gradient-to-br from-[var(--glass-bg-light)] to-[var(--glass-bg-subtle)]
+          border border-[var(--glass-border)]
+          flex items-center justify-center
+          text-white/80 hover:text-white
+          transition-all duration-200
+          shadow-lg
+        "
+        aria-label="Open navigation menu"
+      >
+        <Menu size={24} />
+      </button>
+
+      {/* Mobile Full-Screen Overlay Menu */}
+      {mobileMenuOpen && (
+        <div className="fixed inset-0 z-[100] md:hidden">
+          {/* Backdrop */}
+          <div
+            className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+            onClick={() => setMobileMenuOpen(false)}
+          />
+          {/* Menu Panel */}
+          <div className="
+            absolute inset-0
+            backdrop-blur-xl backdrop-saturate-150
+            bg-gradient-to-b from-purple-900/95 via-blue-900/95 to-teal-900/95
+            flex flex-col
+            overflow-y-auto
+            [&::-webkit-scrollbar]:hidden
+            [-ms-overflow-style:none]
+            [scrollbar-width:none]
+          ">
+            {/* Close Button */}
+            <div className="flex justify-end p-4 flex-shrink-0">
+              <button
+                onClick={() => setMobileMenuOpen(false)}
+                className="
+                  w-12 h-12 rounded-xl
+                  bg-white/10 border border-white/20
+                  flex items-center justify-center
+                  text-white/80 hover:text-white hover:bg-white/20
+                  transition-all duration-200
+                "
+                aria-label="Close navigation menu"
+              >
+                <X size={24} />
+              </button>
+            </div>
+            {/* Nav Items */}
+            <div className="flex-1 px-6 pb-8 space-y-2">
+              <p className="text-white/40 text-xs uppercase tracking-wider mb-4 px-4">Navigation</p>
+              {items.map((item) => {
+                const isActive = activeSection === item.id;
+                return (
+                  <button
+                    key={item.id}
+                    onClick={() => handleMobileNavigate(item.id)}
+                    className={`
+                      w-full flex items-center gap-4
+                      px-4 py-4 rounded-xl
+                      transition-all duration-200
+                      ${isActive
+                        ? 'bg-white/15 text-white border border-white/25'
+                        : 'text-white/70 hover:bg-white/10 hover:text-white border border-transparent'
+                      }
+                    `}
+                  >
+                    <span className={`flex-shrink-0 ${isActive ? 'text-[var(--brand-primary)]' : 'text-white/60'}`}>
+                      {item.icon}
+                    </span>
+                    <span className="flex-1 text-left font-medium text-lg">{item.label}</span>
+                    {isActive && <ChevronRight size={18} className="text-[var(--brand-primary)]" />}
+                  </button>
+                );
+              })}
+            </div>
+            {/* Footer */}
+            <div className="flex-shrink-0 p-6 border-t border-white/10">
+              <div className="p-3 rounded-xl bg-white/5 text-center">
+                <p className="text-white/60 text-xs">50+ Components</p>
+                <p className="text-white text-sm font-semibold">v1.0.0</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Main Sidebar - hidden on mobile, visible on md+ */}
+      <div
         className={`
+          hidden md:flex
           fixed left-0 top-0 bottom-0
           backdrop-blur-xl backdrop-saturate-150
           bg-gradient-to-b from-[var(--glass-bg-light)] to-[var(--glass-bg-subtle)]
           z-50
-          flex flex-col
+          flex-col
           h-screen
           overflow-y-auto
           transition-all duration-300
