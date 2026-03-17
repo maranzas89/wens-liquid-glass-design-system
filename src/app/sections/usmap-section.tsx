@@ -174,9 +174,9 @@ export function USMapSection({ addToast }: USMapSectionProps) {
       <div className={`relative overflow-hidden rounded-3xl transition-opacity duration-1000 ${mounted ? 'opacity-100' : 'opacity-0'}`}>
         {/* 液态模糊背景 (Liquid Blobs) */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
-          <div className="absolute top-[-10%] left-[-5%] w-[50%] h-[50%] bg-cyan-600/20 rounded-full mix-blend-screen filter blur-[120px] animate-blob"></div>
-          <div className="absolute top-[20%] right-[-10%] w-[45%] h-[60%] bg-purple-600/20 rounded-full mix-blend-screen filter blur-[140px] animate-blob animation-delay-2000"></div>
-          <div className="absolute bottom-[-15%] left-[25%] w-[40%] h-[40%] bg-blue-600/20 rounded-full mix-blend-screen filter blur-[100px] animate-blob animation-delay-4000"></div>
+          <div className="absolute top-[-10%] left-[-5%] w-[50%] h-[50%] bg-cyan-600/20 rounded-full mix-blend-screen filter blur-[40px] md:blur-[120px] animate-blob"></div>
+          <div className="absolute top-[20%] right-[-10%] w-[45%] h-[60%] bg-purple-600/20 rounded-full mix-blend-screen filter blur-[40px] md:blur-[140px] animate-blob animation-delay-2000"></div>
+          <div className="absolute bottom-[-15%] left-[25%] w-[40%] h-[40%] bg-blue-600/20 rounded-full mix-blend-screen filter blur-[40px] md:blur-[100px] animate-blob animation-delay-4000"></div>
         </div>
 
         {/* 中央：世界地图容器 */}
@@ -338,7 +338,7 @@ export function USMapSection({ addToast }: USMapSectionProps) {
                 return (
                   <div
                     key={point.id}
-                    className="absolute rounded-full blur-2xl mix-blend-screen pointer-events-none animate-pulse"
+                    className="absolute rounded-full blur-lg md:blur-2xl mix-blend-screen pointer-events-none md:animate-pulse"
                     style={{
                       left: point.left,
                       top: point.top,
@@ -410,9 +410,9 @@ export function USMapSection({ addToast }: USMapSectionProps) {
         <div className="fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex items-center justify-center p-8">
           {/* 液态模糊背景 (Liquid Blobs) */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
-            <div className="absolute top-[-10%] left-[-5%] w-[50%] h-[50%] bg-cyan-600/20 rounded-full mix-blend-screen filter blur-[120px] animate-blob"></div>
-            <div className="absolute top-[20%] right-[-10%] w-[45%] h-[60%] bg-purple-600/20 rounded-full mix-blend-screen filter blur-[140px] animate-blob animation-delay-2000"></div>
-            <div className="absolute bottom-[-15%] left-[25%] w-[40%] h-[40%] bg-blue-600/20 rounded-full mix-blend-screen filter blur-[100px] animate-blob animation-delay-4000"></div>
+            <div className="absolute top-[-10%] left-[-5%] w-[50%] h-[50%] bg-cyan-600/20 rounded-full mix-blend-screen filter blur-[40px] md:blur-[120px] animate-blob"></div>
+            <div className="absolute top-[20%] right-[-10%] w-[45%] h-[60%] bg-purple-600/20 rounded-full mix-blend-screen filter blur-[40px] md:blur-[140px] animate-blob animation-delay-2000"></div>
+            <div className="absolute bottom-[-15%] left-[25%] w-[40%] h-[40%] bg-blue-600/20 rounded-full mix-blend-screen filter blur-[40px] md:blur-[100px] animate-blob animation-delay-4000"></div>
           </div>
 
           {/* Close Button */}
@@ -576,7 +576,7 @@ export function USMapSection({ addToast }: USMapSectionProps) {
                       return (
                         <div
                           key={point.id}
-                          className="absolute rounded-full blur-2xl mix-blend-screen pointer-events-none animate-pulse"
+                          className="absolute rounded-full blur-lg md:blur-2xl mix-blend-screen pointer-events-none md:animate-pulse"
                           style={{
                             left: point.left,
                             top: point.top,

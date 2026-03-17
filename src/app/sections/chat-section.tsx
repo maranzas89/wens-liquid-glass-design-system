@@ -77,7 +77,7 @@ export function ChatSection() {
       <div className="space-y-4">
         <h3 className="text-2xl font-bold text-white text-center">Desktop View</h3>
         <div className="
-          backdrop-blur-xl bg-gradient-to-br from-white/10 to-white/5
+          md:backdrop-blur-xl bg-gradient-to-br from-white/10 to-white/5
           border border-[var(--glass-border)]
           rounded-3xl
           overflow-hidden
@@ -226,7 +226,7 @@ export function ChatSection() {
                       <div className="flex flex-col gap-1">
                         <div className={`
                           px-4 py-2 rounded-2xl
-                          backdrop-blur-md
+                          md:backdrop-blur-md
                           ${msg.sender === 'user' 
                             ? 'bg-gradient-to-br from-blue-500/40 to-purple-500/40 border border-blue-400/30 rounded-br-sm' 
                             : 'bg-[var(--glass-bg-light)] border border-[var(--glass-border)] rounded-bl-sm'
@@ -505,7 +505,7 @@ export function ChatSection() {
                       <User className="text-white/70" size={12} />
                     </div>
                     <div className="flex flex-col gap-1">
-                      <div className="px-3 py-2 rounded-2xl backdrop-blur-md bg-[var(--glass-bg-light)] border border-[var(--glass-border)] rounded-bl-sm">
+                      <div className="px-3 py-2 rounded-2xl md:backdrop-blur-md bg-[var(--glass-bg-light)] border border-[var(--glass-border)] rounded-bl-sm">
                         <p className="text-white text-sm">Hey! How are you?</p>
                       </div>
                       <span className="text-white/40 text-xs">10:30 AM</span>
@@ -517,7 +517,7 @@ export function ChatSection() {
                 <div className="flex justify-end">
                   <div className="flex items-end gap-2 max-w-[85%]">
                     <div className="flex flex-col gap-1">
-                      <div className="px-3 py-2 rounded-2xl backdrop-blur-md bg-gradient-to-br from-blue-500/40 to-purple-500/40 border border-blue-400/30 rounded-br-sm">
+                      <div className="px-3 py-2 rounded-2xl md:backdrop-blur-md bg-gradient-to-br from-blue-500/40 to-purple-500/40 border border-blue-400/30 rounded-br-sm">
                         <p className="text-white text-sm">I'm doing great! Thanks 😊</p>
                       </div>
                       <span className="text-white/40 text-xs text-right">10:32 AM</span>
@@ -535,7 +535,7 @@ export function ChatSection() {
                       <User className="text-white/70" size={12} />
                     </div>
                     <div className="flex flex-col gap-1">
-                      <div className="px-3 py-2 rounded-2xl backdrop-blur-md bg-[var(--glass-bg-light)] border border-[var(--glass-border)] rounded-bl-sm">
+                      <div className="px-3 py-2 rounded-2xl md:backdrop-blur-md bg-[var(--glass-bg-light)] border border-[var(--glass-border)] rounded-bl-sm">
                         <p className="text-white text-sm">The Liquid Glass design is amazing!</p>
                       </div>
                       <span className="text-white/40 text-xs">10:33 AM</span>

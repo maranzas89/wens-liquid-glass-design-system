@@ -10,7 +10,7 @@ export function CodeBlock({ code, language = 'tsx' }: CodeBlockProps) {
   return (
     <div className="mt-12">
       <div className="
-        backdrop-blur-xl bg-gradient-to-br from-[var(--glass-bg-light)] to-[var(--glass-bg-subtle)]
+        md:backdrop-blur-xl bg-gradient-to-br from-[var(--glass-bg-light)] to-[var(--glass-bg-subtle)]
         border border-[var(--glass-border)]
         rounded-3xl
         overflow-hidden

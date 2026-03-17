@@ -56,7 +56,7 @@ export function MessageSection({ addToast }: MessageSectionProps) {
         <div className="space-y-4">
           {/* Inline Info Alert */}
           <div className="
-            backdrop-blur-xl bg-gradient-to-br from-blue-500/20 to-blue-600/10
+            md:backdrop-blur-xl bg-gradient-to-br from-blue-500/20 to-blue-600/10
             border border-blue-400/30
             rounded-xl p-4
             flex items-start gap-3
@@ -69,7 +69,7 @@ export function MessageSection({ addToast }: MessageSectionProps) {
 
           {/* Inline Success Alert */}
           <div className="
-            backdrop-blur-xl bg-gradient-to-br from-green-500/20 to-green-600/10
+            md:backdrop-blur-xl bg-gradient-to-br from-green-500/20 to-green-600/10
             border border-green-400/30
             rounded-xl p-4
             flex items-start gap-3
@@ -87,7 +87,7 @@ export function MessageSection({ addToast }: MessageSectionProps) {
         <div className="space-y-4">
           {showAlert1 && (
             <div className="
-              backdrop-blur-xl bg-gradient-to-br from-yellow-500/20 to-yellow-600/10
+              md:backdrop-blur-xl bg-gradient-to-br from-yellow-500/20 to-yellow-600/10
               border border-yellow-400/30
               rounded-xl p-4
               flex items-start gap-3
@@ -107,7 +107,7 @@ export function MessageSection({ addToast }: MessageSectionProps) {
 
           {showAlert2 && (
             <div className="
-              backdrop-blur-xl bg-gradient-to-br from-red-500/20 to-red-600/10
+              md:backdrop-blur-xl bg-gradient-to-br from-red-500/20 to-red-600/10
               border border-red-400/30
               rounded-xl p-4
               flex items-start gap-3
